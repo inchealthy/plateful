@@ -1,0 +1,80 @@
+[
+  {
+    "id": "r1",
+    "name": "Main Campus Cafeteria",
+    "cuisine": "Full Service Dining Hall",
+    "emoji": "🍽️",
+    "rating": 4.5,
+    "hours": "6am – 9pm",
+    "status": "open",
+    "lat": 0.0,
+    "lng": 0.0,
+    "distanceMiles": 0.2,
+    "tags": ["Breakfast", "Lunch", "Dinner", "Vegan", "Halal"]
+  },
+  {
+    "id": "r2",
+    "name": "Health Sciences Food Court",
+    "cuisine": "Multiple Vendors",
+    "emoji": "🥗",
+    "rating": 4.7,
+    "hours": "7am – 8pm",
+    "status": "busy",
+    "lat": 0.0,
+    "lng": 0.0,
+    "distanceMiles": 0.5,
+    "tags": ["Lunch", "Dinner", "Healthy", "Gluten-Free"]
+  },
+  {
+    "id": "r3",
+    "name": "Riverside Coffee & Bakery",
+    "cuisine": "Café",
+    "emoji": "☕",
+    "rating": 4.8,
+    "hours": "6:30am – 6pm",
+    "status": "open",
+    "lat": 0.0,
+    "lng": 0.0,
+    "distanceMiles": 0.3,
+    "tags": ["Breakfast", "Snacks", "Beverages"]
+  },
+  {
+    "id": "r4",
+    "name": "Student Union Grill",
+    "cuisine": "Casual Dining",
+    "emoji": "🍔",
+    "rating": 4.3,
+    "hours": "10am – 10pm",
+    "status": "open",
+    "lat": 0.0,
+    "lng": 0.0,
+    "distanceMiles": 0.4,
+    "tags": ["Lunch", "Dinner", "Snacks"]
+  },
+  {
+    "id": "r5",
+    "name": "Garden Terrace Bistro",
+    "cuisine": "Healthy Options",
+    "emoji": "🌿",
+    "rating": 4.9,
+    "hours": "11am – 8pm",
+    "status": "closed",
+    "lat": 0.0,
+    "lng": 0.0,
+    "distanceMiles": 0.6,
+    "tags": ["Breakfast", "Lunch", "Vegan", "Gluten-Free"]
+  },
+  {
+    "id": "r6",
+    "name": "Express Convenience Store",
+    "cuisine": "Grab & Go",
+    "emoji": "🏪",
+    "rating": 4.2,
+    "hours": "24/7",
+    "status": "open",
+    "lat": 0.0,
+    "lng": 0.0,
+    "distanceMiles": 0.1,
+    "tags": ["Snacks", "Beverages"]
+  }
+]

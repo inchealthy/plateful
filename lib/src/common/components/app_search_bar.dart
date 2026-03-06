@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
 
 class AppSearchBar extends StatelessWidget {
-  const AppSearchBar({super.key, this.controller, this.onChanged});
+  const AppSearchBar({
+    super.key,
+    this.controller,
+    this.onChanged,
+    this.hintText = 'Search',
+    this.fillColor,
+  });
 
   final TextEditingController? controller;
   final ValueChanged<String>? onChanged;
+  final String hintText;
+  final Color? fillColor;
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +20,8 @@ class AppSearchBar extends StatelessWidget {
       controller: controller,
       onChanged: onChanged,
       decoration: InputDecoration(
-        hintText: 'Search',
+        hintText: hintText,
+        fillColor: fillColor,
         prefixIcon: const Icon(Icons.search),
         suffixIcon: IconButton(
           icon: const Icon(Icons.clear),

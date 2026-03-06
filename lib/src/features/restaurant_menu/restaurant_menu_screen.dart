@@ -6,7 +6,8 @@ class RestaurantMenuScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final restaurantId = GoRouterState.of(context).pathParameters['restaurantId'];
+    final restaurantId =
+        GoRouterState.of(context).pathParameters['restaurantId'];
     return Scaffold(
       appBar: AppBar(title: const Text('RestaurantMenuScreen')),
       body: Center(
