@@ -112,6 +112,10 @@ class _RestaurantMapViewState extends State<RestaurantMapView> {
     } catch (_) {}
   }
 
+  void _retryLocationPermission() {
+    unawaited(_initLocation());
+  }
+
   List<LatLng> _buildPoints(
     int count, {
     required double baseLat,
@@ -208,9 +212,19 @@ class _RestaurantMapViewState extends State<RestaurantMapView> {
                 borderRadius: BorderRadius.circular(10),
                 border: Border.all(color: const Color(0xFFFFD666)),
               ),
-              child: const Text(
-                '📍 Enable location for better experience',
-                style: TextStyle(fontWeight: FontWeight.w500),
+              child: Row(
+                children: [
+                  const Expanded(
+                    child: Text(
+                      '📍 Enable location for better experience',
+                      style: TextStyle(fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: _retryLocationPermission,
+                    child: const Text('Request permission'),
+                  ),
+                ],
               ),
             ),
           ),

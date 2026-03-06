@@ -6,14 +6,23 @@ import 'package:hive_flutter/hive_flutter.dart';
 
 import 'src/app/themes/app_theme.dart';
 import 'src/routing/routes.dart';
+import 'src/utils/dummy_data.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
+  await Hive.openBox<String>('cart');
+  await Hive.openBox<String>('feedbacks');
+  await Hive.openBox<String>('profile');
+  final ordersBox = await Hive.openBox<String>('orders');
+  final metaBox = await Hive.openBox<bool>('meta');
+  await DummyData.seedIfNeeded(ordersBox, metaBox);
 
   try {
     await Firebase.initializeApp();
-  } catch (_) {}
+  } catch (e) {
+    debugPrint('Firebase init skipped: $e');
+  }
 
   runApp(const ProviderScope(child: PlatefulApp()));
 }

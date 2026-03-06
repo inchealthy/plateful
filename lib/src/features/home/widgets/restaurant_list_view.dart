@@ -8,12 +8,14 @@ class RestaurantListView extends StatelessWidget {
     required this.restaurants,
     required this.isLoading,
     required this.onTapRestaurant,
+    this.bottomPadding = 20,
     super.key,
   });
 
   final List<Restaurant> restaurants;
   final bool isLoading;
   final ValueChanged<Restaurant> onTapRestaurant;
+  final double bottomPadding;
 
   @override
   Widget build(BuildContext context) {
@@ -23,13 +25,13 @@ class RestaurantListView extends StatelessWidget {
 
     if (restaurants.isEmpty) {
       return const Center(
-        child: Text('No restaurants found'),
+        child: _NoResultsWidget(),
       );
     }
 
     return ListView.builder(
       key: const Key('home-restaurant-list'),
-      padding: const EdgeInsets.fromLTRB(16, 4, 16, 20),
+      padding: EdgeInsets.fromLTRB(16, 4, 16, bottomPadding),
       itemCount: restaurants.length,
       itemBuilder: (context, index) {
         final restaurant = restaurants[index];
@@ -38,6 +40,24 @@ class RestaurantListView extends StatelessWidget {
           onTap: () => onTapRestaurant(restaurant),
         );
       },
+    );
+  }
+}
+
+class _NoResultsWidget extends StatelessWidget {
+  const _NoResultsWidget();
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: const [
+        Text('🔍', style: TextStyle(fontSize: 56)),
+        SizedBox(height: 8),
+        Text('No restaurants found'),
+        SizedBox(height: 4),
+        Text('Try a different search'),
+      ],
     );
   }
 }
