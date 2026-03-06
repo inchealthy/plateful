@@ -47,4 +47,3 @@ app.*.map.json
 # FVM Version Cache
 .fvm/
 # Local planning workspace
-.planning/
