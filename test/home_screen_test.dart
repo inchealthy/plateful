@@ -20,6 +20,39 @@ void main() {
     await HiveTestHelper.clearProfile();
   });
 
+  testWidgets('Tab toggle switches between list and map views', (tester) async {
+    final container = ProviderContainer(
+      overrides: [
+        locationClientProvider.overrideWithValue(
+          const FakeLocationClient(permission: LocationPermission.denied),
+        ),
+      ],
+    );
+    addTearDown(container.dispose);
+
+    await tester.pumpWidget(
+      UncontrolledProviderScope(
+        container: container,
+        child: ScreenUtilInit(
+          designSize: const Size(390, 844),
+          builder: (_, __) => const MaterialApp(home: HomeScreen()),
+        ),
+      ),
+    );
+    await container.read(homeProvider.notifier).loadRestaurants();
+    await tester.pump(const Duration(milliseconds: 300));
+
+    expect(container.read(homeProvider).selectedTabIndex, 0);
+
+    container.read(homeProvider.notifier).onTabChanged(1);
+    await tester.pump(const Duration(milliseconds: 100));
+    expect(container.read(homeProvider).selectedTabIndex, 1);
+
+    container.read(homeProvider.notifier).onTabChanged(0);
+    await tester.pump(const Duration(milliseconds: 100));
+    expect(container.read(homeProvider).selectedTabIndex, 0);
+  });
+
   testWidgets('Home list/search/toggle/change-location flow works', (
     tester,
   ) async {

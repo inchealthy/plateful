@@ -185,10 +185,9 @@ class _AddButton extends StatelessWidget {
     return GestureDetector(
       key: Key('menu-item-add-$menuItemId'),
       onTap: () {
-        if (!enabled) {
-          return;
+        if (enabled) {
+          HapticFeedback.lightImpact();
         }
-        HapticFeedback.lightImpact();
         onTap();
       },
       child: Container(
