@@ -1,6 +1,7 @@
 class Restaurant {
   const Restaurant({
     required this.id,
+    required this.locationId,
     required this.name,
     required this.cuisine,
     required this.emoji,
@@ -14,6 +15,7 @@ class Restaurant {
   });
 
   final String id;
+  final String locationId;
   final String name;
   final String cuisine;
   final String emoji;
@@ -28,6 +30,7 @@ class Restaurant {
   factory Restaurant.fromJson(Map<String, dynamic> json) {
     return Restaurant(
       id: json['id'] as String,
+      locationId: json['locationId'] as String,
       name: json['name'] as String,
       cuisine: json['cuisine'] as String,
       emoji: json['emoji'] as String,
@@ -44,6 +47,7 @@ class Restaurant {
   Map<String, dynamic> toJson() {
     return {
       'id': id,
+      'locationId': locationId,
       'name': name,
       'cuisine': cuisine,
       'emoji': emoji,

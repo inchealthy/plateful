@@ -1,0 +1,20 @@
+[
+  {
+    "id": "loc_canyon_college",
+    "name": "Canyon College",
+    "lat": 34.0715,
+    "lng": -118.4448
+  },
+  {
+    "id": "loc_harbor_hospital",
+    "name": "Harbor Hospital",
+    "lat": 34.0652,
+    "lng": -118.4508
+  },
+  {
+    "id": "loc_northside_academy",
+    "name": "Northside Academy",
+    "lat": 34.0766,
+    "lng": -118.4383
+  }
+]

@@ -6,12 +6,16 @@ import '../../../common/components/app_search_bar.dart';
 
 class HomeHeader extends StatelessWidget {
   const HomeHeader({
+    required this.currentLocationName,
+    required this.onChangeLocationTap,
     required this.selectedTabIndex,
     required this.onTabChanged,
     required this.onSearchChanged,
     super.key,
   });
 
+  final String currentLocationName;
+  final VoidCallback onChangeLocationTap;
   final int selectedTabIndex;
   final ValueChanged<int> onTabChanged;
   final ValueChanged<String> onSearchChanged;
@@ -32,21 +36,54 @@ class HomeHeader extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            'Good morning 👋',
-            style: AppTextStyles.heading2.copyWith(color: Colors.white),
+          Row(
+            children: [
+              Expanded(
+                child: Text(
+                  currentLocationName,
+                  key: const Key('home-current-location-name'),
+                  style: AppTextStyles.heading2.copyWith(color: Colors.white),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+              const SizedBox(width: 8),
+              Container(
+                width: 36,
+                height: 36,
+                decoration: BoxDecoration(
+                  color: Colors.white.withValues(alpha: 0.2),
+                  shape: BoxShape.circle,
+                ),
+                alignment: Alignment.center,
+                child: const Icon(Icons.location_on, color: Colors.white),
+              ),
+            ],
           ),
-          const SizedBox(height: 12),
+          const SizedBox(height: 4),
+          InkWell(
+            key: const Key('home-change-location'),
+            onTap: onChangeLocationTap,
+            borderRadius: BorderRadius.circular(6),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 4),
+              child: Text(
+                'Change my location',
+                style: AppTextStyles.caption.copyWith(
+                  color: Colors.white.withValues(alpha: 0.9),
+                  decoration: TextDecoration.underline,
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(height: 10),
           AppSearchBar(
             onChanged: onSearchChanged,
             hintText: 'What are you craving?',
             fillColor: Colors.white,
           ),
           const SizedBox(height: 12),
-          _ViewToggle(
-            selectedIndex: selectedTabIndex,
-            onChanged: onTabChanged,
-          ),
+          _ViewToggle(selectedIndex: selectedTabIndex, onChanged: onTabChanged),
         ],
       ),
     );

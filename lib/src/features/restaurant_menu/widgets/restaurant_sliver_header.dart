@@ -53,8 +53,8 @@ class RestaurantSliverHeader extends StatelessWidget {
         titlePadding: EdgeInsets.only(left: 56.w, bottom: 16.h),
         title: LayoutBuilder(
           builder: (context, constraints) {
-            final showCollapsedTitle = constraints.maxHeight <=
-                collapsedHeight + 8.h;
+            final showCollapsedTitle =
+                constraints.maxHeight <= collapsedHeight + 8.h;
 
             if (!showCollapsedTitle) {
               return const SizedBox.shrink();
@@ -70,8 +70,11 @@ class RestaurantSliverHeader extends StatelessWidget {
         ),
         background: LayoutBuilder(
           builder: (context, constraints) {
-            final showExpandedContent = constraints.maxHeight >
-                collapsedHeight + 42.h;
+            final minExpandedHeight = collapsedHeight + 160;
+            final showExpandedContent =
+                constraints.maxHeight > minExpandedHeight;
+            final showCompactTitle = !showExpandedContent &&
+                constraints.maxHeight > (collapsedHeight + 8);
 
             return Container(
               decoration: const BoxDecoration(
@@ -125,7 +128,22 @@ class RestaurantSliverHeader extends StatelessWidget {
                           ],
                         ),
                       )
-                    : const SizedBox.shrink(),
+                    : showCompactTitle
+                        ? Center(
+                            child: Padding(
+                              padding: EdgeInsets.fromLTRB(16.w, 0, 16.w, 16.h),
+                              child: Text(
+                                restaurant.name,
+                                textAlign: TextAlign.center,
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                style: AppTextStyles.heading3.copyWith(
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          )
+                        : const SizedBox.shrink(),
               ),
             );
           },

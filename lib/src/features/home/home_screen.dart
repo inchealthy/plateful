@@ -4,11 +4,13 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../app/themes/app_colors.dart';
+import '../../common/domain/entities/building_location.dart';
 import '../../common/components/cart_fab.dart';
 import '../cart/cart_controller.dart';
 import 'home_controller.dart';
 import 'widgets/filter_chips_bar.dart';
 import 'widgets/home_header.dart';
+import 'widgets/location_selector_screen.dart';
 import 'widgets/restaurant_list_view.dart';
 import 'widgets/restaurant_map_view.dart';
 
@@ -24,12 +26,38 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     context.push('/restaurant/$id');
   }
 
+  Future<void> _openLocationSelector({
+    required List<BuildingLocation> locations,
+    required String selectedLocationId,
+    required Map<String, double> distanceKmById,
+    required bool showDistance,
+  }) async {
+    final nextLocationId = await Navigator.of(context).push<String>(
+      MaterialPageRoute(
+        builder: (_) => LocationSelectorScreen(
+          locations: locations,
+          selectedLocationId: selectedLocationId,
+          distanceKmByLocationId: distanceKmById,
+          showDistance: showDistance,
+        ),
+      ),
+    );
+
+    if (!mounted || nextLocationId == null || nextLocationId.isEmpty) {
+      return;
+    }
+
+    ref.read(homeProvider.notifier).onLocationChanged(nextLocationId);
+  }
+
   @override
   Widget build(BuildContext context) {
     final state = ref.watch(homeProvider);
     final cartState = ref.watch(cartProvider);
     final hasCartItems = cartState.items.isNotEmpty;
     final isListTab = state.selectedTabIndex == 0;
+    final selectedLocation = state.selectedLocation;
+    final currentLocationName = selectedLocation?.name ?? 'Select location';
 
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle.light,
@@ -39,6 +67,13 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
             Column(
               children: [
                 HomeHeader(
+                  currentLocationName: currentLocationName,
+                  onChangeLocationTap: () => _openLocationSelector(
+                    locations: state.rankedLocations,
+                    selectedLocationId: state.selectedLocationId,
+                    distanceKmById: state.locationDistanceKmById,
+                    showDistance: state.hasLocationPermission,
+                  ),
                   selectedTabIndex: state.selectedTabIndex,
                   onSearchChanged:
                       ref.read(homeProvider.notifier).onSearchChanged,
@@ -60,6 +95,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                         )
                       : RestaurantMapView(
                           restaurants: state.filteredList,
+                          centerLat: selectedLocation?.lat ?? 0,
+                          centerLng: selectedLocation?.lng ?? 0,
                           onViewMenu: (restaurant) =>
                               _goToRestaurant(restaurant.id),
                         ),
@@ -80,8 +117,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                       mini: true,
                       backgroundColor: AppColors.primary,
                       onPressed: () => context.push('/cart'),
-                      child:
-                          const Icon(Icons.shopping_cart, color: Colors.white),
+                      child: const Icon(
+                        Icons.shopping_cart,
+                        color: Colors.white,
+                      ),
                     ),
                     Positioned(
                       top: -6,
@@ -94,8 +133,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
-                          border:
-                              Border.all(color: AppColors.primary, width: 1.5),
+                          border: Border.all(
+                            color: AppColors.primary,
+                            width: 1.5,
+                          ),
                         ),
                         child: Text(
                           '${cartState.totalItems}',

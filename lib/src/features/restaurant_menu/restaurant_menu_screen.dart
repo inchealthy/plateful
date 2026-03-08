@@ -23,6 +23,22 @@ class RestaurantMenuScreen extends ConsumerStatefulWidget {
 }
 
 class _RestaurantMenuScreenState extends ConsumerState<RestaurantMenuScreen> {
+  String? _resolveRestaurantId(BuildContext context) {
+    final routerState = GoRouterState.of(context);
+    final routeParam = routerState.pathParameters['restaurantId'];
+    if (routeParam != null && routeParam.isNotEmpty) {
+      return routeParam;
+    }
+
+    final segments = routerState.uri.pathSegments;
+    if (segments.length >= 2 &&
+        segments[segments.length - 2] == 'restaurant' &&
+        segments.last.isNotEmpty) {
+      return segments.last;
+    }
+    return null;
+  }
+
   bool _isRestaurantClosed(String status) {
     return status.toLowerCase() == 'closed';
   }
@@ -96,7 +112,9 @@ class _RestaurantMenuScreenState extends ConsumerState<RestaurantMenuScreen> {
     if (currentQuantity <= 0) {
       return;
     }
-    ref.read(cartProvider.notifier).updateQuantity(item.id, currentQuantity - 1);
+    ref
+        .read(cartProvider.notifier)
+        .updateQuantity(item.id, currentQuantity - 1);
   }
 
   Future<void> _showConflictDialog(
@@ -139,8 +157,7 @@ class _RestaurantMenuScreenState extends ConsumerState<RestaurantMenuScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final restaurantId =
-        GoRouterState.of(context).pathParameters['restaurantId'];
+    final restaurantId = _resolveRestaurantId(context);
 
     if (restaurantId == null) {
       return Scaffold(
@@ -167,7 +184,8 @@ class _RestaurantMenuScreenState extends ConsumerState<RestaurantMenuScreen> {
 
     final cartState = ref.watch(cartProvider);
     final cartQuantityByItem = {
-      for (final cartItem in cartState.items) cartItem.item.id: cartItem.quantity,
+      for (final cartItem in cartState.items)
+        cartItem.item.id: cartItem.quantity,
     };
     final isRestaurantClosed = _isRestaurantClosed(restaurant.status);
 
@@ -189,7 +207,8 @@ class _RestaurantMenuScreenState extends ConsumerState<RestaurantMenuScreen> {
                 MenuSection(
                   selectedCategory: menuState.selectedCategory,
                   items: menuState.filteredItems,
-                  itemQuantityOf: (menuItemId) => cartQuantityByItem[menuItemId] ?? 0,
+                  itemQuantityOf: (menuItemId) =>
+                      cartQuantityByItem[menuItemId] ?? 0,
                   isOrderingEnabled: !isRestaurantClosed,
                   onTapItem: (item) => _openItemDetailSheet(
                     context,
