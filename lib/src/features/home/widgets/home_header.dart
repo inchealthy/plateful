@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../../../app/themes/app_colors.dart';
 import '../../../app/themes/app_text_styles.dart';
-import '../../../common/components/app_search_bar.dart';
 
 class HomeHeader extends StatelessWidget {
   const HomeHeader({
@@ -10,7 +9,6 @@ class HomeHeader extends StatelessWidget {
     required this.onChangeLocationTap,
     required this.selectedTabIndex,
     required this.onTabChanged,
-    required this.onSearchChanged,
     super.key,
   });
 
@@ -18,7 +16,6 @@ class HomeHeader extends StatelessWidget {
   final VoidCallback onChangeLocationTap;
   final int selectedTabIndex;
   final ValueChanged<int> onTabChanged;
-  final ValueChanged<String> onSearchChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -42,21 +39,24 @@ class HomeHeader extends StatelessWidget {
                 child: Text(
                   currentLocationName,
                   key: const Key('home-current-location-name'),
-                  style: AppTextStyles.heading2.copyWith(color: Colors.white),
+                  style: AppTextStyles.heading1.copyWith(color: Colors.white),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                 ),
               ),
               const SizedBox(width: 8),
-              Container(
-                width: 36,
-                height: 36,
-                decoration: BoxDecoration(
-                  color: Colors.white.withValues(alpha: 0.2),
-                  shape: BoxShape.circle,
+              GestureDetector(
+                onTap: onChangeLocationTap,
+                child: Container(
+                  width: 36,
+                  height: 36,
+                  decoration: BoxDecoration(
+                    color: Colors.white.withValues(alpha: 0.2),
+                    shape: BoxShape.circle,
+                  ),
+                  alignment: Alignment.center,
+                  child: const Icon(Icons.location_on, color: Colors.white),
                 ),
-                alignment: Alignment.center,
-                child: const Icon(Icons.location_on, color: Colors.white),
               ),
             ],
           ),
@@ -67,22 +67,26 @@ class HomeHeader extends StatelessWidget {
             borderRadius: BorderRadius.circular(6),
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 4),
-              child: Text(
-                'Change my location',
-                style: AppTextStyles.caption.copyWith(
-                  color: Colors.white.withValues(alpha: 0.9),
-                  decoration: TextDecoration.underline,
-                ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(
+                    Icons.location_pin,
+                    size: 14,
+                    color: Colors.white.withValues(alpha: 0.9),
+                  ),
+                  const SizedBox(width: 4),
+                  Text(
+                    'Change my location',
+                    style: AppTextStyles.caption.copyWith(
+                      color: Colors.white.withValues(alpha: 0.9),
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
           const SizedBox(height: 10),
-          AppSearchBar(
-            onChanged: onSearchChanged,
-            hintText: 'What are you craving?',
-            fillColor: Colors.white,
-          ),
-          const SizedBox(height: 12),
           _ViewToggle(selectedIndex: selectedTabIndex, onChanged: onTabChanged),
         ],
       ),

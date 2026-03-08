@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../app/themes/app_colors.dart';
+import '../../common/components/app_search_bar.dart';
 import '../../common/domain/entities/building_location.dart';
 import '../../common/components/cart_fab.dart';
 import '../cart/cart_controller.dart';
@@ -75,9 +76,14 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                     showDistance: state.hasLocationPermission,
                   ),
                   selectedTabIndex: state.selectedTabIndex,
-                  onSearchChanged:
-                      ref.read(homeProvider.notifier).onSearchChanged,
                   onTabChanged: ref.read(homeProvider.notifier).onTabChanged,
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+                  child: AppSearchBar(
+                    onChanged: ref.read(homeProvider.notifier).onSearchChanged,
+                    hintText: 'What are you craving?',
+                  ),
                 ),
                 FilterChipsBar(
                   selectedFilter: state.selectedFilter,
