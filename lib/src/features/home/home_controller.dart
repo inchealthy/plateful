@@ -103,6 +103,7 @@ class HomeController extends Notifier<HomeState> {
         locationDistanceKmById: ranking.distanceKmById,
         selectedLocationId: selectedLocationId,
         hasLocationPermission: hasLocationPermission,
+        userCoordinate: userCoordinate,
         isLoading: false,
       );
       _applyFilters();

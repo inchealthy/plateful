@@ -1,5 +1,6 @@
 import '../../common/domain/entities/building_location.dart';
 import '../../common/domain/entities/restaurant.dart';
+import 'home_controller.dart';
 
 class HomeState {
   const HomeState({
@@ -14,6 +15,7 @@ class HomeState {
     this.selectedLocationId = '',
     this.hasLocationPermission = false,
     this.isLoading = false,
+    this.userCoordinate,
   });
 
   final List<Restaurant> allRestaurants;
@@ -27,6 +29,7 @@ class HomeState {
   final String selectedLocationId;
   final bool hasLocationPermission;
   final bool isLoading;
+  final UserCoordinate? userCoordinate;
 
   BuildingLocation? get selectedLocation {
     if (selectedLocationId.isEmpty) {
@@ -52,6 +55,7 @@ class HomeState {
     String? selectedLocationId,
     bool? hasLocationPermission,
     bool? isLoading,
+    UserCoordinate? userCoordinate,
   }) {
     return HomeState(
       allRestaurants: allRestaurants ?? this.allRestaurants,
@@ -67,6 +71,7 @@ class HomeState {
       hasLocationPermission:
           hasLocationPermission ?? this.hasLocationPermission,
       isLoading: isLoading ?? this.isLoading,
+      userCoordinate: userCoordinate ?? this.userCoordinate,
     );
   }
 }

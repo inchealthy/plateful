@@ -105,6 +105,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                           centerLng: selectedLocation?.lng ?? 0,
                           onViewMenu: (restaurant) =>
                               _goToRestaurant(restaurant.id),
+                          userLat: state.userCoordinate?.latitude,
+                          userLng: state.userCoordinate?.longitude,
                         ),
                 ),
               ],
