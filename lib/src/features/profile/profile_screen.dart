@@ -26,20 +26,20 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
     'Dairy-Free',
   ];
 
-  late final TextEditingController _allergiesController;
-
-  @override
-  void initState() {
-    super.initState();
-    final initial = ref.read(profileProvider).allergiesText;
-    _allergiesController = TextEditingController(text: initial);
-  }
-
-  @override
-  void dispose() {
-    _allergiesController.dispose();
-    super.dispose();
-  }
+  static const _commonAllergens = [
+    'Gluten',
+    'Dairy',
+    'Eggs',
+    'Peanuts',
+    'Tree Nuts',
+    'Soy',
+    'Wheat',
+    'Fish',
+    'Shellfish',
+    'Sesame',
+    'Mustard',
+    'Sulphites',
+  ];
 
   String _initialsFromEmail(String email) {
     final local = email.split('@').first.trim();
@@ -89,13 +89,6 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
     final state = ref.watch(profileProvider);
     final controller = ref.read(profileProvider.notifier);
     final email = controller.userEmail;
-
-    if (_allergiesController.text != state.allergiesText) {
-      _allergiesController.value = _allergiesController.value.copyWith(
-        text: state.allergiesText,
-        selection: TextSelection.collapsed(offset: state.allergiesText.length),
-      );
-    }
 
     return Scaffold(
       appBar: AppBar(title: const Text('Profile')),
@@ -151,26 +144,34 @@ class _ProfileScreenState extends ConsumerState<ProfileScreen> {
             SizedBox(height: 20.h),
             Text('Allergies', style: AppTextStyles.heading3),
             SizedBox(height: 10.h),
-            TextField(
-              key: const Key('profile-allergies-field'),
-              controller: _allergiesController,
-              maxLines: 2,
-              onChanged: controller.updateAllergies,
-              decoration: const InputDecoration(
-                hintText: 'e.g. peanuts, shellfish, tree nuts',
-              ),
+            Wrap(
+              spacing: 8.w,
+              runSpacing: 8.h,
+              children: _commonAllergens
+                  .map(
+                    (allergen) => AppChip(
+                      label: allergen,
+                      isSelected:
+                          state.selectedAllergens.contains(allergen),
+                      onTap: () {
+                        HapticFeedback.lightImpact();
+                        controller.toggleAllergen(allergen);
+                      },
+                    ),
+                  )
+                  .toList(),
             ),
             SizedBox(height: 24.h),
-            const Divider(color: AppColors.border),
-            ListTile(
-              leading: const Icon(
-                Icons.receipt_long_outlined,
-                color: AppColors.primary,
-              ),
-              title: const Text('Order History'),
-              trailing: const Icon(Icons.arrow_forward_ios, size: 16),
-              onTap: () => context.go('/shell/orders'),
-            ),
+            // const Divider(color: AppColors.border),
+            // ListTile(
+            //   leading: const Icon(
+            //     Icons.receipt_long_outlined,
+            //     color: AppColors.primary,
+            //   ),
+            //   title: const Text('Order History'),
+            //   trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+            //   onTap: () => context.go('/shell/orders'),
+            // ),
             const Divider(color: AppColors.border),
             ListTile(
               leading: const Icon(Icons.logout, color: AppColors.error),

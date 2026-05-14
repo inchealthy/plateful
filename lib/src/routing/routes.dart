@@ -9,7 +9,7 @@ import '../features/checkout/checkout_screen.dart';
 import '../features/feedback/feedback_screen.dart';
 import '../features/feedback/feedback_tab_screen.dart';
 import '../features/home/home_screen.dart';
-import '../features/orders/orders_screen.dart';
+import '../features/plato/plato_screen.dart';
 import '../features/profile/profile_screen.dart';
 import '../features/restaurant_menu/restaurant_menu_screen.dart';
 import 'route_enums.dart';
@@ -47,16 +47,16 @@ final router = GoRouter(
         StatefulShellBranch(
           routes: [
             GoRoute(
-              path: AppRoute.orders.path,
-              builder: (context, state) => const OrdersScreen(),
+              path: AppRoute.feedback.path,
+              builder: (context, state) => const FeedbackTabScreen(),
             ),
           ],
         ),
         StatefulShellBranch(
           routes: [
             GoRoute(
-              path: AppRoute.feedback.path,
-              builder: (context, state) => const FeedbackTabScreen(),
+              path: AppRoute.plato.path,
+              builder: (context, state) => const PlatoScreen(),
             ),
           ],
         ),
@@ -93,6 +93,13 @@ final router = GoRouter(
     ),
     GoRoute(
       path: AppRoute.feedbackForm.path,
+      pageBuilder: (context, state) => buildSlideUpPage(
+        key: state.pageKey,
+        child: const FeedbackScreen(),
+      ),
+    ),
+    GoRoute(
+      path: AppRoute.restaurantFeedbackForm.path,
       pageBuilder: (context, state) => buildSlideUpPage(
         key: state.pageKey,
         child: const FeedbackScreen(),

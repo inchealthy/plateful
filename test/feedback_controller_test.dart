@@ -61,9 +61,9 @@ void main() {
     await Future<void>.delayed(Duration.zero);
 
     notifier.setRating(FeedbackDimension.overall, 5);
-    notifier.setRating(FeedbackDimension.foodQuality, 4);
-    notifier.setRating(FeedbackDimension.portionSize, 4);
-    notifier.setRating(FeedbackDimension.serviceSpeed, 5);
+    notifier.setRating(FeedbackDimension.food, 4);
+    notifier.setRating(FeedbackDimension.service, 4);
+    notifier.setRating(FeedbackDimension.recommend, 5);
     notifier.setComment('great');
 
     await notifier.submit();

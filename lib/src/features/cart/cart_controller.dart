@@ -35,7 +35,7 @@ class CartNotifier extends Notifier<CartState> {
 
   void addItem(CartItem newItem, {required String restaurantName}) {
     final existingIndex =
-        state.items.indexWhere((item) => item.item.id == newItem.item.id);
+        state.items.indexWhere((i) => i.cartKey == newItem.cartKey);
 
     late final List<CartItem> updatedItems;
     if (existingIndex >= 0) {
@@ -66,32 +66,38 @@ class CartNotifier extends Notifier<CartState> {
     );
   }
 
-  void removeItem(String menuItemId) {
+  /// Removes the specific cart entry identified by [cartKey].
+  void removeItem(String cartKey) {
     final updatedItems =
-        state.items.where((item) => item.item.id != menuItemId).toList();
+        state.items.where((i) => i.cartKey != cartKey).toList();
     if (updatedItems.isEmpty) {
       _updateState(const CartState());
       return;
     }
-
     _updateState(state.copyWith(items: updatedItems));
   }
 
-  void updateQuantity(String menuItemId, int quantity) {
+  /// Updates quantity of the specific cart entry identified by [cartKey].
+  void updateQuantity(String cartKey, int quantity) {
     if (quantity <= 0) {
-      removeItem(menuItemId);
+      removeItem(cartKey);
       return;
     }
 
     final updatedItems = state.items
-        .map(
-          (item) => item.item.id == menuItemId
-              ? item.copyWith(quantity: quantity)
-              : item,
-        )
+        .map((i) => i.cartKey == cartKey ? i.copyWith(quantity: quantity) : i)
         .toList();
 
     _updateState(state.copyWith(items: updatedItems));
+  }
+
+  /// Used by the menu list's quick-decrement button, which only knows item.id.
+  /// Decrements the first cart entry that matches [menuItemId].
+  void decrementFirstByItemId(String menuItemId) {
+    final idx = state.items.indexWhere((i) => i.item.id == menuItemId);
+    if (idx < 0) return;
+    final entry = state.items[idx];
+    updateQuantity(entry.cartKey, entry.quantity - 1);
   }
 
   void clearCart() {

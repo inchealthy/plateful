@@ -31,12 +31,12 @@ class FeedbackController extends FamilyNotifier<FeedbackState, String> {
     state = switch (dimension) {
       FeedbackDimension.overall =>
         state.copyWith(overallRating: value, submitted: false),
-      FeedbackDimension.foodQuality =>
-        state.copyWith(foodQualityRating: value, submitted: false),
-      FeedbackDimension.portionSize =>
-        state.copyWith(portionSizeRating: value, submitted: false),
-      FeedbackDimension.serviceSpeed =>
-        state.copyWith(serviceSpeedRating: value, submitted: false),
+      FeedbackDimension.food =>
+        state.copyWith(foodRating: value, submitted: false),
+      FeedbackDimension.service =>
+        state.copyWith(serviceRating: value, submitted: false),
+      FeedbackDimension.recommend =>
+        state.copyWith(recommendRating: value, submitted: false),
     };
   }
 
@@ -55,10 +55,11 @@ class FeedbackController extends FamilyNotifier<FeedbackState, String> {
     final feedback = FeedbackModel(
       id: 'fb_${DateTime.now().millisecondsSinceEpoch}',
       orderId: order.id,
+      restaurantId: order.restaurantId,
       overallRating: state.overallRating,
-      foodQualityRating: state.foodQualityRating,
-      portionSizeRating: state.portionSizeRating,
-      serviceSpeedRating: state.serviceSpeedRating,
+      foodRating: state.foodRating,
+      serviceRating: state.serviceRating,
+      recommendRating: state.recommendRating,
       comment: state.comment.trim().isEmpty ? null : state.comment.trim(),
       submittedAt: DateTime.now(),
     );

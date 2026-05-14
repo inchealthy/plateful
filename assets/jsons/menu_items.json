@@ -2,436 +2,4690 @@
   {
     "id": "m1",
     "restaurantId": "r1",
-    "name": "Canyon Classic Burger",
-    "description": "Grilled beef burger with campus house sauce.",
-    "emoji": "🍔",
-    "category": "Lunch",
-    "price": 8.5,
-    "calories": 650,
-    "carbs": 45,
-    "protein": 35,
-    "fat": 28,
-    "allergens": ["Gluten", "Dairy"],
-    "dietaryTags": ["Popular"]
+    "name": "Breakfast Sandwich",
+    "description": "Fried egg, cheddar cheese, bacon/ham/sausage, IVC sauce on a toasted brioche bun.",
+    "emoji": "🥪",
+    "category": "Breakfast",
+    "price": 8.0,
+    "calories": 670,
+    "carbs": 40,
+    "protein": 30,
+    "fat": 36,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Eggs",
+      "Sesame"
+    ],
+    "dietaryTags": [
+      "Popular"
+    ],
+    "ingredients": [
+      {
+        "name": "Brioche Bun",
+        "calories": 200,
+        "carbs": 32,
+        "protein": 6,
+        "fat": 5
+      },
+      {
+        "name": "Fried Egg",
+        "calories": 90,
+        "carbs": 0,
+        "protein": 7,
+        "fat": 6
+      },
+      {
+        "name": "Cheddar Cheese (2 slices)",
+        "calories": 220,
+        "carbs": 2,
+        "protein": 14,
+        "fat": 18
+      },
+      {
+        "name": "Bacon / Ham / Sausage",
+        "calories": 250,
+        "carbs": 0,
+        "protein": 18,
+        "fat": 20
+      },
+      {
+        "name": "IVC Sauce",
+        "calories": 50,
+        "carbs": 6,
+        "protein": 0,
+        "fat": 4
+      }
+    ]
   },
   {
     "id": "m2",
     "restaurantId": "r1",
-    "name": "Mediterranean Bowl",
-    "description": "Chickpeas, grains, and roasted vegetables.",
-    "emoji": "🥙",
-    "category": "Lunch",
-    "price": 9.25,
-    "calories": 520,
-    "carbs": 62,
-    "protein": 18,
-    "fat": 14,
-    "allergens": [],
-    "dietaryTags": ["Vegan", "Healthy"]
+    "name": "Breakfast Burrito",
+    "description": "Eggs, breakfast meat, potatoes, cheddar cheese, avocado, and salsa in a flour tortilla.",
+    "emoji": "🌯",
+    "category": "Breakfast",
+    "price": 10.0,
+    "calories": 860,
+    "carbs": 68,
+    "protein": 34,
+    "fat": 42,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Eggs",
+      "Soy"
+    ],
+    "dietaryTags": [
+      "Popular"
+    ],
+    "ingredients": [
+      {
+        "name": "Large Flour Tortilla",
+        "calories": 210,
+        "carbs": 34,
+        "protein": 6,
+        "fat": 4
+      },
+      {
+        "name": "Eggs (2)",
+        "calories": 140,
+        "carbs": 0,
+        "protein": 12,
+        "fat": 10
+      },
+      {
+        "name": "Breakfast Meat",
+        "calories": 250,
+        "carbs": 0,
+        "protein": 18,
+        "fat": 20
+      },
+      {
+        "name": "Potatoes",
+        "calories": 120,
+        "carbs": 26,
+        "protein": 2,
+        "fat": 2
+      },
+      {
+        "name": "Cheddar Cheese",
+        "calories": 110,
+        "carbs": 0,
+        "protein": 7,
+        "fat": 9
+      },
+      {
+        "name": "Avocado",
+        "calories": 90,
+        "carbs": 4,
+        "protein": 1,
+        "fat": 9
+      },
+      {
+        "name": "Salsa",
+        "calories": 10,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
   },
   {
     "id": "m3",
     "restaurantId": "r1",
-    "name": "Buttermilk Pancakes",
-    "description": "Fluffy pancakes with maple drizzle.",
-    "emoji": "🥞",
+    "name": "Avocado Toast",
+    "description": "Toasted sourdough, fried egg, avocado, bacon, and everything seasoning.",
+    "emoji": "🥑",
     "category": "Breakfast",
-    "price": 6.5,
-    "calories": 520,
-    "carbs": 68,
-    "protein": 12,
-    "fat": 18,
-    "allergens": ["Gluten", "Dairy", "Eggs"],
-    "dietaryTags": ["Popular"]
+    "price": 9.0,
+    "calories": 535,
+    "carbs": 36,
+    "protein": 14,
+    "fat": 30,
+    "allergens": [
+      "Gluten",
+      "Eggs",
+      "Sesame"
+    ],
+    "dietaryTags": [
+      "Healthy"
+    ],
+    "ingredients": [
+      {
+        "name": "Sourdough Bread (2 slices)",
+        "calories": 200,
+        "carbs": 36,
+        "protein": 7,
+        "fat": 2
+      },
+      {
+        "name": "Fried Egg",
+        "calories": 90,
+        "carbs": 0,
+        "protein": 7,
+        "fat": 6
+      },
+      {
+        "name": "Avocado",
+        "calories": 150,
+        "carbs": 8,
+        "protein": 2,
+        "fat": 14
+      },
+      {
+        "name": "Bacon",
+        "calories": 80,
+        "carbs": 0,
+        "protein": 6,
+        "fat": 6
+      },
+      {
+        "name": "Everything Seasoning",
+        "calories": 5,
+        "carbs": 1,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
   },
   {
     "id": "m4",
     "restaurantId": "r1",
-    "name": "Protein Power Breakfast",
-    "description": "Eggs, lean protein, and roasted potatoes.",
-    "emoji": "🍳",
+    "name": "Crème Brulee French Toast",
+    "description": "Brioche french toast with butter, maple syrup, and blueberry compote.",
+    "emoji": "🍞",
     "category": "Breakfast",
-    "price": 10.25,
-    "calories": 480,
-    "carbs": 32,
-    "protein": 35,
-    "fat": 22,
-    "allergens": ["Eggs", "Dairy"],
-    "dietaryTags": ["Healthy"]
+    "price": 9.0,
+    "calories": 625,
+    "carbs": 84,
+    "protein": 12,
+    "fat": 20,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Eggs",
+      "Soy",
+      "Sesame"
+    ],
+    "dietaryTags": [],
+    "ingredients": [
+      {
+        "name": "Brioche French Toast",
+        "calories": 380,
+        "carbs": 46,
+        "protein": 12,
+        "fat": 16
+      },
+      {
+        "name": "Butter",
+        "calories": 100,
+        "carbs": 0,
+        "protein": 0,
+        "fat": 11
+      },
+      {
+        "name": "Maple Syrup",
+        "calories": 100,
+        "carbs": 26,
+        "protein": 0,
+        "fat": 0
+      },
+      {
+        "name": "Blueberry Compote",
+        "calories": 60,
+        "carbs": 14,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
   },
   {
     "id": "m5",
     "restaurantId": "r1",
-    "name": "Penne Alfredo",
-    "description": "Creamy pasta finished with parmesan.",
-    "emoji": "🍝",
-    "category": "Dinner",
-    "price": 10.95,
-    "calories": 720,
-    "carbs": 85,
-    "protein": 32,
-    "fat": 24,
-    "allergens": ["Gluten", "Dairy"],
-    "dietaryTags": ["Popular"]
+    "name": "Loaded CUB Tots",
+    "description": "Tater tots loaded with cheddar cheese, bacon, CUB sauce, and grilled onions.",
+    "emoji": "🥔",
+    "category": "Breakfast",
+    "price": 9.0,
+    "calories": 800,
+    "carbs": 62,
+    "protein": 18,
+    "fat": 44,
+    "allergens": [
+      "Dairy",
+      "Soy",
+      "Eggs"
+    ],
+    "dietaryTags": [],
+    "ingredients": [
+      {
+        "name": "Tater Tots",
+        "calories": 450,
+        "carbs": 46,
+        "protein": 5,
+        "fat": 22
+      },
+      {
+        "name": "Cheddar Cheese",
+        "calories": 175,
+        "carbs": 2,
+        "protein": 11,
+        "fat": 14
+      },
+      {
+        "name": "Bacon",
+        "calories": 100,
+        "carbs": 0,
+        "protein": 8,
+        "fat": 8
+      },
+      {
+        "name": "CUB Sauce",
+        "calories": 100,
+        "carbs": 12,
+        "protein": 0,
+        "fat": 6
+      },
+      {
+        "name": "Grilled Onions",
+        "calories": 45,
+        "carbs": 8,
+        "protein": 1,
+        "fat": 1
+      }
+    ]
   },
   {
     "id": "m6",
     "restaurantId": "r1",
-    "name": "Grilled Salmon",
-    "description": "Herb-seasoned salmon with greens.",
-    "emoji": "🐟",
-    "category": "Dinner",
-    "price": 13.5,
-    "calories": 420,
-    "carbs": 12,
-    "protein": 48,
-    "fat": 18,
-    "allergens": ["Fish"],
-    "dietaryTags": ["Healthy", "Gluten-Free"]
+    "name": "Cougar Smash",
+    "description": "Two smashed beef patties, American cheese, CUB sauce, and veg toppings on a brioche bun.",
+    "emoji": "🍔",
+    "category": "Lunch",
+    "price": 12.0,
+    "calories": 860,
+    "carbs": 50,
+    "protein": 42,
+    "fat": 48,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Soy",
+      "Eggs",
+      "Sesame"
+    ],
+    "dietaryTags": [
+      "Popular"
+    ],
+    "ingredients": [
+      {
+        "name": "Beef Patties (2)",
+        "calories": 325,
+        "carbs": 0,
+        "protein": 28,
+        "fat": 24
+      },
+      {
+        "name": "American Cheese (2)",
+        "calories": 220,
+        "carbs": 4,
+        "protein": 14,
+        "fat": 16
+      },
+      {
+        "name": "Brioche Bun",
+        "calories": 200,
+        "carbs": 32,
+        "protein": 6,
+        "fat": 5
+      },
+      {
+        "name": "CUB Sauce",
+        "calories": 80,
+        "carbs": 8,
+        "protein": 0,
+        "fat": 6
+      },
+      {
+        "name": "Veg Toppings",
+        "calories": 20,
+        "carbs": 4,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
   },
   {
     "id": "m7",
     "restaurantId": "r1",
-    "name": "Garden Salad",
-    "description": "Mixed greens, vegetables, light dressing.",
-    "emoji": "🥗",
+    "name": "Cowboy Burger",
+    "description": "Beef patty with smoked cheddar, bacon, crispy onion strings, and BBQ sauce on a brioche bun.",
+    "emoji": "🤠",
     "category": "Lunch",
-    "price": 7.0,
-    "calories": 180,
-    "carbs": 22,
-    "protein": 6,
-    "fat": 8,
-    "allergens": [],
-    "dietaryTags": ["Vegan", "Gluten-Free", "Healthy"]
+    "price": 12.0,
+    "calories": 950,
+    "carbs": 56,
+    "protein": 38,
+    "fat": 54,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Sesame"
+    ],
+    "dietaryTags": [],
+    "ingredients": [
+      {
+        "name": "Beef Patty",
+        "calories": 300,
+        "carbs": 0,
+        "protein": 24,
+        "fat": 22
+      },
+      {
+        "name": "Brioche Bun",
+        "calories": 200,
+        "carbs": 32,
+        "protein": 6,
+        "fat": 5
+      },
+      {
+        "name": "Smoked Cheddar",
+        "calories": 120,
+        "carbs": 0,
+        "protein": 7,
+        "fat": 10
+      },
+      {
+        "name": "Bacon",
+        "calories": 80,
+        "carbs": 0,
+        "protein": 6,
+        "fat": 6
+      },
+      {
+        "name": "Crispy Onion Strings",
+        "calories": 120,
+        "carbs": 16,
+        "protein": 2,
+        "fat": 6
+      },
+      {
+        "name": "BBQ Sauce",
+        "calories": 50,
+        "carbs": 12,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
   },
   {
     "id": "m8",
     "restaurantId": "r1",
-    "name": "Chicken Wrap",
-    "description": "Grilled chicken wrap with crisp veggies.",
-    "emoji": "🌯",
+    "name": "Veggie Burger",
+    "description": "Plant-based patty with cheese, IVC sauce, and veg toppings on a sesame bun.",
+    "emoji": "🌱",
     "category": "Lunch",
-    "price": 8.75,
-    "calories": 540,
-    "carbs": 52,
-    "protein": 28,
-    "fat": 20,
-    "allergens": ["Gluten", "Dairy"],
-    "dietaryTags": ["Popular"]
-  },
-  {
-    "id": "m9",
-    "restaurantId": "r2",
-    "name": "Fish Tacos (3)",
-    "description": "Three grilled fish tacos with salsa.",
-    "emoji": "🌮",
-    "category": "Lunch",
-    "price": 11.5,
-    "calories": 580,
-    "carbs": 48,
-    "protein": 28,
-    "fat": 22,
-    "allergens": ["Fish", "Gluten"],
-    "dietaryTags": ["Spicy", "Healthy"]
-  },
-  {
-    "id": "m10",
-    "restaurantId": "r2",
-    "name": "Quinoa Power Bowl",
-    "description": "Quinoa, beans, and seasonal vegetables.",
-    "emoji": "🥣",
-    "category": "Lunch",
-    "price": 10.5,
-    "calories": 440,
-    "carbs": 58,
-    "protein": 16,
-    "fat": 12,
-    "allergens": [],
-    "dietaryTags": ["Vegan", "Gluten-Free", "Healthy"]
-  },
-  {
-    "id": "m11",
-    "restaurantId": "r2",
-    "name": "Turkey Avocado Sandwich",
-    "description": "Turkey, avocado, and greens on toasted bread.",
-    "emoji": "🥪",
-    "category": "Lunch",
-    "price": 9.0,
-    "calories": 490,
-    "carbs": 42,
-    "protein": 28,
-    "fat": 18,
-    "allergens": ["Gluten", "Dairy"],
-    "dietaryTags": ["Healthy"]
-  },
-  {
-    "id": "m12",
-    "restaurantId": "r2",
-    "name": "Veggie Stir Fry",
-    "description": "Wok-tossed veggies in savory soy glaze.",
-    "emoji": "🥦",
-    "category": "Dinner",
-    "price": 9.75,
-    "calories": 380,
-    "carbs": 52,
-    "protein": 12,
-    "fat": 10,
-    "allergens": ["Soy"],
-    "dietaryTags": ["Vegan", "Halal"]
-  },
-  {
-    "id": "m13",
-    "restaurantId": "r2",
-    "name": "BBQ Chicken Plate",
-    "description": "BBQ chicken with rice and side greens.",
-    "emoji": "🍗",
-    "category": "Dinner",
     "price": 12.0,
-    "calories": 620,
-    "carbs": 38,
-    "protein": 45,
-    "fat": 20,
-    "allergens": ["Gluten", "Soy"],
-    "dietaryTags": ["Popular", "Halal"]
+    "calories": 700,
+    "carbs": 58,
+    "protein": 26,
+    "fat": 34,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Soy",
+      "Sesame"
+    ],
+    "dietaryTags": [
+      "Vegetarian"
+    ],
+    "ingredients": [
+      {
+        "name": "Plant-Based Patty",
+        "calories": 200,
+        "carbs": 8,
+        "protein": 14,
+        "fat": 12
+      },
+      {
+        "name": "Sesame Bun",
+        "calories": 200,
+        "carbs": 32,
+        "protein": 6,
+        "fat": 5
+      },
+      {
+        "name": "Cheese",
+        "calories": 110,
+        "carbs": 0,
+        "protein": 7,
+        "fat": 9
+      },
+      {
+        "name": "IVC Sauce",
+        "calories": 80,
+        "carbs": 8,
+        "protein": 0,
+        "fat": 7
+      },
+      {
+        "name": "Veg Toppings",
+        "calories": 40,
+        "carbs": 8,
+        "protein": 1,
+        "fat": 1
+      }
+    ]
   },
   {
     "id": "m14",
     "restaurantId": "r3",
-    "name": "Caramel Latte",
-    "description": "Espresso with milk and caramel syrup.",
-    "emoji": "☕",
-    "category": "Beverages",
-    "price": 4.5,
-    "calories": 180,
-    "carbs": 28,
-    "protein": 6,
-    "fat": 6,
-    "allergens": ["Dairy"],
-    "dietaryTags": []
+    "name": "Spicy Turkey",
+    "description": "Smoked turkey, bacon, pepper jack, chipotle aioli, avocado, and red onion on a Telera roll.",
+    "emoji": "🦃",
+    "category": "Sandwiches",
+    "price": 11.0,
+    "calories": 670,
+    "carbs": 44,
+    "protein": 38,
+    "fat": 34,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Eggs"
+    ],
+    "dietaryTags": [],
+    "ingredients": [
+      {
+        "name": "Telera Roll",
+        "calories": 200,
+        "carbs": 36,
+        "protein": 7,
+        "fat": 3
+      },
+      {
+        "name": "Smoked Turkey",
+        "calories": 150,
+        "carbs": 0,
+        "protein": 22,
+        "fat": 7
+      },
+      {
+        "name": "Bacon",
+        "calories": 80,
+        "carbs": 0,
+        "protein": 6,
+        "fat": 6
+      },
+      {
+        "name": "Pepper Jack Cheese",
+        "calories": 110,
+        "carbs": 0,
+        "protein": 7,
+        "fat": 9
+      },
+      {
+        "name": "Chipotle Aioli",
+        "calories": 80,
+        "carbs": 4,
+        "protein": 0,
+        "fat": 8
+      },
+      {
+        "name": "Avocado",
+        "calories": 80,
+        "carbs": 4,
+        "protein": 1,
+        "fat": 7
+      },
+      {
+        "name": "Red Onion",
+        "calories": 10,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
   },
   {
     "id": "m15",
     "restaurantId": "r3",
-    "name": "Matcha Green Tea",
-    "description": "Smooth matcha drink with milk.",
-    "emoji": "🍵",
-    "category": "Beverages",
-    "price": 4.0,
-    "calories": 120,
-    "carbs": 18,
-    "protein": 4,
-    "fat": 4,
-    "allergens": ["Dairy"],
-    "dietaryTags": []
+    "name": "Italian",
+    "description": "Ham, Genoa salami, pepperoni, provolone, mozzarella, roasted tomatoes, pepperoncini, arugula, and basil aioli on a focaccia roll.",
+    "emoji": "🥖",
+    "category": "Sandwiches",
+    "price": 12.0,
+    "calories": 727,
+    "carbs": 48,
+    "protein": 40,
+    "fat": 36,
+    "allergens": [
+      "Gluten",
+      "Dairy"
+    ],
+    "dietaryTags": [],
+    "ingredients": [
+      {
+        "name": "Focaccia Roll",
+        "calories": 220,
+        "carbs": 36,
+        "protein": 7,
+        "fat": 6
+      },
+      {
+        "name": "Ham & Salami & Pepperoni",
+        "calories": 280,
+        "carbs": 0,
+        "protein": 22,
+        "fat": 22
+      },
+      {
+        "name": "Provolone & Mozzarella",
+        "calories": 150,
+        "carbs": 0,
+        "protein": 10,
+        "fat": 12
+      },
+      {
+        "name": "Roasted Tomatoes",
+        "calories": 30,
+        "carbs": 6,
+        "protein": 1,
+        "fat": 1
+      },
+      {
+        "name": "Pepperoncini & Arugula",
+        "calories": 15,
+        "carbs": 3,
+        "protein": 1,
+        "fat": 0
+      },
+      {
+        "name": "Basil Aioli",
+        "calories": 60,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 6
+      }
+    ]
   },
   {
     "id": "m16",
     "restaurantId": "r3",
-    "name": "Blueberry Muffin",
-    "description": "Fresh-baked muffin with blueberries.",
-    "emoji": "🫐",
-    "category": "Snacks",
-    "price": 3.5,
-    "calories": 320,
-    "carbs": 48,
-    "protein": 5,
-    "fat": 12,
-    "allergens": ["Gluten", "Dairy", "Eggs"],
-    "dietaryTags": ["Popular"]
+    "name": "Cougar Club",
+    "description": "Smoked turkey, shaved ham, bacon, cheddar, lettuce, tomato, onion, and garlic aioli on a Telera roll.",
+    "emoji": "🥪",
+    "category": "Sandwiches",
+    "price": 11.0,
+    "calories": 620,
+    "carbs": 44,
+    "protein": 36,
+    "fat": 28,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Eggs"
+    ],
+    "dietaryTags": [
+      "Popular"
+    ],
+    "ingredients": [
+      {
+        "name": "Telera Roll",
+        "calories": 200,
+        "carbs": 36,
+        "protein": 7,
+        "fat": 3
+      },
+      {
+        "name": "Smoked Turkey & Shaved Ham",
+        "calories": 190,
+        "carbs": 0,
+        "protein": 26,
+        "fat": 10
+      },
+      {
+        "name": "Bacon",
+        "calories": 80,
+        "carbs": 0,
+        "protein": 6,
+        "fat": 6
+      },
+      {
+        "name": "Cheddar Cheese",
+        "calories": 60,
+        "carbs": 0,
+        "protein": 4,
+        "fat": 5
+      },
+      {
+        "name": "Lettuce, Tomato & Onion",
+        "calories": 20,
+        "carbs": 5,
+        "protein": 1,
+        "fat": 0
+      },
+      {
+        "name": "Garlic Aioli",
+        "calories": 60,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 6
+      }
+    ]
   },
   {
     "id": "m17",
     "restaurantId": "r3",
-    "name": "Avocado Toast",
-    "description": "Toasted sourdough with smashed avocado.",
-    "emoji": "🥑",
-    "category": "Breakfast",
-    "price": 7.5,
-    "calories": 340,
-    "carbs": 36,
-    "protein": 10,
+    "name": "Chicken Caesar Wrap",
+    "description": "Grilled chicken, chopped Romaine, garlic croutons, Parmesan cheese in a spinach-herb wrap.",
+    "emoji": "🌯",
+    "category": "Wraps",
+    "price": 11.0,
+    "calories": 482,
+    "carbs": 40,
+    "protein": 32,
     "fat": 18,
-    "allergens": ["Gluten"],
-    "dietaryTags": ["Vegan", "Healthy"]
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Eggs"
+    ],
+    "dietaryTags": [
+      "Healthy"
+    ],
+    "ingredients": [
+      {
+        "name": "Spinach-Herb Wrap",
+        "calories": 140,
+        "carbs": 22,
+        "protein": 4,
+        "fat": 4
+      },
+      {
+        "name": "Grilled Chicken Breast",
+        "calories": 160,
+        "carbs": 0,
+        "protein": 26,
+        "fat": 4
+      },
+      {
+        "name": "Romaine Lettuce",
+        "calories": 15,
+        "carbs": 3,
+        "protein": 1,
+        "fat": 0
+      },
+      {
+        "name": "Garlic Croutons",
+        "calories": 80,
+        "carbs": 12,
+        "protein": 2,
+        "fat": 2
+      },
+      {
+        "name": "Parmesan Cheese",
+        "calories": 45,
+        "carbs": 0,
+        "protein": 4,
+        "fat": 3
+      },
+      {
+        "name": "Caesar Dressing",
+        "calories": 90,
+        "carbs": 2,
+        "protein": 1,
+        "fat": 9
+      }
+    ]
   },
   {
     "id": "m18",
     "restaurantId": "r3",
-    "name": "Croissant",
-    "description": "Buttery flaky morning croissant.",
-    "emoji": "🥐",
-    "category": "Breakfast",
-    "price": 3.0,
-    "calories": 280,
-    "carbs": 32,
-    "protein": 6,
-    "fat": 14,
-    "allergens": ["Gluten", "Dairy", "Eggs"],
-    "dietaryTags": []
-  },
-  {
-    "id": "m19",
-    "restaurantId": "r4",
-    "name": "Smash Burger",
-    "description": "Double smash burger with melted cheese.",
-    "emoji": "🍔",
-    "category": "Lunch",
-    "price": 9.5,
-    "calories": 720,
-    "carbs": 52,
-    "protein": 38,
-    "fat": 32,
-    "allergens": ["Gluten", "Dairy", "Eggs"],
-    "dietaryTags": ["Popular"]
-  },
-  {
-    "id": "m20",
-    "restaurantId": "r4",
-    "name": "Loaded Fries",
-    "description": "Crispy fries with savory toppings.",
-    "emoji": "🍟",
-    "category": "Snacks",
-    "price": 5.0,
-    "calories": 480,
-    "carbs": 58,
-    "protein": 12,
-    "fat": 22,
-    "allergens": ["Gluten", "Dairy"],
-    "dietaryTags": ["Popular"]
-  },
-  {
-    "id": "m21",
-    "restaurantId": "r4",
-    "name": "Margherita Pizza Slice",
-    "description": "Classic tomato, basil, and mozzarella.",
-    "emoji": "🍕",
-    "category": "Dinner",
-    "price": 4.5,
-    "calories": 380,
-    "carbs": 44,
-    "protein": 15,
-    "fat": 14,
-    "allergens": ["Gluten", "Dairy"],
-    "dietaryTags": ["Popular"]
-  },
-  {
-    "id": "m22",
-    "restaurantId": "r4",
-    "name": "BBQ Pulled Pork Sandwich",
-    "description": "Slow-cooked pork with tangy bbq sauce.",
-    "emoji": "🥩",
-    "category": "Dinner",
+    "name": "Mediterranean Wrap",
+    "description": "Chickpea falafel, hummus, roasted tomatoes, olive spread, feta, arugula in a tomato-basil wrap.",
+    "emoji": "🥙",
+    "category": "Wraps",
     "price": 11.0,
-    "calories": 680,
-    "carbs": 62,
-    "protein": 35,
-    "fat": 24,
-    "allergens": ["Gluten", "Soy"],
-    "dietaryTags": ["Popular"]
+    "calories": 455,
+    "carbs": 46,
+    "protein": 14,
+    "fat": 22,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Sesame"
+    ],
+    "dietaryTags": [
+      "Vegetarian",
+      "Healthy"
+    ],
+    "ingredients": [
+      {
+        "name": "Tomato-Basil Wrap",
+        "calories": 140,
+        "carbs": 24,
+        "protein": 4,
+        "fat": 3
+      },
+      {
+        "name": "Chickpea Falafel",
+        "calories": 140,
+        "carbs": 14,
+        "protein": 5,
+        "fat": 8
+      },
+      {
+        "name": "Hummus",
+        "calories": 70,
+        "carbs": 8,
+        "protein": 2,
+        "fat": 4
+      },
+      {
+        "name": "Feta Cheese",
+        "calories": 60,
+        "carbs": 1,
+        "protein": 4,
+        "fat": 5
+      },
+      {
+        "name": "Roasted Tomatoes & Arugula",
+        "calories": 25,
+        "carbs": 5,
+        "protein": 1,
+        "fat": 0
+      },
+      {
+        "name": "Olive Spread",
+        "calories": 40,
+        "carbs": 1,
+        "protein": 0,
+        "fat": 4
+      }
+    ]
   },
   {
-    "id": "m23",
-    "restaurantId": "r5",
-    "name": "Acai Smoothie Bowl",
-    "description": "Acai blend topped with fruit and seeds.",
-    "emoji": "🫐",
+    "id": "m30",
+    "restaurantId": "r7",
+    "name": "Breakfast Sandwich",
+    "description": "Fried egg, bacon, sausage, or ham, cheddar cheese, IVC sauce, toasted brioche bun.",
+    "emoji": "🥪",
     "category": "Breakfast",
     "price": 8.0,
-    "calories": 380,
-    "carbs": 62,
-    "protein": 8,
-    "fat": 10,
-    "allergens": [],
-    "dietaryTags": ["Vegan", "Gluten-Free", "Healthy"]
+    "calories": 670,
+    "carbs": 40,
+    "protein": 30,
+    "fat": 36,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Eggs",
+      "Sesame"
+    ],
+    "dietaryTags": [
+      "Popular"
+    ],
+    "ingredients": [
+      {
+        "name": "Brioche Bun",
+        "calories": 200,
+        "carbs": 32,
+        "protein": 6,
+        "fat": 5
+      },
+      {
+        "name": "Fried Egg",
+        "calories": 90,
+        "carbs": 0,
+        "protein": 7,
+        "fat": 6
+      },
+      {
+        "name": "Cheddar Cheese (2 slices)",
+        "calories": 220,
+        "carbs": 2,
+        "protein": 14,
+        "fat": 18
+      },
+      {
+        "name": "Bacon / Ham / Sausage",
+        "calories": 250,
+        "carbs": 0,
+        "protein": 18,
+        "fat": 20
+      },
+      {
+        "name": "IVC Sauce",
+        "calories": 50,
+        "carbs": 6,
+        "protein": 0,
+        "fat": 4
+      }
+    ]
   },
   {
-    "id": "m24",
-    "restaurantId": "r5",
-    "name": "Buddha Bowl",
-    "description": "Balanced grains, greens, and roasted veg.",
+    "id": "m31",
+    "restaurantId": "r7",
+    "name": "Breakfast Burrito",
+    "description": "Eggs, bacon, sausage, or ham, potato, cheddar cheese, avocado, salsa.",
+    "emoji": "🌯",
+    "category": "Breakfast",
+    "price": 10.0,
+    "calories": 860,
+    "carbs": 68,
+    "protein": 34,
+    "fat": 42,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Eggs",
+      "Soy"
+    ],
+    "dietaryTags": [
+      "Popular"
+    ],
+    "ingredients": [
+      {
+        "name": "Large Flour Tortilla",
+        "calories": 210,
+        "carbs": 34,
+        "protein": 6,
+        "fat": 4
+      },
+      {
+        "name": "Eggs (2)",
+        "calories": 140,
+        "carbs": 0,
+        "protein": 12,
+        "fat": 10
+      },
+      {
+        "name": "Breakfast Meat",
+        "calories": 250,
+        "carbs": 0,
+        "protein": 18,
+        "fat": 20
+      },
+      {
+        "name": "Potatoes",
+        "calories": 120,
+        "carbs": 26,
+        "protein": 2,
+        "fat": 2
+      },
+      {
+        "name": "Cheddar Cheese",
+        "calories": 110,
+        "carbs": 0,
+        "protein": 7,
+        "fat": 9
+      },
+      {
+        "name": "Avocado",
+        "calories": 90,
+        "carbs": 4,
+        "protein": 1,
+        "fat": 9
+      },
+      {
+        "name": "Salsa",
+        "calories": 10,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "id": "m32",
+    "restaurantId": "r7",
+    "name": "Avocado Toast",
+    "description": "Toasted sourdough, fried egg, avocado, bacon, everything seasoning.",
+    "emoji": "🥑",
+    "category": "Breakfast",
+    "price": 8.98,
+    "calories": 535,
+    "carbs": 36,
+    "protein": 22,
+    "fat": 30,
+    "allergens": [
+      "Gluten",
+      "Eggs",
+      "Sesame"
+    ],
+    "dietaryTags": [
+      "Healthy"
+    ],
+    "ingredients": [
+      {
+        "name": "Sourdough Bread (2 slices)",
+        "calories": 200,
+        "carbs": 36,
+        "protein": 7,
+        "fat": 2
+      },
+      {
+        "name": "Fried Egg",
+        "calories": 90,
+        "carbs": 0,
+        "protein": 7,
+        "fat": 6
+      },
+      {
+        "name": "Avocado",
+        "calories": 150,
+        "carbs": 8,
+        "protein": 2,
+        "fat": 14
+      },
+      {
+        "name": "Bacon",
+        "calories": 80,
+        "carbs": 0,
+        "protein": 6,
+        "fat": 6
+      },
+      {
+        "name": "Everything Seasoning",
+        "calories": 0,
+        "carbs": 0,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "id": "m33",
+    "restaurantId": "r7",
+    "name": "Creme Brule French Toast",
+    "description": "Maple syrup, butter, blueberry compote.",
+    "emoji": "🍞",
+    "category": "Breakfast",
+    "price": 8.98,
+    "calories": 625,
+    "carbs": 84,
+    "protein": 12,
+    "fat": 20,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Eggs",
+      "Soy",
+      "Sesame"
+    ],
+    "dietaryTags": [],
+    "ingredients": [
+      {
+        "name": "Brioche French Toast",
+        "calories": 380,
+        "carbs": 46,
+        "protein": 12,
+        "fat": 16
+      },
+      {
+        "name": "Butter",
+        "calories": 100,
+        "carbs": 0,
+        "protein": 0,
+        "fat": 11
+      },
+      {
+        "name": "Maple Syrup",
+        "calories": 100,
+        "carbs": 26,
+        "protein": 0,
+        "fat": 0
+      },
+      {
+        "name": "Blueberry Compote",
+        "calories": 60,
+        "carbs": 14,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "id": "m34",
+    "restaurantId": "r7",
+    "name": "Crispy Breakfast Potatoes",
+    "description": "Add smoked gouda blend +$1.00.",
+    "emoji": "🥔",
+    "category": "Breakfast",
+    "price": 3.95,
+    "calories": 250,
+    "carbs": 30,
+    "protein": 3,
+    "fat": 11,
+    "allergens": [
+      "Dairy",
+      "Soy"
+    ],
+    "dietaryTags": [
+      "Vegan"
+    ],
+    "ingredients": [
+      {
+        "name": "Potatoes",
+        "calories": 160,
+        "carbs": 36,
+        "protein": 3,
+        "fat": 0
+      },
+      {
+        "name": "Cooking Oil",
+        "calories": 90,
+        "carbs": 0,
+        "protein": 0,
+        "fat": 10
+      }
+    ]
+  },
+  {
+    "id": "m35",
+    "restaurantId": "r7",
+    "name": "English Muffin Sandwich",
+    "description": "Fried egg and cheddar cheese. No substitutions.",
+    "emoji": "🫓",
+    "category": "Breakfast",
+    "price": 2.98,
+    "calories": 360,
+    "carbs": 28,
+    "protein": 14,
+    "fat": 18,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Eggs",
+      "Soy"
+    ],
+    "dietaryTags": [
+      "Value Menu"
+    ],
+    "ingredients": [
+      {
+        "name": "English Muffin",
+        "calories": 130,
+        "carbs": 26,
+        "protein": 4,
+        "fat": 1
+      },
+      {
+        "name": "Fried Egg",
+        "calories": 90,
+        "carbs": 0,
+        "protein": 7,
+        "fat": 6
+      },
+      {
+        "name": "Cheddar Cheese",
+        "calories": 10,
+        "carbs": 0,
+        "protein": 1,
+        "fat": 1
+      },
+      {
+        "name": "Butter / Oil",
+        "calories": 30,
+        "carbs": 0,
+        "protein": 0,
+        "fat": 3
+      }
+    ]
+  },
+  {
+    "id": "m36",
+    "restaurantId": "r7",
+    "name": "Breakfast Tacos (2)",
+    "description": "Scrambled eggs, potato, cheese, salsa. No substitutions.",
+    "emoji": "🌮",
+    "category": "Breakfast",
+    "price": 3.95,
+    "calories": 440,
+    "carbs": 42,
+    "protein": 20,
+    "fat": 20,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Eggs",
+      "Soy"
+    ],
+    "dietaryTags": [
+      "Value Menu"
+    ],
+    "ingredients": [
+      {
+        "name": "Corn Tortillas (2)",
+        "calories": 110,
+        "carbs": 22,
+        "protein": 3,
+        "fat": 2
+      },
+      {
+        "name": "Scrambled Eggs",
+        "calories": 140,
+        "carbs": 0,
+        "protein": 12,
+        "fat": 10
+      },
+      {
+        "name": "Breakfast Potatoes",
+        "calories": 70,
+        "carbs": 14,
+        "protein": 1,
+        "fat": 3
+      },
+      {
+        "name": "Cheddar Cheese",
+        "calories": 110,
+        "carbs": 0,
+        "protein": 7,
+        "fat": 9
+      },
+      {
+        "name": "Salsa",
+        "calories": 10,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "id": "m37",
+    "restaurantId": "r7",
+    "name": "IVC Double Smash",
+    "description": "Griddled onions, pickles, lettuce, tomato, American cheese, IVC sauce, toasted brioche bun.",
+    "emoji": "🍔",
+    "category": "Lunch",
+    "price": 10.0,
+    "calories": 860,
+    "carbs": 54,
+    "protein": 40,
+    "fat": 46,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Eggs",
+      "Soy",
+      "Sesame"
+    ],
+    "dietaryTags": [
+      "Popular"
+    ],
+    "ingredients": [
+      {
+        "name": "Beef Patties",
+        "calories": 325,
+        "carbs": 0,
+        "protein": 28,
+        "fat": 24
+      },
+      {
+        "name": "American Cheese (2)",
+        "calories": 220,
+        "carbs": 4,
+        "protein": 14,
+        "fat": 16
+      },
+      {
+        "name": "Brioche Bun",
+        "calories": 200,
+        "carbs": 32,
+        "protein": 6,
+        "fat": 5
+      },
+      {
+        "name": "IVC Sauce",
+        "calories": 80,
+        "carbs": 8,
+        "protein": 0,
+        "fat": 6
+      },
+      {
+        "name": "Veg Toppings",
+        "calories": 20,
+        "carbs": 4,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "id": "m38",
+    "restaurantId": "r7",
+    "name": "Cowboy Burger",
+    "description": "Smoked cheddar, bacon, crispy onion strings, BBQ sauce, lettuce, tomato, toasted brioche bun.",
+    "emoji": "🤠",
+    "category": "Lunch",
+    "price": 10.0,
+    "calories": 950,
+    "carbs": 58,
+    "protein": 36,
+    "fat": 52,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Sesame"
+    ],
+    "dietaryTags": [],
+    "ingredients": [
+      {
+        "name": "Beef Patty",
+        "calories": 300,
+        "carbs": 0,
+        "protein": 24,
+        "fat": 22
+      },
+      {
+        "name": "Brioche Bun",
+        "calories": 200,
+        "carbs": 32,
+        "protein": 6,
+        "fat": 5
+      },
+      {
+        "name": "Smoked Cheddar",
+        "calories": 120,
+        "carbs": 0,
+        "protein": 7,
+        "fat": 10
+      },
+      {
+        "name": "Bacon",
+        "calories": 80,
+        "carbs": 0,
+        "protein": 6,
+        "fat": 6
+      },
+      {
+        "name": "Crispy Onion Strings",
+        "calories": 120,
+        "carbs": 16,
+        "protein": 2,
+        "fat": 6
+      },
+      {
+        "name": "BBQ Sauce",
+        "calories": 50,
+        "carbs": 12,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "id": "m39",
+    "restaurantId": "r7",
+    "name": "Korean Fried Chicken",
+    "description": "Gochujang aioli, pickles, kimchi slaw, toasted brioche bun.",
+    "emoji": "🍗",
+    "category": "Lunch",
+    "price": 10.0,
+    "calories": 850,
+    "carbs": 60,
+    "protein": 36,
+    "fat": 42,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Eggs",
+      "Soy",
+      "Sesame"
+    ],
+    "dietaryTags": [],
+    "ingredients": [
+      {
+        "name": "Fried Chicken Breast",
+        "calories": 400,
+        "carbs": 22,
+        "protein": 30,
+        "fat": 20
+      },
+      {
+        "name": "Brioche Bun",
+        "calories": 200,
+        "carbs": 32,
+        "protein": 6,
+        "fat": 5
+      },
+      {
+        "name": "Gochujang Aioli",
+        "calories": 120,
+        "carbs": 6,
+        "protein": 0,
+        "fat": 12
+      },
+      {
+        "name": "Kimchi Slaw",
+        "calories": 40,
+        "carbs": 6,
+        "protein": 1,
+        "fat": 1
+      },
+      {
+        "name": "Pickles",
+        "calories": 10,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "id": "m40",
+    "restaurantId": "r7",
+    "name": "Mediterranean Wrap",
+    "description": "Falafel, hummus, roasted tomatoes, arugula, olives, feta cheese, tomato-basil wrap.",
+    "emoji": "🥙",
+    "category": "Lunch",
+    "price": 10.0,
+    "calories": 700,
+    "carbs": 64,
+    "protein": 22,
+    "fat": 30,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Sesame"
+    ],
+    "dietaryTags": [
+      "Vegan"
+    ],
+    "ingredients": [
+      {
+        "name": "Wrap Tortilla",
+        "calories": 220,
+        "carbs": 38,
+        "protein": 6,
+        "fat": 4
+      },
+      {
+        "name": "Falafel",
+        "calories": 250,
+        "carbs": 22,
+        "protein": 8,
+        "fat": 14
+      },
+      {
+        "name": "Hummus",
+        "calories": 80,
+        "carbs": 8,
+        "protein": 2,
+        "fat": 5
+      },
+      {
+        "name": "Feta Cheese",
+        "calories": 70,
+        "carbs": 1,
+        "protein": 4,
+        "fat": 6
+      },
+      {
+        "name": "Veg Toppings",
+        "calories": 40,
+        "carbs": 8,
+        "protein": 1,
+        "fat": 1
+      }
+    ]
+  },
+  {
+    "id": "m41",
+    "restaurantId": "r7",
+    "name": "Philly Cheesesteak",
+    "description": "Onions, peppers, mushrooms, & provolone cheese, hoagie roll.",
+    "emoji": "🥖",
+    "category": "Lunch",
+    "price": 10.0,
+    "calories": 900,
+    "carbs": 52,
+    "protein": 44,
+    "fat": 46,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Soy"
+    ],
+    "dietaryTags": [],
+    "ingredients": [
+      {
+        "name": "Hoagie Roll",
+        "calories": 240,
+        "carbs": 44,
+        "protein": 8,
+        "fat": 3
+      },
+      {
+        "name": "Shaved Steak",
+        "calories": 300,
+        "carbs": 0,
+        "protein": 28,
+        "fat": 20
+      },
+      {
+        "name": "Provolone Cheese",
+        "calories": 200,
+        "carbs": 2,
+        "protein": 12,
+        "fat": 16
+      },
+      {
+        "name": "Veg Toppings",
+        "calories": 40,
+        "carbs": 8,
+        "protein": 1,
+        "fat": 1
+      },
+      {
+        "name": "Cooking Oil",
+        "calories": 100,
+        "carbs": 0,
+        "protein": 0,
+        "fat": 11
+      }
+    ]
+  },
+  {
+    "id": "m42",
+    "restaurantId": "r7",
+    "name": "Spicy Turkey",
+    "description": "Smoked turkey, bacon, avocado, pepper jack cheese, shaved onion, and chipotle aioli on sourdough.",
+    "emoji": "🦃",
+    "category": "Lunch",
+    "price": 10.0,
+    "calories": 750,
+    "carbs": 40,
+    "protein": 38,
+    "fat": 42,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Eggs",
+      "Soy"
+    ],
+    "dietaryTags": [],
+    "ingredients": [
+      {
+        "name": "Sourdough Bread",
+        "calories": 200,
+        "carbs": 36,
+        "protein": 7,
+        "fat": 2
+      },
+      {
+        "name": "Smoked Turkey",
+        "calories": 150,
+        "carbs": 0,
+        "protein": 22,
+        "fat": 7
+      },
+      {
+        "name": "Bacon",
+        "calories": 80,
+        "carbs": 0,
+        "protein": 6,
+        "fat": 6
+      },
+      {
+        "name": "Avocado",
+        "calories": 100,
+        "carbs": 4,
+        "protein": 1,
+        "fat": 9
+      },
+      {
+        "name": "Pepper Jack Cheese",
+        "calories": 110,
+        "carbs": 0,
+        "protein": 7,
+        "fat": 9
+      },
+      {
+        "name": "Chipotle Aioli",
+        "calories": 120,
+        "carbs": 4,
+        "protein": 0,
+        "fat": 12
+      }
+    ]
+  },
+  {
+    "id": "m43",
+    "restaurantId": "r7",
+    "name": "Veggie Burger",
+    "description": "Plant-based patty, cheese, onion, tomato, lettuce, IVC sauce, toasted sesame bun.",
+    "emoji": "🌱",
+    "category": "Lunch",
+    "price": 10.0,
+    "calories": 700,
+    "carbs": 58,
+    "protein": 24,
+    "fat": 32,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Eggs",
+      "Soy",
+      "Sesame"
+    ],
+    "dietaryTags": [
+      "Vegan"
+    ],
+    "ingredients": [
+      {
+        "name": "Plant-Based Patty",
+        "calories": 200,
+        "carbs": 8,
+        "protein": 14,
+        "fat": 12
+      },
+      {
+        "name": "Sesame Bun",
+        "calories": 200,
+        "carbs": 32,
+        "protein": 6,
+        "fat": 5
+      },
+      {
+        "name": "Cheese",
+        "calories": 110,
+        "carbs": 0,
+        "protein": 7,
+        "fat": 9
+      },
+      {
+        "name": "IVC Sauce",
+        "calories": 80,
+        "carbs": 8,
+        "protein": 0,
+        "fat": 7
+      },
+      {
+        "name": "Veg Toppings",
+        "calories": 40,
+        "carbs": 8,
+        "protein": 1,
+        "fat": 1
+      }
+    ]
+  },
+  {
+    "id": "m44",
+    "restaurantId": "r7",
+    "name": "Crispy Chicken Strips",
+    "description": "Served with fries & dipping sauce. Choice of 2 sauces: BBQ, Ranch, Honey Mustard, or IVC sauce.",
+    "emoji": "🍗",
+    "category": "Lunch",
+    "price": 10.0,
+    "calories": 850,
+    "carbs": 62,
+    "protein": 38,
+    "fat": 36,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Soy"
+    ],
+    "dietaryTags": [
+      "Popular"
+    ],
+    "ingredients": [
+      {
+        "name": "Chicken Strips",
+        "calories": 420,
+        "carbs": 24,
+        "protein": 32,
+        "fat": 22
+      },
+      {
+        "name": "Fries",
+        "calories": 350,
+        "carbs": 46,
+        "protein": 4,
+        "fat": 16
+      },
+      {
+        "name": "Dipping Sauce",
+        "calories": 80,
+        "carbs": 8,
+        "protein": 0,
+        "fat": 6
+      }
+    ]
+  },
+  {
+    "id": "m45",
+    "restaurantId": "r7",
+    "name": "Ultimate Grilled Cheese",
+    "description": "Blend of Gruyere, Fontina, and Gouda on sourdough. Served with smoked tomato soup. Add ham +$2.00.",
+    "emoji": "🧀",
+    "category": "Lunch",
+    "price": 10.0,
+    "calories": 720,
+    "carbs": 42,
+    "protein": 26,
+    "fat": 46,
+    "allergens": [
+      "Gluten",
+      "Dairy"
+    ],
+    "dietaryTags": [],
+    "ingredients": [
+      {
+        "name": "Sourdough Bread",
+        "calories": 200,
+        "carbs": 36,
+        "protein": 7,
+        "fat": 2
+      },
+      {
+        "name": "Gruyere Cheese",
+        "calories": 120,
+        "carbs": 0,
+        "protein": 8,
+        "fat": 10
+      },
+      {
+        "name": "Fontina Cheese",
+        "calories": 110,
+        "carbs": 0,
+        "protein": 7,
+        "fat": 9
+      },
+      {
+        "name": "Gouda Cheese",
+        "calories": 110,
+        "carbs": 0,
+        "protein": 7,
+        "fat": 9
+      },
+      {
+        "name": "Butter",
+        "calories": 120,
+        "carbs": 0,
+        "protein": 0,
+        "fat": 13
+      },
+      {
+        "name": "Smoked Tomato Soup",
+        "calories": 60,
+        "carbs": 8,
+        "protein": 1,
+        "fat": 2
+      }
+    ]
+  },
+  {
+    "id": "m46",
+    "restaurantId": "r7",
+    "name": "Chicken Quesadilla",
+    "description": "Grilled chicken, Pico de Gallo, cheddar blend, poblano peppers, pickled onion.",
+    "emoji": "🫔",
+    "category": "Lunch",
+    "price": 8.98,
+    "calories": 660,
+    "carbs": 46,
+    "protein": 36,
+    "fat": 32,
+    "allergens": [
+      "Gluten",
+      "Dairy"
+    ],
+    "dietaryTags": [],
+    "ingredients": [
+      {
+        "name": "Flour Tortilla",
+        "calories": 210,
+        "carbs": 34,
+        "protein": 6,
+        "fat": 4
+      },
+      {
+        "name": "Grilled Chicken",
+        "calories": 180,
+        "carbs": 0,
+        "protein": 28,
+        "fat": 4
+      },
+      {
+        "name": "Cheddar Cheese Blend",
+        "calories": 220,
+        "carbs": 2,
+        "protein": 14,
+        "fat": 18
+      },
+      {
+        "name": "Pico de Gallo",
+        "calories": 10,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      },
+      {
+        "name": "Peppers & Onions",
+        "calories": 40,
+        "carbs": 8,
+        "protein": 1,
+        "fat": 1
+      }
+    ]
+  },
+  {
+    "id": "m47",
+    "restaurantId": "r7",
+    "name": "French Fries",
+    "description": "Classic crispy fries.",
+    "emoji": "🍟",
+    "category": "Sides",
+    "price": 3.95,
+    "calories": 350,
+    "carbs": 46,
+    "protein": 4,
+    "fat": 15,
+    "allergens": [
+      "Soy"
+    ],
+    "dietaryTags": [
+      "Vegan"
+    ],
+    "ingredients": [
+      {
+        "name": "Russet Potatoes",
+        "calories": 200,
+        "carbs": 40,
+        "protein": 4,
+        "fat": 0
+      },
+      {
+        "name": "Cooking Oil (Soy)",
+        "calories": 130,
+        "carbs": 0,
+        "protein": 0,
+        "fat": 14
+      },
+      {
+        "name": "Sea Salt & Seasoning",
+        "calories": 10,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "id": "m48",
+    "restaurantId": "r7",
+    "name": "House Made Chips",
+    "description": "Freshly made house chips.",
+    "emoji": "🥨",
+    "category": "Sides",
+    "price": 2.98,
+    "calories": 275,
+    "carbs": 30,
+    "protein": 3,
+    "fat": 14,
+    "allergens": [],
+    "dietaryTags": [
+      "Vegan"
+    ],
+    "ingredients": [
+      {
+        "name": "Potato Slices",
+        "calories": 150,
+        "carbs": 28,
+        "protein": 3,
+        "fat": 0
+      },
+      {
+        "name": "Cooking Oil",
+        "calories": 115,
+        "carbs": 0,
+        "protein": 0,
+        "fat": 13
+      },
+      {
+        "name": "Seasoning",
+        "calories": 10,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "id": "m49",
+    "restaurantId": "r7",
+    "name": "Cheese Quesadilla",
+    "description": "Grilled flour tortilla, melted cheese blend, Pico de Gallo. No substitutions.",
+    "emoji": "🫔",
+    "category": "Sides",
+    "price": 2.98,
+    "calories": 485,
+    "carbs": 40,
+    "protein": 18,
+    "fat": 26,
+    "allergens": [
+      "Gluten",
+      "Dairy"
+    ],
+    "dietaryTags": [
+      "Value Menu"
+    ],
+    "ingredients": [
+      {
+        "name": "Flour Tortilla",
+        "calories": 210,
+        "carbs": 34,
+        "protein": 6,
+        "fat": 4
+      },
+      {
+        "name": "Cheese Blend",
+        "calories": 220,
+        "carbs": 2,
+        "protein": 14,
+        "fat": 18
+      },
+      {
+        "name": "Pico de Gallo",
+        "calories": 10,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "id": "m50",
+    "restaurantId": "r7",
+    "name": "Grilled Ham & Cheese",
+    "description": "Classic grilled cheese on sourdough. No substitutions.",
+    "emoji": "🥪",
+    "category": "Sides",
+    "price": 3.95,
+    "calories": 560,
+    "carbs": 38,
+    "protein": 22,
+    "fat": 34,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Soy"
+    ],
+    "dietaryTags": [
+      "Value Menu"
+    ],
+    "ingredients": [
+      {
+        "name": "Sourdough Bread",
+        "calories": 200,
+        "carbs": 36,
+        "protein": 7,
+        "fat": 2
+      },
+      {
+        "name": "Ham",
+        "calories": 120,
+        "carbs": 0,
+        "protein": 12,
+        "fat": 7
+      },
+      {
+        "name": "Cheese",
+        "calories": 110,
+        "carbs": 0,
+        "protein": 7,
+        "fat": 9
+      },
+      {
+        "name": "Butter",
+        "calories": 120,
+        "carbs": 0,
+        "protein": 0,
+        "fat": 13
+      }
+    ]
+  },
+  {
+    "id": "m51",
+    "restaurantId": "r7",
+    "name": "Chicken Burrito",
+    "description": "Grilled chicken with cilantro-lime rice, beans, fajita vegetables, and your choice of toppings. Served Mon–Thu 11am–2pm.",
+    "emoji": "🌯",
+    "category": "South of the Border",
+    "price": 10.0,
+    "calories": 880,
+    "carbs": 90,
+    "protein": 38,
+    "fat": 26,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Soy"
+    ],
+    "dietaryTags": [],
+    "ingredients": [
+      {
+        "name": "Flour Tortilla",
+        "calories": 210,
+        "carbs": 34,
+        "protein": 6,
+        "fat": 4
+      },
+      {
+        "name": "Grilled Chicken",
+        "calories": 180,
+        "carbs": 0,
+        "protein": 24,
+        "fat": 4
+      },
+      {
+        "name": "Cilantro-Lime Rice",
+        "calories": 200,
+        "carbs": 40,
+        "protein": 4,
+        "fat": 2
+      },
+      {
+        "name": "Vegetarian Pinto Beans",
+        "calories": 120,
+        "carbs": 20,
+        "protein": 7,
+        "fat": 1
+      },
+      {
+        "name": "Fajita Vegetables",
+        "calories": 50,
+        "carbs": 8,
+        "protein": 1,
+        "fat": 2
+      },
+      {
+        "name": "Cheddar Cheese Blend",
+        "calories": 110,
+        "carbs": 0,
+        "protein": 7,
+        "fat": 9
+      },
+      {
+        "name": "Fresh Salsa",
+        "calories": 10,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "id": "m52",
+    "restaurantId": "r7",
+    "name": "Carnitas Burrito",
+    "description": "Carnitas with cilantro-lime rice, beans, fajita vegetables, and your choice of toppings. Served Mon–Thu 11am–2pm.",
+    "emoji": "🌯",
+    "category": "South of the Border",
+    "price": 10.0,
+    "calories": 910,
+    "carbs": 88,
+    "protein": 36,
+    "fat": 34,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Soy"
+    ],
+    "dietaryTags": [],
+    "ingredients": [
+      {
+        "name": "Flour Tortilla",
+        "calories": 210,
+        "carbs": 34,
+        "protein": 6,
+        "fat": 4
+      },
+      {
+        "name": "Carnitas",
+        "calories": 210,
+        "carbs": 0,
+        "protein": 22,
+        "fat": 14
+      },
+      {
+        "name": "Cilantro-Lime Rice",
+        "calories": 200,
+        "carbs": 40,
+        "protein": 4,
+        "fat": 2
+      },
+      {
+        "name": "Vegetarian Pinto Beans",
+        "calories": 120,
+        "carbs": 20,
+        "protein": 7,
+        "fat": 1
+      },
+      {
+        "name": "Fajita Vegetables",
+        "calories": 50,
+        "carbs": 8,
+        "protein": 1,
+        "fat": 2
+      },
+      {
+        "name": "Cheddar Cheese Blend",
+        "calories": 110,
+        "carbs": 0,
+        "protein": 7,
+        "fat": 9
+      },
+      {
+        "name": "Fresh Salsa",
+        "calories": 10,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "id": "m53",
+    "restaurantId": "r7",
+    "name": "Barbacoa Burrito",
+    "description": "Barbacoa beef with cilantro-lime rice, beans, fajita vegetables, and your choice of toppings. Served Mon–Thu 11am–2pm.",
+    "emoji": "🌯",
+    "category": "South of the Border",
+    "price": 10.0,
+    "calories": 870,
+    "carbs": 88,
+    "protein": 40,
+    "fat": 28,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Soy"
+    ],
+    "dietaryTags": [],
+    "ingredients": [
+      {
+        "name": "Flour Tortilla",
+        "calories": 210,
+        "carbs": 34,
+        "protein": 6,
+        "fat": 4
+      },
+      {
+        "name": "Barbacoa Beef",
+        "calories": 170,
+        "carbs": 0,
+        "protein": 24,
+        "fat": 8
+      },
+      {
+        "name": "Cilantro-Lime Rice",
+        "calories": 200,
+        "carbs": 40,
+        "protein": 4,
+        "fat": 2
+      },
+      {
+        "name": "Vegetarian Pinto Beans",
+        "calories": 120,
+        "carbs": 20,
+        "protein": 7,
+        "fat": 1
+      },
+      {
+        "name": "Fajita Vegetables",
+        "calories": 50,
+        "carbs": 8,
+        "protein": 1,
+        "fat": 2
+      },
+      {
+        "name": "Cheddar Cheese Blend",
+        "calories": 110,
+        "carbs": 0,
+        "protein": 7,
+        "fat": 9
+      },
+      {
+        "name": "Fresh Salsa",
+        "calories": 10,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "id": "m54",
+    "restaurantId": "r7",
+    "name": "Plant Based Chorizo Burrito",
+    "description": "Plant based chorizo with cilantro-lime rice, beans, fajita vegetables, and your choice of toppings. Served Mon–Thu 11am–2pm.",
+    "emoji": "🌯",
+    "category": "South of the Border",
+    "price": 10.0,
+    "calories": 740,
+    "carbs": 96,
+    "protein": 26,
+    "fat": 18,
+    "allergens": [
+      "Gluten",
+      "Soy"
+    ],
+    "dietaryTags": [
+      "Vegan"
+    ],
+    "ingredients": [
+      {
+        "name": "Flour Tortilla",
+        "calories": 210,
+        "carbs": 34,
+        "protein": 6,
+        "fat": 4
+      },
+      {
+        "name": "Plant-Based Chorizo",
+        "calories": 150,
+        "carbs": 6,
+        "protein": 12,
+        "fat": 8
+      },
+      {
+        "name": "Cilantro-Lime Rice",
+        "calories": 200,
+        "carbs": 40,
+        "protein": 4,
+        "fat": 2
+      },
+      {
+        "name": "Vegetarian Pinto Beans",
+        "calories": 120,
+        "carbs": 20,
+        "protein": 7,
+        "fat": 1
+      },
+      {
+        "name": "Fajita Vegetables",
+        "calories": 50,
+        "carbs": 8,
+        "protein": 1,
+        "fat": 2
+      },
+      {
+        "name": "Fresh Salsa",
+        "calories": 10,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "id": "m55",
+    "restaurantId": "r7",
+    "name": "Chicken Bowl",
+    "description": "Grilled chicken with cilantro-lime rice, beans, fajita vegetables, and your choice of toppings. Served Mon–Thu 11am–2pm.",
+    "emoji": "🍚",
+    "category": "South of the Border",
+    "price": 10.0,
+    "calories": 670,
+    "carbs": 70,
+    "protein": 40,
+    "fat": 18,
+    "allergens": [
+      "Dairy",
+      "Soy"
+    ],
+    "dietaryTags": [
+      "Healthy"
+    ],
+    "ingredients": [
+      {
+        "name": "Grilled Chicken",
+        "calories": 180,
+        "carbs": 0,
+        "protein": 24,
+        "fat": 4
+      },
+      {
+        "name": "Cilantro-Lime Rice",
+        "calories": 200,
+        "carbs": 40,
+        "protein": 4,
+        "fat": 2
+      },
+      {
+        "name": "Vegetarian Pinto Beans",
+        "calories": 120,
+        "carbs": 20,
+        "protein": 7,
+        "fat": 1
+      },
+      {
+        "name": "Fajita Vegetables",
+        "calories": 50,
+        "carbs": 8,
+        "protein": 1,
+        "fat": 2
+      },
+      {
+        "name": "Cheddar Cheese Blend",
+        "calories": 110,
+        "carbs": 0,
+        "protein": 7,
+        "fat": 9
+      },
+      {
+        "name": "Fresh Salsa",
+        "calories": 10,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "id": "m56",
+    "restaurantId": "r7",
+    "name": "Carnitas Bowl",
+    "description": "Carnitas with cilantro-lime rice, beans, fajita vegetables, and your choice of toppings. Served Mon–Thu 11am–2pm.",
+    "emoji": "🍚",
+    "category": "South of the Border",
+    "price": 10.0,
+    "calories": 700,
+    "carbs": 68,
+    "protein": 38,
+    "fat": 26,
+    "allergens": [
+      "Dairy",
+      "Soy"
+    ],
+    "dietaryTags": [],
+    "ingredients": [
+      {
+        "name": "Carnitas",
+        "calories": 210,
+        "carbs": 0,
+        "protein": 22,
+        "fat": 14
+      },
+      {
+        "name": "Cilantro-Lime Rice",
+        "calories": 200,
+        "carbs": 40,
+        "protein": 4,
+        "fat": 2
+      },
+      {
+        "name": "Vegetarian Pinto Beans",
+        "calories": 120,
+        "carbs": 20,
+        "protein": 7,
+        "fat": 1
+      },
+      {
+        "name": "Fajita Vegetables",
+        "calories": 50,
+        "carbs": 8,
+        "protein": 1,
+        "fat": 2
+      },
+      {
+        "name": "Cheddar Cheese Blend",
+        "calories": 110,
+        "carbs": 0,
+        "protein": 7,
+        "fat": 9
+      },
+      {
+        "name": "Fresh Salsa",
+        "calories": 10,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "id": "m57",
+    "restaurantId": "r7",
+    "name": "Barbacoa Bowl",
+    "description": "Barbacoa beef with cilantro-lime rice, beans, fajita vegetables, and your choice of toppings. Served Mon–Thu 11am–2pm.",
+    "emoji": "🍚",
+    "category": "South of the Border",
+    "price": 10.0,
+    "calories": 660,
+    "carbs": 68,
+    "protein": 42,
+    "fat": 20,
+    "allergens": [
+      "Dairy",
+      "Soy"
+    ],
+    "dietaryTags": [],
+    "ingredients": [
+      {
+        "name": "Barbacoa Beef",
+        "calories": 170,
+        "carbs": 0,
+        "protein": 24,
+        "fat": 8
+      },
+      {
+        "name": "Cilantro-Lime Rice",
+        "calories": 200,
+        "carbs": 40,
+        "protein": 4,
+        "fat": 2
+      },
+      {
+        "name": "Vegetarian Pinto Beans",
+        "calories": 120,
+        "carbs": 20,
+        "protein": 7,
+        "fat": 1
+      },
+      {
+        "name": "Fajita Vegetables",
+        "calories": 50,
+        "carbs": 8,
+        "protein": 1,
+        "fat": 2
+      },
+      {
+        "name": "Cheddar Cheese Blend",
+        "calories": 110,
+        "carbs": 0,
+        "protein": 7,
+        "fat": 9
+      },
+      {
+        "name": "Fresh Salsa",
+        "calories": 10,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "id": "m58",
+    "restaurantId": "r7",
+    "name": "Plant Based Chorizo Bowl",
+    "description": "Plant based chorizo with cilantro-lime rice, beans, fajita vegetables, and your choice of toppings. Served Mon–Thu 11am–2pm.",
+    "emoji": "🍚",
+    "category": "South of the Border",
+    "price": 10.0,
+    "calories": 530,
+    "carbs": 76,
+    "protein": 24,
+    "fat": 14,
+    "allergens": [
+      "Soy"
+    ],
+    "dietaryTags": [
+      "Vegan",
+      "Healthy"
+    ],
+    "ingredients": [
+      {
+        "name": "Plant-Based Chorizo",
+        "calories": 150,
+        "carbs": 6,
+        "protein": 12,
+        "fat": 8
+      },
+      {
+        "name": "Cilantro-Lime Rice",
+        "calories": 200,
+        "carbs": 40,
+        "protein": 4,
+        "fat": 2
+      },
+      {
+        "name": "Vegetarian Pinto Beans",
+        "calories": 120,
+        "carbs": 20,
+        "protein": 7,
+        "fat": 1
+      },
+      {
+        "name": "Fajita Vegetables",
+        "calories": 50,
+        "carbs": 8,
+        "protein": 1,
+        "fat": 2
+      },
+      {
+        "name": "Fresh Salsa",
+        "calories": 10,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "id": "m59",
+    "restaurantId": "r7",
+    "name": "Chicken Nachos",
+    "description": "Nachos with grilled chicken, beans, cheese, salsa, and your choice of toppings. Served Mon–Thu 11am–2pm.",
+    "emoji": "🧆",
+    "category": "South of the Border",
+    "price": 10.0,
+    "calories": 960,
+    "carbs": 80,
+    "protein": 40,
+    "fat": 46,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Soy"
+    ],
+    "dietaryTags": [],
+    "ingredients": [
+      {
+        "name": "Tortilla Chips",
+        "calories": 350,
+        "carbs": 44,
+        "protein": 4,
+        "fat": 18
+      },
+      {
+        "name": "Grilled Chicken",
+        "calories": 180,
+        "carbs": 0,
+        "protein": 24,
+        "fat": 4
+      },
+      {
+        "name": "Cheddar Cheese Blend",
+        "calories": 110,
+        "carbs": 0,
+        "protein": 7,
+        "fat": 9
+      },
+      {
+        "name": "Vegetarian Pinto Beans",
+        "calories": 120,
+        "carbs": 20,
+        "protein": 7,
+        "fat": 1
+      },
+      {
+        "name": "Green Chile Queso",
+        "calories": 135,
+        "carbs": 6,
+        "protein": 4,
+        "fat": 10
+      },
+      {
+        "name": "Pico de Gallo",
+        "calories": 10,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      },
+      {
+        "name": "Guacamole",
+        "calories": 90,
+        "carbs": 4,
+        "protein": 1,
+        "fat": 8
+      }
+    ]
+  },
+  {
+    "id": "m60",
+    "restaurantId": "r7",
+    "name": "Carnitas Nachos",
+    "description": "Nachos with carnitas, beans, cheese, salsa, and your choice of toppings. Served Mon–Thu 11am–2pm.",
+    "emoji": "🧆",
+    "category": "South of the Border",
+    "price": 10.0,
+    "calories": 990,
+    "carbs": 78,
+    "protein": 38,
+    "fat": 54,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Soy"
+    ],
+    "dietaryTags": [],
+    "ingredients": [
+      {
+        "name": "Tortilla Chips",
+        "calories": 350,
+        "carbs": 44,
+        "protein": 4,
+        "fat": 18
+      },
+      {
+        "name": "Carnitas",
+        "calories": 210,
+        "carbs": 0,
+        "protein": 22,
+        "fat": 14
+      },
+      {
+        "name": "Cheddar Cheese Blend",
+        "calories": 110,
+        "carbs": 0,
+        "protein": 7,
+        "fat": 9
+      },
+      {
+        "name": "Vegetarian Pinto Beans",
+        "calories": 120,
+        "carbs": 20,
+        "protein": 7,
+        "fat": 1
+      },
+      {
+        "name": "Green Chile Queso",
+        "calories": 135,
+        "carbs": 6,
+        "protein": 4,
+        "fat": 10
+      },
+      {
+        "name": "Pico de Gallo",
+        "calories": 10,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      },
+      {
+        "name": "Guacamole",
+        "calories": 90,
+        "carbs": 4,
+        "protein": 1,
+        "fat": 8
+      }
+    ]
+  },
+  {
+    "id": "m61",
+    "restaurantId": "r7",
+    "name": "Barbacoa Nachos",
+    "description": "Nachos with barbacoa beef, beans, cheese, salsa, and your choice of toppings. Served Mon–Thu 11am–2pm.",
+    "emoji": "🧆",
+    "category": "South of the Border",
+    "price": 10.0,
+    "calories": 950,
+    "carbs": 78,
+    "protein": 42,
+    "fat": 46,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Soy"
+    ],
+    "dietaryTags": [],
+    "ingredients": [
+      {
+        "name": "Tortilla Chips",
+        "calories": 350,
+        "carbs": 44,
+        "protein": 4,
+        "fat": 18
+      },
+      {
+        "name": "Barbacoa Beef",
+        "calories": 170,
+        "carbs": 0,
+        "protein": 24,
+        "fat": 8
+      },
+      {
+        "name": "Cheddar Cheese Blend",
+        "calories": 110,
+        "carbs": 0,
+        "protein": 7,
+        "fat": 9
+      },
+      {
+        "name": "Vegetarian Pinto Beans",
+        "calories": 120,
+        "carbs": 20,
+        "protein": 7,
+        "fat": 1
+      },
+      {
+        "name": "Green Chile Queso",
+        "calories": 135,
+        "carbs": 6,
+        "protein": 4,
+        "fat": 10
+      },
+      {
+        "name": "Pico de Gallo",
+        "calories": 10,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      },
+      {
+        "name": "Guacamole",
+        "calories": 90,
+        "carbs": 4,
+        "protein": 1,
+        "fat": 8
+      }
+    ]
+  },
+  {
+    "id": "m62",
+    "restaurantId": "r7",
+    "name": "Plant Based Chorizo Nachos",
+    "description": "Nachos with plant based chorizo, beans, cheese, salsa, and your choice of toppings. Served Mon–Thu 11am–2pm.",
+    "emoji": "🧆",
+    "category": "South of the Border",
+    "price": 10.0,
+    "calories": 930,
+    "carbs": 80,
+    "protein": 30,
+    "fat": 46,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Soy"
+    ],
+    "dietaryTags": [
+      "Vegan"
+    ],
+    "ingredients": [
+      {
+        "name": "Tortilla Chips",
+        "calories": 350,
+        "carbs": 44,
+        "protein": 4,
+        "fat": 18
+      },
+      {
+        "name": "Plant-Based Chorizo",
+        "calories": 150,
+        "carbs": 6,
+        "protein": 12,
+        "fat": 8
+      },
+      {
+        "name": "Cheddar Cheese Blend",
+        "calories": 110,
+        "carbs": 0,
+        "protein": 7,
+        "fat": 9
+      },
+      {
+        "name": "Vegetarian Pinto Beans",
+        "calories": 120,
+        "carbs": 20,
+        "protein": 7,
+        "fat": 1
+      },
+      {
+        "name": "Green Chile Queso",
+        "calories": 135,
+        "carbs": 6,
+        "protein": 4,
+        "fat": 10
+      },
+      {
+        "name": "Pico de Gallo",
+        "calories": 10,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      },
+      {
+        "name": "Guacamole",
+        "calories": 90,
+        "carbs": 4,
+        "protein": 1,
+        "fat": 8
+      }
+    ]
+  },
+  {
+    "id": "m63",
+    "restaurantId": "r7",
+    "name": "Chips & Salsa",
+    "description": "House chips with fresh salsa.",
+    "emoji": "🌮",
+    "category": "South of the Border",
+    "price": 3.0,
+    "calories": 335,
+    "carbs": 44,
+    "protein": 4,
+    "fat": 14,
+    "allergens": [
+      "Gluten"
+    ],
+    "dietaryTags": [
+      "Vegan"
+    ],
+    "ingredients": [
+      {
+        "name": "Tortilla Chips",
+        "calories": 320,
+        "carbs": 40,
+        "protein": 4,
+        "fat": 14
+      },
+      {
+        "name": "Fresh Salsa",
+        "calories": 10,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      },
+      {
+        "name": "Lime Wedge",
+        "calories": 5,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "id": "m64",
+    "restaurantId": "r7",
+    "name": "Chips & Guacamole",
+    "description": "House chips with fresh guacamole.",
+    "emoji": "🥑",
+    "category": "South of the Border",
+    "price": 4.0,
+    "calories": 400,
+    "carbs": 44,
+    "protein": 5,
+    "fat": 22,
+    "allergens": [
+      "Gluten"
+    ],
+    "dietaryTags": [
+      "Vegan"
+    ],
+    "ingredients": [
+      {
+        "name": "Tortilla Chips",
+        "calories": 310,
+        "carbs": 38,
+        "protein": 4,
+        "fat": 14
+      },
+      {
+        "name": "Fresh Guacamole",
+        "calories": 90,
+        "carbs": 4,
+        "protein": 1,
+        "fat": 8
+      },
+      {
+        "name": "Lime & Cilantro",
+        "calories": 5,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "id": "m65",
+    "restaurantId": "r7",
+    "name": "Chips, Salsa & Guacamole",
+    "description": "House chips with fresh salsa and guacamole.",
+    "emoji": "🥑",
+    "category": "South of the Border",
+    "price": 6.0,
+    "calories": 450,
+    "carbs": 52,
+    "protein": 5,
+    "fat": 22,
+    "allergens": [
+      "Gluten"
+    ],
+    "dietaryTags": [
+      "Vegan"
+    ],
+    "ingredients": [
+      {
+        "name": "Tortilla Chips",
+        "calories": 310,
+        "carbs": 38,
+        "protein": 4,
+        "fat": 14
+      },
+      {
+        "name": "Fresh Guacamole",
+        "calories": 90,
+        "carbs": 4,
+        "protein": 1,
+        "fat": 8
+      },
+      {
+        "name": "Fresh Salsa",
+        "calories": 10,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      },
+      {
+        "name": "Lime & Cilantro",
+        "calories": 5,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "id": "m66",
+    "restaurantId": "r1",
+    "name": "Nashville Hot Chicken",
+    "description": "Crispy chicken breast with Nashville hot sauce, slaw, and pickles on a brioche bun.",
+    "emoji": "🍗",
+    "category": "Lunch",
+    "price": 12.0,
+    "calories": 875,
+    "carbs": 62,
+    "protein": 38,
+    "fat": 46,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Soy",
+      "Eggs",
+      "Sesame"
+    ],
+    "dietaryTags": [
+      "Spicy"
+    ],
+    "ingredients": [
+      {
+        "name": "Brioche Bun",
+        "calories": 200,
+        "carbs": 32,
+        "protein": 6,
+        "fat": 5
+      },
+      {
+        "name": "Crispy Chicken Breast",
+        "calories": 425,
+        "carbs": 22,
+        "protein": 30,
+        "fat": 22
+      },
+      {
+        "name": "Nashville Hot Sauce",
+        "calories": 100,
+        "carbs": 6,
+        "protein": 0,
+        "fat": 10
+      },
+      {
+        "name": "Slaw",
+        "calories": 100,
+        "carbs": 10,
+        "protein": 1,
+        "fat": 6
+      },
+      {
+        "name": "Pickles",
+        "calories": 10,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "id": "m67",
+    "restaurantId": "r1",
+    "name": "Greeky Gyro",
+    "description": "Seasoned beef in a grilled pita with feta, tzatziki, and fresh vegetables.",
     "emoji": "🥙",
     "category": "Lunch",
     "price": 11.0,
-    "calories": 460,
-    "carbs": 58,
-    "protein": 16,
-    "fat": 14,
-    "allergens": ["Soy"],
-    "dietaryTags": ["Vegan", "Gluten-Free"]
+    "calories": 775,
+    "carbs": 54,
+    "protein": 36,
+    "fat": 36,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Soy",
+      "Sesame"
+    ],
+    "dietaryTags": [],
+    "ingredients": [
+      {
+        "name": "Grilled Pita",
+        "calories": 240,
+        "carbs": 38,
+        "protein": 7,
+        "fat": 5
+      },
+      {
+        "name": "Seasoned Beef",
+        "calories": 285,
+        "carbs": 0,
+        "protein": 24,
+        "fat": 22
+      },
+      {
+        "name": "Feta Cheese",
+        "calories": 90,
+        "carbs": 1,
+        "protein": 5,
+        "fat": 7
+      },
+      {
+        "name": "Tzatziki Sauce",
+        "calories": 100,
+        "carbs": 5,
+        "protein": 3,
+        "fat": 8
+      },
+      {
+        "name": "Vegetables (tomato, onion, lettuce)",
+        "calories": 40,
+        "carbs": 8,
+        "protein": 1,
+        "fat": 0
+      }
+    ]
   },
   {
-    "id": "m25",
-    "restaurantId": "r5",
-    "name": "Green Goddess Wrap",
-    "description": "Fresh wrap with herby green dressing.",
-    "emoji": "🌯",
+    "id": "m68",
+    "restaurantId": "r1",
+    "name": "Philly Cheesesteak",
+    "description": "Shaved steak with provolone, onions, peppers, and mushrooms on a hoagie roll.",
+    "emoji": "🥖",
     "category": "Lunch",
-    "price": 9.0,
-    "calories": 420,
+    "price": 12.0,
+    "calories": 900,
     "carbs": 52,
-    "protein": 14,
-    "fat": 16,
-    "allergens": ["Gluten"],
-    "dietaryTags": ["Vegan", "Healthy"]
+    "protein": 44,
+    "fat": 46,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Soy"
+    ],
+    "dietaryTags": [],
+    "ingredients": [
+      {
+        "name": "Hoagie Roll",
+        "calories": 240,
+        "carbs": 44,
+        "protein": 8,
+        "fat": 3
+      },
+      {
+        "name": "Shaved Steak",
+        "calories": 300,
+        "carbs": 0,
+        "protein": 28,
+        "fat": 20
+      },
+      {
+        "name": "Provolone Cheese",
+        "calories": 200,
+        "carbs": 2,
+        "protein": 12,
+        "fat": 16
+      },
+      {
+        "name": "Veg Toppings",
+        "calories": 40,
+        "carbs": 8,
+        "protein": 1,
+        "fat": 1
+      },
+      {
+        "name": "Cooking Oil",
+        "calories": 100,
+        "carbs": 0,
+        "protein": 0,
+        "fat": 11
+      }
+    ]
   },
   {
-    "id": "m26",
-    "restaurantId": "r5",
-    "name": "Chia Pudding",
-    "description": "Creamy chia pudding with fruit.",
-    "emoji": "🍮",
-    "category": "Breakfast",
-    "price": 5.5,
-    "calories": 280,
-    "carbs": 38,
-    "protein": 8,
-    "fat": 10,
-    "allergens": ["Dairy"],
-    "dietaryTags": ["Gluten-Free", "Healthy"]
+    "id": "m69",
+    "restaurantId": "r1",
+    "name": "Chicken Strips",
+    "description": "Crispy chicken strips with fries and your choice of dipping sauce.",
+    "emoji": "🍗",
+    "category": "Favorites",
+    "price": 10.0,
+    "calories": 850,
+    "carbs": 68,
+    "protein": 40,
+    "fat": 34,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Soy"
+    ],
+    "dietaryTags": [
+      "Popular"
+    ],
+    "ingredients": [
+      {
+        "name": "Chicken Strips",
+        "calories": 420,
+        "carbs": 24,
+        "protein": 32,
+        "fat": 20
+      },
+      {
+        "name": "Fries",
+        "calories": 350,
+        "carbs": 46,
+        "protein": 4,
+        "fat": 16
+      },
+      {
+        "name": "Dipping Sauce",
+        "calories": 90,
+        "carbs": 10,
+        "protein": 0,
+        "fat": 6
+      }
+    ]
   },
   {
-    "id": "m27",
-    "restaurantId": "r6",
-    "name": "Protein Bar",
-    "description": "Grab-and-go high-protein snack bar.",
-    "emoji": "🍫",
-    "category": "Snacks",
-    "price": 3.0,
-    "calories": 220,
-    "carbs": 28,
-    "protein": 15,
-    "fat": 8,
-    "allergens": ["Nuts", "Dairy"],
-    "dietaryTags": ["Healthy"]
+    "id": "m70",
+    "restaurantId": "r1",
+    "name": "Grilled Cheese",
+    "description": "Sourdough bread with a cheese blend, butter, and tomato soup.",
+    "emoji": "🧀",
+    "category": "Favorites",
+    "price": 9.0,
+    "calories": 775,
+    "carbs": 44,
+    "protein": 24,
+    "fat": 42,
+    "allergens": [
+      "Gluten",
+      "Dairy"
+    ],
+    "dietaryTags": [
+      "Vegetarian"
+    ],
+    "ingredients": [
+      {
+        "name": "Sourdough Bread",
+        "calories": 200,
+        "carbs": 36,
+        "protein": 7,
+        "fat": 2
+      },
+      {
+        "name": "Cheese Blend",
+        "calories": 325,
+        "carbs": 2,
+        "protein": 18,
+        "fat": 28
+      },
+      {
+        "name": "Butter",
+        "calories": 120,
+        "carbs": 0,
+        "protein": 0,
+        "fat": 13
+      },
+      {
+        "name": "Tomato Soup",
+        "calories": 100,
+        "carbs": 14,
+        "protein": 2,
+        "fat": 4
+      }
+    ]
   },
   {
-    "id": "m28",
-    "restaurantId": "r6",
-    "name": "Sparkling Water",
-    "description": "Zero-calorie sparkling hydration.",
-    "emoji": "💧",
-    "category": "Beverages",
-    "price": 2.0,
-    "calories": 0,
-    "carbs": 0,
-    "protein": 0,
-    "fat": 0,
-    "allergens": [],
-    "dietaryTags": ["Vegan", "Gluten-Free"]
+    "id": "m71",
+    "restaurantId": "r1",
+    "name": "Quesadilla",
+    "description": "Flour tortilla with protein, cheese, sour cream, and pico de gallo.",
+    "emoji": "🫔",
+    "category": "Favorites",
+    "price": 10.0,
+    "calories": 800,
+    "carbs": 66,
+    "protein": 34,
+    "fat": 36,
+    "allergens": [
+      "Gluten",
+      "Dairy"
+    ],
+    "dietaryTags": [],
+    "ingredients": [
+      {
+        "name": "Flour Tortilla",
+        "calories": 210,
+        "carbs": 34,
+        "protein": 6,
+        "fat": 4
+      },
+      {
+        "name": "Protein (chicken/beef)",
+        "calories": 240,
+        "carbs": 0,
+        "protein": 24,
+        "fat": 16
+      },
+      {
+        "name": "Cheese",
+        "calories": 220,
+        "carbs": 2,
+        "protein": 14,
+        "fat": 18
+      },
+      {
+        "name": "Sour Cream",
+        "calories": 110,
+        "carbs": 3,
+        "protein": 1,
+        "fat": 10
+      },
+      {
+        "name": "Pico de Gallo",
+        "calories": 10,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
   },
   {
-    "id": "m29",
-    "restaurantId": "r6",
-    "name": "Trail Mix",
-    "description": "Nuts and dried fruit trail mix pack.",
-    "emoji": "🥜",
-    "category": "Snacks",
+    "id": "m72",
+    "restaurantId": "r1",
+    "name": "Hot Dog Meal Deal",
+    "description": "Quarter-pound hot dog on a bun with chips and a fountain drink.",
+    "emoji": "🌭",
+    "category": "Favorites",
+    "price": 8.0,
+    "calories": 800,
+    "carbs": 74,
+    "protein": 22,
+    "fat": 36,
+    "allergens": [
+      "Gluten",
+      "Soy"
+    ],
+    "dietaryTags": [],
+    "ingredients": [
+      {
+        "name": "Hot Dog (¼ lb)",
+        "calories": 325,
+        "carbs": 2,
+        "protein": 14,
+        "fat": 28
+      },
+      {
+        "name": "Hot Dog Bun",
+        "calories": 165,
+        "carbs": 30,
+        "protein": 5,
+        "fat": 3
+      },
+      {
+        "name": "Chips",
+        "calories": 200,
+        "carbs": 26,
+        "protein": 2,
+        "fat": 10
+      },
+      {
+        "name": "Fountain Drink",
+        "calories": 100,
+        "carbs": 26,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "id": "m73",
+    "restaurantId": "r1",
+    "name": "Curly Fries / Tots",
+    "description": "Crispy curly fries or tater tots.",
+    "emoji": "🍟",
+    "category": "Sides",
     "price": 4.0,
-    "calories": 340,
-    "carbs": 32,
-    "protein": 10,
+    "calories": 370,
+    "carbs": 48,
+    "protein": 5,
     "fat": 18,
-    "allergens": ["Nuts"],
-    "dietaryTags": ["Vegan", "Gluten-Free"]
+    "allergens": [
+      "Soy"
+    ],
+    "dietaryTags": [
+      "Vegan"
+    ],
+    "ingredients": [
+      {
+        "name": "Curly Fries or Tater Tots",
+        "calories": 340,
+        "carbs": 44,
+        "protein": 4,
+        "fat": 16
+      },
+      {
+        "name": "Seasoning",
+        "calories": 10,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      },
+      {
+        "name": "Cooking Oil (Soy)",
+        "calories": 20,
+        "carbs": 0,
+        "protein": 0,
+        "fat": 2
+      }
+    ]
+  },
+  {
+    "id": "m74",
+    "restaurantId": "r1",
+    "name": "Onion Rings",
+    "description": "Golden crispy onion rings.",
+    "emoji": "🧅",
+    "category": "Sides",
+    "price": 4.0,
+    "calories": 400,
+    "carbs": 50,
+    "protein": 6,
+    "fat": 20,
+    "allergens": [
+      "Gluten",
+      "Soy"
+    ],
+    "dietaryTags": [
+      "Vegan"
+    ],
+    "ingredients": [
+      {
+        "name": "Onion Rings",
+        "calories": 370,
+        "carbs": 46,
+        "protein": 5,
+        "fat": 18
+      },
+      {
+        "name": "Seasoned Batter",
+        "calories": 30,
+        "carbs": 6,
+        "protein": 1,
+        "fat": 1
+      }
+    ]
+  },
+  {
+    "id": "m75",
+    "restaurantId": "r1",
+    "name": "SW Eggrolls",
+    "description": "Crispy southwestern eggrolls with dipping sauce.",
+    "emoji": "🥢",
+    "category": "Sides",
+    "price": 6.0,
+    "calories": 475,
+    "carbs": 48,
+    "protein": 16,
+    "fat": 24,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Soy",
+      "Eggs"
+    ],
+    "dietaryTags": [],
+    "ingredients": [
+      {
+        "name": "Eggroll Wrappers",
+        "calories": 120,
+        "carbs": 22,
+        "protein": 4,
+        "fat": 2
+      },
+      {
+        "name": "Chicken & Cheese Filling",
+        "calories": 220,
+        "carbs": 6,
+        "protein": 18,
+        "fat": 14
+      },
+      {
+        "name": "Corn & Peppers",
+        "calories": 40,
+        "carbs": 8,
+        "protein": 1,
+        "fat": 0
+      },
+      {
+        "name": "Dipping Sauce",
+        "calories": 80,
+        "carbs": 10,
+        "protein": 0,
+        "fat": 4
+      }
+    ]
+  },
+  {
+    "id": "m76",
+    "restaurantId": "r1",
+    "name": "Mozzarella Sticks",
+    "description": "Crispy breaded mozzarella sticks with marinara.",
+    "emoji": "🧀",
+    "category": "Sides",
+    "price": 6.0,
+    "calories": 525,
+    "carbs": 44,
+    "protein": 22,
+    "fat": 28,
+    "allergens": [
+      "Gluten",
+      "Dairy"
+    ],
+    "dietaryTags": [
+      "Vegetarian"
+    ],
+    "ingredients": [
+      {
+        "name": "Mozzarella Sticks (4)",
+        "calories": 400,
+        "carbs": 32,
+        "protein": 20,
+        "fat": 24
+      },
+      {
+        "name": "Breadcrumb Coating",
+        "calories": 60,
+        "carbs": 10,
+        "protein": 2,
+        "fat": 1
+      },
+      {
+        "name": "Marinara Sauce",
+        "calories": 40,
+        "carbs": 8,
+        "protein": 1,
+        "fat": 1
+      }
+    ]
+  },
+  {
+    "id": "m77",
+    "restaurantId": "r3",
+    "name": "Chicken Shawarma",
+    "description": "Seasoned sliced chicken, hummus, lettuce, tomato, cucumber, feta, and tzatziki in a grilled pita.",
+    "emoji": "🫓",
+    "category": "Wraps",
+    "price": 11.0,
+    "calories": 562,
+    "carbs": 48,
+    "protein": 32,
+    "fat": 22,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Sesame"
+    ],
+    "dietaryTags": [
+      "Healthy"
+    ],
+    "ingredients": [
+      {
+        "name": "Grilled Pita",
+        "calories": 220,
+        "carbs": 34,
+        "protein": 7,
+        "fat": 4
+      },
+      {
+        "name": "Seasoned Chicken",
+        "calories": 180,
+        "carbs": 0,
+        "protein": 24,
+        "fat": 8
+      },
+      {
+        "name": "Hummus",
+        "calories": 60,
+        "carbs": 6,
+        "protein": 2,
+        "fat": 4
+      },
+      {
+        "name": "Feta Cheese",
+        "calories": 50,
+        "carbs": 1,
+        "protein": 3,
+        "fat": 4
+      },
+      {
+        "name": "Lettuce, Tomato & Cucumber",
+        "calories": 25,
+        "carbs": 5,
+        "protein": 1,
+        "fat": 0
+      },
+      {
+        "name": "Tzatziki Sauce",
+        "calories": 60,
+        "carbs": 3,
+        "protein": 2,
+        "fat": 5
+      }
+    ]
+  },
+  {
+    "id": "m78",
+    "restaurantId": "r3",
+    "name": "Roast Beef",
+    "description": "Roast beef, melted provolone, roasted tomatoes, arugula, shaved red onion, horseradish aioli on warm focaccia.",
+    "emoji": "🥩",
+    "category": "Monthly Special",
+    "price": 12.0,
+    "calories": 815,
+    "carbs": 48,
+    "protein": 42,
+    "fat": 40,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Eggs"
+    ],
+    "dietaryTags": [
+      "Popular"
+    ],
+    "ingredients": [
+      {
+        "name": "Warm Focaccia",
+        "calories": 240,
+        "carbs": 38,
+        "protein": 7,
+        "fat": 7
+      },
+      {
+        "name": "Roast Beef",
+        "calories": 280,
+        "carbs": 0,
+        "protein": 32,
+        "fat": 18
+      },
+      {
+        "name": "Provolone Cheese",
+        "calories": 130,
+        "carbs": 0,
+        "protein": 8,
+        "fat": 10
+      },
+      {
+        "name": "Roasted Tomatoes & Arugula",
+        "calories": 35,
+        "carbs": 6,
+        "protein": 1,
+        "fat": 1
+      },
+      {
+        "name": "Shaved Red Onion",
+        "calories": 10,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      },
+      {
+        "name": "Horseradish Aioli",
+        "calories": 100,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 10
+      }
+    ]
+  },
+  {
+    "id": "m79",
+    "restaurantId": "r3",
+    "name": "Turkey-Bacon-Ranch Panini",
+    "description": "Smoked turkey, crispy bacon, cheddar cheese, and ranch dressing, grilled on bread.",
+    "emoji": "🥪",
+    "category": "Paninis",
+    "price": 10.0,
+    "calories": 620,
+    "carbs": 42,
+    "protein": 34,
+    "fat": 30,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Eggs"
+    ],
+    "dietaryTags": [
+      "Popular"
+    ],
+    "ingredients": [
+      {
+        "name": "Panini Bread",
+        "calories": 200,
+        "carbs": 34,
+        "protein": 7,
+        "fat": 3
+      },
+      {
+        "name": "Smoked Turkey",
+        "calories": 150,
+        "carbs": 0,
+        "protein": 22,
+        "fat": 7
+      },
+      {
+        "name": "Crispy Bacon",
+        "calories": 80,
+        "carbs": 0,
+        "protein": 6,
+        "fat": 6
+      },
+      {
+        "name": "Cheddar Cheese",
+        "calories": 110,
+        "carbs": 0,
+        "protein": 7,
+        "fat": 9
+      },
+      {
+        "name": "Ranch Dressing",
+        "calories": 80,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 8
+      }
+    ]
+  },
+  {
+    "id": "m80",
+    "restaurantId": "r3",
+    "name": "Chicken Pesto Panini",
+    "description": "Grilled chicken breast, basil pesto, roasted red peppers, and provolone, pressed and grilled.",
+    "emoji": "🍗",
+    "category": "Paninis",
+    "price": 10.0,
+    "calories": 555,
+    "carbs": 36,
+    "protein": 36,
+    "fat": 26,
+    "allergens": [
+      "Gluten",
+      "Dairy"
+    ],
+    "dietaryTags": [
+      "Healthy"
+    ],
+    "ingredients": [
+      {
+        "name": "Panini Bread",
+        "calories": 200,
+        "carbs": 34,
+        "protein": 7,
+        "fat": 3
+      },
+      {
+        "name": "Grilled Chicken Breast",
+        "calories": 180,
+        "carbs": 0,
+        "protein": 26,
+        "fat": 4
+      },
+      {
+        "name": "Basil Pesto",
+        "calories": 80,
+        "carbs": 2,
+        "protein": 1,
+        "fat": 8
+      },
+      {
+        "name": "Roasted Red Peppers",
+        "calories": 20,
+        "carbs": 4,
+        "protein": 1,
+        "fat": 0
+      },
+      {
+        "name": "Provolone Cheese",
+        "calories": 100,
+        "carbs": 0,
+        "protein": 6,
+        "fat": 8
+      }
+    ]
+  },
+  {
+    "id": "m81",
+    "restaurantId": "r3",
+    "name": "Ham & Swiss Panini",
+    "description": "Shaved ham, Swiss cheese, honey-mustard Dijon, and pickles, pressed and grilled.",
+    "emoji": "🥪",
+    "category": "Paninis",
+    "price": 10.0,
+    "calories": 487,
+    "carbs": 38,
+    "protein": 28,
+    "fat": 22,
+    "allergens": [
+      "Gluten",
+      "Dairy"
+    ],
+    "dietaryTags": [],
+    "ingredients": [
+      {
+        "name": "Panini Bread",
+        "calories": 200,
+        "carbs": 34,
+        "protein": 7,
+        "fat": 3
+      },
+      {
+        "name": "Shaved Ham",
+        "calories": 120,
+        "carbs": 0,
+        "protein": 14,
+        "fat": 7
+      },
+      {
+        "name": "Swiss Cheese",
+        "calories": 110,
+        "carbs": 0,
+        "protein": 8,
+        "fat": 9
+      },
+      {
+        "name": "Honey-Mustard Dijon",
+        "calories": 40,
+        "carbs": 6,
+        "protein": 0,
+        "fat": 2
+      },
+      {
+        "name": "Pickles",
+        "calories": 10,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "id": "m82",
+    "restaurantId": "r3",
+    "name": "Grilled Chicken Caesar Salad",
+    "description": "Grilled chicken breast over Romaine with garlic croutons, Parmesan, and Caesar dressing.",
+    "emoji": "🥗",
+    "category": "Salads",
+    "price": 11.0,
+    "calories": 375,
+    "carbs": 22,
+    "protein": 30,
+    "fat": 16,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Eggs"
+    ],
+    "dietaryTags": [
+      "Healthy"
+    ],
+    "ingredients": [
+      {
+        "name": "Grilled Chicken Breast",
+        "calories": 160,
+        "carbs": 0,
+        "protein": 26,
+        "fat": 4
+      },
+      {
+        "name": "Romaine Lettuce",
+        "calories": 20,
+        "carbs": 4,
+        "protein": 1,
+        "fat": 0
+      },
+      {
+        "name": "Garlic Croutons",
+        "calories": 80,
+        "carbs": 12,
+        "protein": 2,
+        "fat": 2
+      },
+      {
+        "name": "Parmesan Cheese",
+        "calories": 45,
+        "carbs": 0,
+        "protein": 4,
+        "fat": 3
+      },
+      {
+        "name": "Caesar Dressing",
+        "calories": 90,
+        "carbs": 2,
+        "protein": 1,
+        "fat": 9
+      }
+    ]
+  },
+  {
+    "id": "m83",
+    "restaurantId": "r3",
+    "name": "Chopped Antipasto Salad",
+    "description": "Romaine, greens, Genoa salami, cucumber, tomato, pepperoncini, olives, mozzarella, and balsamic vinaigrette.",
+    "emoji": "🥗",
+    "category": "Salads",
+    "price": 11.0,
+    "calories": 265,
+    "carbs": 18,
+    "protein": 14,
+    "fat": 14,
+    "allergens": [
+      "Gluten",
+      "Dairy"
+    ],
+    "dietaryTags": [
+      "Healthy"
+    ],
+    "ingredients": [
+      {
+        "name": "Romaine & Mixed Greens",
+        "calories": 20,
+        "carbs": 4,
+        "protein": 1,
+        "fat": 0
+      },
+      {
+        "name": "Genoa Salami",
+        "calories": 80,
+        "carbs": 0,
+        "protein": 6,
+        "fat": 7
+      },
+      {
+        "name": "Cucumber, Tomato & Pepperoncini",
+        "calories": 25,
+        "carbs": 5,
+        "protein": 1,
+        "fat": 0
+      },
+      {
+        "name": "Olives",
+        "calories": 40,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 4
+      },
+      {
+        "name": "Fresh Mozzarella",
+        "calories": 70,
+        "carbs": 1,
+        "protein": 5,
+        "fat": 6
+      },
+      {
+        "name": "Balsamic Vinaigrette",
+        "calories": 60,
+        "carbs": 6,
+        "protein": 0,
+        "fat": 5
+      }
+    ]
+  },
+  {
+    "id": "m84",
+    "restaurantId": "r3",
+    "name": "Chipotle Ranch Salad",
+    "description": "Adobo chicken, Romaine, black beans, peppers, Pico de Gallo, cheddar, tortilla strips, chipotle ranch.",
+    "emoji": "🥗",
+    "category": "Salads",
+    "price": 11.0,
+    "calories": 400,
+    "carbs": 36,
+    "protein": 22,
+    "fat": 18,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Eggs"
+    ],
+    "dietaryTags": [
+      "Spicy"
+    ],
+    "ingredients": [
+      {
+        "name": "Adobo Chicken",
+        "calories": 160,
+        "carbs": 2,
+        "protein": 20,
+        "fat": 8
+      },
+      {
+        "name": "Romaine Lettuce",
+        "calories": 20,
+        "carbs": 4,
+        "protein": 1,
+        "fat": 0
+      },
+      {
+        "name": "Black Beans & Peppers",
+        "calories": 70,
+        "carbs": 14,
+        "protein": 4,
+        "fat": 0
+      },
+      {
+        "name": "Pico de Gallo & Cheddar",
+        "calories": 70,
+        "carbs": 2,
+        "protein": 4,
+        "fat": 5
+      },
+      {
+        "name": "Tortilla Strips",
+        "calories": 40,
+        "carbs": 6,
+        "protein": 0,
+        "fat": 2
+      },
+      {
+        "name": "Chipotle Ranch Dressing",
+        "calories": 80,
+        "carbs": 4,
+        "protein": 0,
+        "fat": 8
+      }
+    ]
+  },
+  {
+    "id": "m85",
+    "restaurantId": "r3",
+    "name": "Chips",
+    "description": "Bag of chips (1oz or 1.5oz).",
+    "emoji": "🥨",
+    "category": "Sides & More",
+    "price": 2.0,
+    "calories": 200,
+    "carbs": 24,
+    "protein": 2,
+    "fat": 10,
+    "allergens": [
+      "Soy"
+    ],
+    "dietaryTags": [
+      "Vegan"
+    ],
+    "ingredients": [
+      {
+        "name": "Chips",
+        "calories": 200,
+        "carbs": 24,
+        "protein": 2,
+        "fat": 10
+      }
+    ]
+  },
+  {
+    "id": "m86",
+    "restaurantId": "r3",
+    "name": "Salted Caramel Cookie",
+    "description": "House-baked salted caramel cookie.",
+    "emoji": "🍪",
+    "category": "Sides & More",
+    "price": 3.0,
+    "calories": 225,
+    "carbs": 32,
+    "protein": 3,
+    "fat": 10,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Eggs"
+    ],
+    "dietaryTags": [],
+    "ingredients": [
+      {
+        "name": "Cookie Dough",
+        "calories": 180,
+        "carbs": 26,
+        "protein": 3,
+        "fat": 8
+      },
+      {
+        "name": "Salted Caramel",
+        "calories": 45,
+        "carbs": 8,
+        "protein": 0,
+        "fat": 2
+      }
+    ]
+  },
+  {
+    "id": "m87",
+    "restaurantId": "r3",
+    "name": "Soup Du Jour",
+    "description": "16 oz daily rotating soup.",
+    "emoji": "🍲",
+    "category": "Sides & More",
+    "price": 5.0,
+    "calories": 150,
+    "carbs": 20,
+    "protein": 6,
+    "fat": 5,
+    "allergens": [
+      "Dairy"
+    ],
+    "dietaryTags": [
+      "Healthy"
+    ],
+    "ingredients": [
+      {
+        "name": "House Soup (16 oz)",
+        "calories": 150,
+        "carbs": 20,
+        "protein": 6,
+        "fat": 5
+      }
+    ]
+  },
+  {
+    "id": "m88",
+    "restaurantId": "r3",
+    "name": "Mac & Cheese",
+    "description": "Creamy house-made mac and cheese.",
+    "emoji": "🧀",
+    "category": "Sides & More",
+    "price": 5.0,
+    "calories": 300,
+    "carbs": 42,
+    "protein": 12,
+    "fat": 10,
+    "allergens": [
+      "Gluten",
+      "Dairy"
+    ],
+    "dietaryTags": [
+      "Vegetarian"
+    ],
+    "ingredients": [
+      {
+        "name": "Pasta",
+        "calories": 180,
+        "carbs": 36,
+        "protein": 7,
+        "fat": 1
+      },
+      {
+        "name": "Cheese Sauce",
+        "calories": 120,
+        "carbs": 6,
+        "protein": 5,
+        "fat": 8
+      }
+    ]
+  },
+  {
+    "id": "m89",
+    "restaurantId": "r1",
+    "name": "Burrito",
+    "description": "Flour tortilla filled with your choice of protein (adobo chicken, carnitas, carne asada, or plant-based chorizo), cilantro-lime rice, beans, fajita veggies, and toppings.",
+    "emoji": "🌯",
+    "category": "International Flavors",
+    "price": 10.5,
+    "calories": 930,
+    "carbs": 100,
+    "protein": 42,
+    "fat": 32,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Soy"
+    ],
+    "dietaryTags": [],
+    "ingredients": [
+      {
+        "name": "Flour Tortilla",
+        "calories": 210,
+        "carbs": 34,
+        "protein": 6,
+        "fat": 4
+      },
+      {
+        "name": "Choice of Protein",
+        "calories": 200,
+        "carbs": 0,
+        "protein": 22,
+        "fat": 8
+      },
+      {
+        "name": "Cilantro-Lime Rice",
+        "calories": 200,
+        "carbs": 42,
+        "protein": 4,
+        "fat": 2
+      },
+      {
+        "name": "Pinto Beans",
+        "calories": 120,
+        "carbs": 20,
+        "protein": 7,
+        "fat": 1
+      },
+      {
+        "name": "Fajita Vegetables",
+        "calories": 50,
+        "carbs": 8,
+        "protein": 1,
+        "fat": 2
+      },
+      {
+        "name": "Cheddar Cheese Blend",
+        "calories": 110,
+        "carbs": 0,
+        "protein": 7,
+        "fat": 9
+      },
+      {
+        "name": "Fresh Salsa",
+        "calories": 10,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "id": "m90",
+    "restaurantId": "r1",
+    "name": "Burrito Bowl",
+    "description": "All the goodness of a burrito served in a bowl — no tortilla. Choose your protein, rice, beans, veggies, and toppings.",
+    "emoji": "🥣",
+    "category": "International Flavors",
+    "price": 10.5,
+    "calories": 675,
+    "carbs": 72,
+    "protein": 36,
+    "fat": 20,
+    "allergens": [
+      "Dairy",
+      "Soy"
+    ],
+    "dietaryTags": [
+      "Gluten-Free"
+    ],
+    "ingredients": [
+      {
+        "name": "Choice of Protein",
+        "calories": 200,
+        "carbs": 0,
+        "protein": 22,
+        "fat": 8
+      },
+      {
+        "name": "Cilantro-Lime Rice",
+        "calories": 200,
+        "carbs": 42,
+        "protein": 4,
+        "fat": 2
+      },
+      {
+        "name": "Pinto Beans",
+        "calories": 120,
+        "carbs": 20,
+        "protein": 7,
+        "fat": 1
+      },
+      {
+        "name": "Fajita Vegetables",
+        "calories": 50,
+        "carbs": 8,
+        "protein": 1,
+        "fat": 2
+      },
+      {
+        "name": "Cheddar Cheese Blend",
+        "calories": 110,
+        "carbs": 0,
+        "protein": 7,
+        "fat": 9
+      }
+    ]
+  },
+  {
+    "id": "m91",
+    "restaurantId": "r1",
+    "name": "Tacos",
+    "description": "Two flour tortillas with your choice of protein, topped with fajita veggies, cheese, pico de gallo, and fresh salsa.",
+    "emoji": "🌮",
+    "category": "International Flavors",
+    "price": 9.75,
+    "calories": 675,
+    "carbs": 74,
+    "protein": 32,
+    "fat": 20,
+    "allergens": [
+      "Gluten",
+      "Dairy"
+    ],
+    "dietaryTags": [],
+    "ingredients": [
+      {
+        "name": "Flour Tortillas (2)",
+        "calories": 280,
+        "carbs": 46,
+        "protein": 8,
+        "fat": 5
+      },
+      {
+        "name": "Choice of Protein",
+        "calories": 200,
+        "carbs": 0,
+        "protein": 22,
+        "fat": 8
+      },
+      {
+        "name": "Fajita Vegetables",
+        "calories": 50,
+        "carbs": 8,
+        "protein": 1,
+        "fat": 2
+      },
+      {
+        "name": "Cheddar Cheese Blend",
+        "calories": 110,
+        "carbs": 0,
+        "protein": 7,
+        "fat": 9
+      },
+      {
+        "name": "Pico de Gallo",
+        "calories": 10,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      },
+      {
+        "name": "Fresh Salsa",
+        "calories": 10,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "id": "m92",
+    "restaurantId": "r1",
+    "name": "Nachos",
+    "description": "Tortilla chips loaded with your choice of protein, queso, beans, pico de gallo, and all the toppings.",
+    "emoji": "🧀",
+    "category": "International Flavors",
+    "price": 9.75,
+    "calories": 1000,
+    "carbs": 112,
+    "protein": 24,
+    "fat": 40,
+    "allergens": [
+      "Dairy",
+      "Soy"
+    ],
+    "dietaryTags": [
+      "Gluten-Free"
+    ],
+    "ingredients": [
+      {
+        "name": "Tortilla Chips",
+        "calories": 420,
+        "carbs": 56,
+        "protein": 6,
+        "fat": 20
+      },
+      {
+        "name": "Choice of Protein",
+        "calories": 200,
+        "carbs": 0,
+        "protein": 22,
+        "fat": 8
+      },
+      {
+        "name": "Green Chile Queso",
+        "calories": 135,
+        "carbs": 8,
+        "protein": 4,
+        "fat": 10
+      },
+      {
+        "name": "Pinto Beans",
+        "calories": 120,
+        "carbs": 20,
+        "protein": 7,
+        "fat": 1
+      },
+      {
+        "name": "Cheddar Cheese Blend",
+        "calories": 110,
+        "carbs": 0,
+        "protein": 7,
+        "fat": 9
+      },
+      {
+        "name": "Pico de Gallo",
+        "calories": 10,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "id": "m93",
+    "restaurantId": "r1",
+    "name": "Chips & Salsa",
+    "description": "Crispy tortilla chips served with fresh house salsa.",
+    "emoji": "🫙",
+    "category": "International Flavors",
+    "price": 4.5,
+    "calories": 335,
+    "carbs": 46,
+    "protein": 4,
+    "fat": 14,
+    "allergens": [],
+    "dietaryTags": [
+      "Vegan 🌱",
+      "Vegetarian",
+      "Gluten-Free"
+    ],
+    "ingredients": [
+      {
+        "name": "Tortilla Chips",
+        "calories": 320,
+        "carbs": 44,
+        "protein": 4,
+        "fat": 14
+      },
+      {
+        "name": "Fresh Salsa",
+        "calories": 10,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "id": "m94",
+    "restaurantId": "r1",
+    "name": "Chips & Guac",
+    "description": "Crispy tortilla chips served with fresh-made guacamole.",
+    "emoji": "🥑",
+    "category": "International Flavors",
+    "price": 5.5,
+    "calories": 400,
+    "carbs": 50,
+    "protein": 5,
+    "fat": 20,
+    "allergens": [],
+    "dietaryTags": [
+      "Vegan 🌱",
+      "Vegetarian",
+      "Gluten-Free"
+    ],
+    "ingredients": [
+      {
+        "name": "Tortilla Chips",
+        "calories": 320,
+        "carbs": 44,
+        "protein": 4,
+        "fat": 14
+      },
+      {
+        "name": "Guacamole",
+        "calories": 90,
+        "carbs": 6,
+        "protein": 1,
+        "fat": 8
+      }
+    ]
+  },
+  {
+    "id": "m95",
+    "restaurantId": "r1",
+    "name": "Chips, Salsa & Guac",
+    "description": "Crispy tortilla chips served with both fresh house salsa and guacamole.",
+    "emoji": "🥑",
+    "category": "International Flavors",
+    "price": 6.25,
+    "calories": 450,
+    "carbs": 56,
+    "protein": 6,
+    "fat": 20,
+    "allergens": [],
+    "dietaryTags": [
+      "Vegan 🌱",
+      "Vegetarian",
+      "Gluten-Free"
+    ],
+    "ingredients": [
+      {
+        "name": "Tortilla Chips",
+        "calories": 320,
+        "carbs": 44,
+        "protein": 4,
+        "fat": 14
+      },
+      {
+        "name": "Fresh Salsa",
+        "calories": 10,
+        "carbs": 2,
+        "protein": 0,
+        "fat": 0
+      },
+      {
+        "name": "Guacamole",
+        "calories": 90,
+        "carbs": 6,
+        "protein": 1,
+        "fat": 8
+      }
+    ]
+  },
+  {
+    "id": "m96",
+    "restaurantId": "r1",
+    "name": "Cheese Pizza Slice",
+    "description": "Classic pizza dough topped with tomato sauce and melted cheese blend.",
+    "emoji": "🍕",
+    "category": "Pizza",
+    "price": 4.25,
+    "calories": 275,
+    "carbs": 32,
+    "protein": 12,
+    "fat": 9,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Soy"
+    ],
+    "dietaryTags": [
+      "Vegetarian"
+    ],
+    "ingredients": [
+      {
+        "name": "Pizza Crust",
+        "calories": 190,
+        "carbs": 28,
+        "protein": 6,
+        "fat": 3
+      },
+      {
+        "name": "Cheese Blend",
+        "calories": 75,
+        "carbs": 0,
+        "protein": 6,
+        "fat": 6
+      },
+      {
+        "name": "Tomato Sauce",
+        "calories": 15,
+        "carbs": 3,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "id": "m97",
+    "restaurantId": "r1",
+    "name": "Pepperoni Pizza Slice",
+    "description": "Pizza slice topped with tomato sauce, melted cheese, and classic pepperoni.",
+    "emoji": "🍕",
+    "category": "Pizza",
+    "price": 4.75,
+    "calories": 340,
+    "carbs": 33,
+    "protein": 14,
+    "fat": 14,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Soy"
+    ],
+    "dietaryTags": [],
+    "ingredients": [
+      {
+        "name": "Pizza Crust",
+        "calories": 190,
+        "carbs": 28,
+        "protein": 6,
+        "fat": 3
+      },
+      {
+        "name": "Cheese Blend",
+        "calories": 75,
+        "carbs": 0,
+        "protein": 6,
+        "fat": 6
+      },
+      {
+        "name": "Pepperoni",
+        "calories": 65,
+        "carbs": 0,
+        "protein": 4,
+        "fat": 6
+      },
+      {
+        "name": "Tomato Sauce",
+        "calories": 15,
+        "carbs": 3,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "id": "m98",
+    "restaurantId": "r1",
+    "name": "Daily Special Pizza Slice",
+    "description": "Pizza slice with the chef's daily rotating toppings. Ask the team for today's special.",
+    "emoji": "🍕",
+    "category": "Pizza",
+    "price": 4.75,
+    "calories": 375,
+    "carbs": 42,
+    "protein": 14,
+    "fat": 14,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Soy"
+    ],
+    "dietaryTags": [],
+    "ingredients": [
+      {
+        "name": "Pizza Crust",
+        "calories": 190,
+        "carbs": 28,
+        "protein": 6,
+        "fat": 3
+      },
+      {
+        "name": "Cheese Blend",
+        "calories": 75,
+        "carbs": 0,
+        "protein": 6,
+        "fat": 6
+      },
+      {
+        "name": "Daily Toppings",
+        "calories": 95,
+        "carbs": 10,
+        "protein": 2,
+        "fat": 6
+      },
+      {
+        "name": "Tomato Sauce",
+        "calories": 15,
+        "carbs": 3,
+        "protein": 0,
+        "fat": 0
+      }
+    ]
+  },
+  {
+    "id": "m99",
+    "restaurantId": "r1",
+    "name": "Whole Cheese Pizza",
+    "description": "A full cheese pizza with tomato sauce and melted cheese blend. Perfect for sharing.",
+    "emoji": "🍕",
+    "category": "Pizza",
+    "price": 18.0,
+    "calories": 1650,
+    "carbs": 195,
+    "protein": 68,
+    "fat": 56,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Soy"
+    ],
+    "dietaryTags": [
+      "Vegetarian"
+    ],
+    "ingredients": [
+      {
+        "name": "Pizza Dough",
+        "calories": 1150,
+        "carbs": 175,
+        "protein": 38,
+        "fat": 12
+      },
+      {
+        "name": "Cheese Blend",
+        "calories": 420,
+        "carbs": 4,
+        "protein": 28,
+        "fat": 34
+      },
+      {
+        "name": "Tomato Sauce",
+        "calories": 80,
+        "carbs": 16,
+        "protein": 2,
+        "fat": 1
+      }
+    ]
+  },
+  {
+    "id": "m100",
+    "restaurantId": "r1",
+    "name": "Whole Pepperoni Pizza",
+    "description": "A full pepperoni pizza with tomato sauce, cheese blend, and generous pepperoni. Perfect for sharing.",
+    "emoji": "🍕",
+    "category": "Pizza",
+    "price": 22.0,
+    "calories": 1950,
+    "carbs": 198,
+    "protein": 82,
+    "fat": 76,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Soy"
+    ],
+    "dietaryTags": [],
+    "ingredients": [
+      {
+        "name": "Pizza Dough",
+        "calories": 1150,
+        "carbs": 175,
+        "protein": 38,
+        "fat": 12
+      },
+      {
+        "name": "Cheese Blend",
+        "calories": 420,
+        "carbs": 4,
+        "protein": 28,
+        "fat": 34
+      },
+      {
+        "name": "Pepperoni",
+        "calories": 350,
+        "carbs": 0,
+        "protein": 18,
+        "fat": 30
+      },
+      {
+        "name": "Tomato Sauce",
+        "calories": 80,
+        "carbs": 16,
+        "protein": 2,
+        "fat": 1
+      }
+    ]
+  },
+  {
+    "id": "m101",
+    "restaurantId": "r1",
+    "name": "BYO Whole Pizza",
+    "description": "Build your own whole pizza. Choose your toppings and customize to your liking. Perfect for sharing.",
+    "emoji": "🍕",
+    "category": "Pizza",
+    "price": 20.0,
+    "calories": 1900,
+    "carbs": 200,
+    "protein": 78,
+    "fat": 72,
+    "allergens": [
+      "Gluten",
+      "Dairy",
+      "Soy"
+    ],
+    "dietaryTags": [],
+    "ingredients": [
+      {
+        "name": "Pizza Dough",
+        "calories": 1150,
+        "carbs": 175,
+        "protein": 38,
+        "fat": 12
+      },
+      {
+        "name": "Cheese Blend",
+        "calories": 420,
+        "carbs": 4,
+        "protein": 28,
+        "fat": 34
+      },
+      {
+        "name": "Choice of Toppings",
+        "calories": 250,
+        "carbs": 8,
+        "protein": 10,
+        "fat": 22
+      },
+      {
+        "name": "Tomato Sauce",
+        "calories": 80,
+        "carbs": 16,
+        "protein": 2,
+        "fat": 1
+      }
+    ]
   }
 ]

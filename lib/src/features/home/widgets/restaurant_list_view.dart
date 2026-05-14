@@ -9,6 +9,7 @@ class RestaurantListView extends StatelessWidget {
     required this.isLoading,
     required this.onTapRestaurant,
     this.bottomPadding = 20,
+    this.showMeta = true,
     super.key,
   });
 
@@ -16,6 +17,7 @@ class RestaurantListView extends StatelessWidget {
   final bool isLoading;
   final ValueChanged<Restaurant> onTapRestaurant;
   final double bottomPadding;
+  final bool showMeta;
 
   @override
   Widget build(BuildContext context) {
@@ -38,6 +40,7 @@ class RestaurantListView extends StatelessWidget {
         return RestaurantCard(
           restaurant: restaurant,
           onTap: () => onTapRestaurant(restaurant),
+          showMeta: showMeta,
         );
       },
     );

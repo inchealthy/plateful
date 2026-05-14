@@ -14,6 +14,7 @@ class MenuSection extends StatelessWidget {
     required this.onTapItem,
     required this.onIncrementItem,
     required this.onDecrementItem,
+    this.selectedAllergens = const {},
     super.key,
   });
 
@@ -24,6 +25,11 @@ class MenuSection extends StatelessWidget {
   final ValueChanged<MenuItem> onTapItem;
   final ValueChanged<MenuItem> onIncrementItem;
   final ValueChanged<MenuItem> onDecrementItem;
+  final Set<String> selectedAllergens;
+
+  bool _hasAllergenWarning(MenuItem item) =>
+      selectedAllergens.isNotEmpty &&
+      item.allergens.any(selectedAllergens.contains);
 
   static const _baseOrder = [
     'Breakfast',
@@ -85,6 +91,7 @@ class MenuSection extends StatelessWidget {
                 item: item,
                 quantity: itemQuantityOf(item.id),
                 isOrderingEnabled: isOrderingEnabled,
+                hasAllergenWarning: _hasAllergenWarning(item),
                 onTap: () => onTapItem(item),
                 onIncrementTap: () => onIncrementItem(item),
                 onDecrementTap: () => onDecrementItem(item),

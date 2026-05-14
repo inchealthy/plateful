@@ -12,7 +12,7 @@ class CartState {
   final String? restaurantName;
 
   double get subtotal =>
-      items.fold(0, (sum, item) => sum + (item.item.price * item.quantity));
+      items.fold(0, (sum, item) => sum + item.lineTotal);
   double get tax => subtotal * 0.08;
   double get total => subtotal + tax;
   int get totalItems => items.fold(0, (sum, item) => sum + item.quantity);

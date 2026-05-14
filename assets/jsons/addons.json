@@ -1,0 +1,491 @@
+[
+  {
+    "id": "ag1",
+    "restaurantId": "r7",
+    "applicableItemIds": ["m30", "m31"],
+    "name": "Protein Choice",
+    "required": true,
+    "maxSelections": 1,
+    "options": [
+      {"id": "ao1_1", "name": "Bacon", "extraCost": 0, "calories": 80, "carbs": 0, "protein": 6, "fat": 6},
+      {"id": "ao1_2", "name": "Sausage", "extraCost": 0, "calories": 110, "carbs": 1, "protein": 7, "fat": 9},
+      {"id": "ao1_3", "name": "Ham", "extraCost": 0, "calories": 60, "carbs": 1, "protein": 8, "fat": 3}
+    ]
+  },
+  {
+    "id": "ag2",
+    "restaurantId": "r7",
+    "applicableItemIds": ["m34"],
+    "name": "Add-Ons",
+    "required": false,
+    "maxSelections": 5,
+    "options": [
+      {"id": "ao2_1", "name": "Smoked Gouda Blend", "extraCost": 1.00, "calories": 110, "carbs": 0, "protein": 6, "fat": 9}
+    ]
+  },
+  {
+    "id": "ag3",
+    "restaurantId": "r7",
+    "applicableItemIds": ["m45"],
+    "name": "Add-Ons",
+    "required": false,
+    "maxSelections": 5,
+    "options": [
+      {"id": "ao3_1", "name": "Ham", "extraCost": 2.00, "calories": 60, "carbs": 1, "protein": 8, "fat": 3}
+    ]
+  },
+  {
+    "id": "ag4",
+    "restaurantId": "r7",
+    "applicableItemIds": ["m51","m52","m53","m54","m55","m56","m57","m58","m59","m60","m61","m62"],
+    "name": "Fillings & Toppings",
+    "required": false,
+    "maxSelections": 9,
+    "options": [
+      {"id": "ao4_1", "name": "Cilantro-Lime Rice", "extraCost": 0, "calories": 200, "carbs": 40, "protein": 4, "fat": 2},
+      {"id": "ao4_2", "name": "Vegetarian Pinto Beans", "extraCost": 0, "calories": 120, "carbs": 22, "protein": 7, "fat": 1},
+      {"id": "ao4_3", "name": "Seasoned Black Beans", "extraCost": 0, "calories": 110, "carbs": 20, "protein": 7, "fat": 1},
+      {"id": "ao4_4", "name": "Fajita Vegetables", "extraCost": 0, "calories": 50, "carbs": 8, "protein": 1, "fat": 2},
+      {"id": "ao4_5", "name": "Green Chile Queso", "extraCost": 0, "calories": 135, "carbs": 6, "protein": 6, "fat": 9},
+      {"id": "ao4_6", "name": "Pico de Gallo", "extraCost": 0, "calories": 10, "carbs": 2, "protein": 0, "fat": 0},
+      {"id": "ao4_7", "name": "Fresh Salsa", "extraCost": 0, "calories": 15, "carbs": 3, "protein": 0, "fat": 0},
+      {"id": "ao4_8", "name": "Cheddar Cheese Blend", "extraCost": 0, "calories": 110, "carbs": 0, "protein": 7, "fat": 9},
+      {"id": "ao4_9", "name": "Guacamole", "extraCost": 0, "calories": 90, "carbs": 6, "protein": 1, "fat": 8}
+    ]
+  },
+  {
+    "id": "ag5",
+    "restaurantId": "r1",
+    "applicableItemIds": ["m1"],
+    "name": "Burger Add-Ons",
+    "required": false,
+    "maxSelections": 5,
+    "options": [
+      {"id": "ao5_1", "name": "Extra Cheese", "extraCost": 0.50, "calories": 60, "carbs": 0, "protein": 4, "fat": 5},
+      {"id": "ao5_2", "name": "Bacon", "extraCost": 1.00, "calories": 80, "carbs": 0, "protein": 6, "fat": 6},
+      {"id": "ao5_3", "name": "Avocado", "extraCost": 1.00, "calories": 80, "carbs": 4, "protein": 1, "fat": 7},
+      {"id": "ao5_4", "name": "Fried Egg", "extraCost": 0.75, "calories": 70, "carbs": 0, "protein": 6, "fat": 5},
+      {"id": "ao5_5", "name": "Extra House Sauce", "extraCost": 0, "calories": 60, "carbs": 8, "protein": 0, "fat": 4}
+    ]
+  },
+  {
+    "id": "ag6",
+    "restaurantId": "r1",
+    "applicableItemIds": ["m2"],
+    "name": "Bowl Add-Ons",
+    "required": false,
+    "maxSelections": 4,
+    "options": [
+      {"id": "ao6_1", "name": "Grilled Chicken", "extraCost": 2.00, "calories": 160, "carbs": 0, "protein": 30, "fat": 3},
+      {"id": "ao6_2", "name": "Feta Cheese", "extraCost": 1.00, "calories": 80, "carbs": 1, "protein": 5, "fat": 6},
+      {"id": "ao6_3", "name": "Extra Tahini", "extraCost": 0, "calories": 60, "carbs": 2, "protein": 3, "fat": 5},
+      {"id": "ao6_4", "name": "Boiled Egg", "extraCost": 0.75, "calories": 70, "carbs": 0, "protein": 6, "fat": 5}
+    ]
+  },
+  {
+    "id": "ag7",
+    "restaurantId": "r1",
+    "applicableItemIds": ["m3"],
+    "name": "Pancake Add-Ons",
+    "required": false,
+    "maxSelections": 4,
+    "options": [
+      {"id": "ao7_1", "name": "Whipped Cream", "extraCost": 0, "calories": 80, "carbs": 4, "protein": 1, "fat": 7},
+      {"id": "ao7_2", "name": "Fresh Berries", "extraCost": 1.00, "calories": 40, "carbs": 10, "protein": 0, "fat": 0},
+      {"id": "ao7_3", "name": "Bacon (2 strips)", "extraCost": 1.50, "calories": 80, "carbs": 0, "protein": 6, "fat": 6},
+      {"id": "ao7_4", "name": "Extra Maple Syrup", "extraCost": 0, "calories": 60, "carbs": 16, "protein": 0, "fat": 0}
+    ]
+  },
+  {
+    "id": "ag8",
+    "restaurantId": "r1",
+    "applicableItemIds": ["m4"],
+    "name": "Breakfast Add-Ons",
+    "required": false,
+    "maxSelections": 4,
+    "options": [
+      {"id": "ao8_1", "name": "Extra Eggs", "extraCost": 0.75, "calories": 70, "carbs": 0, "protein": 6, "fat": 5},
+      {"id": "ao8_2", "name": "Avocado", "extraCost": 1.00, "calories": 80, "carbs": 4, "protein": 1, "fat": 7},
+      {"id": "ao8_3", "name": "Toast (2 slices)", "extraCost": 0, "calories": 80, "carbs": 15, "protein": 2, "fat": 1},
+      {"id": "ao8_4", "name": "Hot Sauce", "extraCost": 0, "calories": 10, "carbs": 2, "protein": 0, "fat": 0}
+    ]
+  },
+  {
+    "id": "ag9",
+    "restaurantId": "r1",
+    "applicableItemIds": ["m5"],
+    "name": "Pasta Add-Ons",
+    "required": false,
+    "maxSelections": 4,
+    "options": [
+      {"id": "ao9_1", "name": "Extra Parmesan", "extraCost": 0, "calories": 40, "carbs": 0, "protein": 4, "fat": 3},
+      {"id": "ao9_2", "name": "Garlic Bread", "extraCost": 1.00, "calories": 150, "carbs": 22, "protein": 4, "fat": 5},
+      {"id": "ao9_3", "name": "Extra Chicken", "extraCost": 2.00, "calories": 160, "carbs": 0, "protein": 30, "fat": 3},
+      {"id": "ao9_4", "name": "Crushed Red Pepper", "extraCost": 0, "calories": 5, "carbs": 1, "protein": 0, "fat": 0}
+    ]
+  },
+  {
+    "id": "ag10",
+    "restaurantId": "r1",
+    "applicableItemIds": ["m6"],
+    "name": "Salmon Add-Ons",
+    "required": false,
+    "maxSelections": 3,
+    "options": [
+      {"id": "ao10_1", "name": "Garlic Bread", "extraCost": 1.00, "calories": 150, "carbs": 22, "protein": 4, "fat": 5},
+      {"id": "ao10_2", "name": "Extra Greens", "extraCost": 0, "calories": 30, "carbs": 4, "protein": 2, "fat": 1},
+      {"id": "ao10_3", "name": "Lemon Butter Sauce", "extraCost": 0.50, "calories": 100, "carbs": 1, "protein": 0, "fat": 11}
+    ]
+  },
+  {
+    "id": "ag11",
+    "restaurantId": "r1",
+    "applicableItemIds": ["m7"],
+    "name": "Salad Add-Ons",
+    "required": false,
+    "maxSelections": 5,
+    "options": [
+      {"id": "ao11_1", "name": "Grilled Chicken", "extraCost": 2.00, "calories": 180, "carbs": 0, "protein": 26, "fat": 4},
+      {"id": "ao11_2", "name": "Boiled Egg", "extraCost": 0.75, "calories": 70, "carbs": 0, "protein": 6, "fat": 5},
+      {"id": "ao11_3", "name": "Avocado", "extraCost": 1.00, "calories": 80, "carbs": 4, "protein": 1, "fat": 7},
+      {"id": "ao11_4", "name": "Feta Cheese", "extraCost": 1.00, "calories": 80, "carbs": 1, "protein": 5, "fat": 6},
+      {"id": "ao11_5", "name": "Extra Dressing", "extraCost": 0, "calories": 80, "carbs": 6, "protein": 0, "fat": 7}
+    ]
+  },
+  {
+    "id": "ag12",
+    "restaurantId": "r1",
+    "applicableItemIds": ["m8"],
+    "name": "Wrap Add-Ons",
+    "required": false,
+    "maxSelections": 4,
+    "options": [
+      {"id": "ao12_1", "name": "Extra Cheese", "extraCost": 0, "calories": 60, "carbs": 0, "protein": 4, "fat": 5},
+      {"id": "ao12_2", "name": "Avocado", "extraCost": 1.00, "calories": 80, "carbs": 4, "protein": 1, "fat": 7},
+      {"id": "ao12_3", "name": "Bacon", "extraCost": 1.00, "calories": 80, "carbs": 0, "protein": 6, "fat": 6},
+      {"id": "ao12_4", "name": "Extra Ranch", "extraCost": 0, "calories": 90, "carbs": 2, "protein": 0, "fat": 8}
+    ]
+  },
+  {
+    "id": "ag13",
+    "restaurantId": "r2",
+    "applicableItemIds": ["m9"],
+    "name": "Taco Add-Ons",
+    "required": false,
+    "maxSelections": 4,
+    "options": [
+      {"id": "ao13_1", "name": "Guacamole", "extraCost": 1.50, "calories": 90, "carbs": 6, "protein": 1, "fat": 8},
+      {"id": "ao13_2", "name": "Extra Salsa", "extraCost": 0, "calories": 30, "carbs": 6, "protein": 1, "fat": 0},
+      {"id": "ao13_3", "name": "Sour Cream", "extraCost": 0.50, "calories": 60, "carbs": 2, "protein": 1, "fat": 5},
+      {"id": "ao13_4", "name": "Extra Tortilla", "extraCost": 0.50, "calories": 50, "carbs": 10, "protein": 1, "fat": 1}
+    ]
+  },
+  {
+    "id": "ag14",
+    "restaurantId": "r2",
+    "applicableItemIds": ["m10"],
+    "name": "Bowl Add-Ons",
+    "required": false,
+    "maxSelections": 4,
+    "options": [
+      {"id": "ao14_1", "name": "Grilled Chicken", "extraCost": 2.00, "calories": 180, "carbs": 0, "protein": 26, "fat": 4},
+      {"id": "ao14_2", "name": "Extra Avocado", "extraCost": 1.00, "calories": 60, "carbs": 3, "protein": 1, "fat": 6},
+      {"id": "ao14_3", "name": "Feta Cheese", "extraCost": 1.00, "calories": 80, "carbs": 1, "protein": 5, "fat": 6},
+      {"id": "ao14_4", "name": "Extra Quinoa", "extraCost": 0, "calories": 80, "carbs": 14, "protein": 3, "fat": 1}
+    ]
+  },
+  {
+    "id": "ag15",
+    "restaurantId": "r2",
+    "applicableItemIds": ["m11"],
+    "name": "Sandwich Add-Ons",
+    "required": false,
+    "maxSelections": 4,
+    "options": [
+      {"id": "ao15_1", "name": "Bacon", "extraCost": 1.00, "calories": 80, "carbs": 0, "protein": 6, "fat": 6},
+      {"id": "ao15_2", "name": "Extra Avocado", "extraCost": 1.00, "calories": 80, "carbs": 4, "protein": 1, "fat": 7},
+      {"id": "ao15_3", "name": "Extra Cheese", "extraCost": 0.50, "calories": 60, "carbs": 0, "protein": 4, "fat": 5},
+      {"id": "ao15_4", "name": "Dijon Mustard", "extraCost": 0, "calories": 15, "carbs": 1, "protein": 0, "fat": 1}
+    ]
+  },
+  {
+    "id": "ag16",
+    "restaurantId": "r2",
+    "applicableItemIds": ["m12"],
+    "name": "Stir Fry Add-Ons",
+    "required": false,
+    "maxSelections": 3,
+    "options": [
+      {"id": "ao16_1", "name": "Tofu", "extraCost": 1.50, "calories": 80, "carbs": 2, "protein": 9, "fat": 4},
+      {"id": "ao16_2", "name": "Extra Rice", "extraCost": 0, "calories": 160, "carbs": 34, "protein": 3, "fat": 0},
+      {"id": "ao16_3", "name": "Edamame", "extraCost": 1.00, "calories": 70, "carbs": 6, "protein": 6, "fat": 3}
+    ]
+  },
+  {
+    "id": "ag17",
+    "restaurantId": "r2",
+    "applicableItemIds": ["m13"],
+    "name": "BBQ Plate Add-Ons",
+    "required": false,
+    "maxSelections": 3,
+    "options": [
+      {"id": "ao17_1", "name": "Mac & Cheese", "extraCost": 2.00, "calories": 250, "carbs": 30, "protein": 9, "fat": 11},
+      {"id": "ao17_2", "name": "Cornbread", "extraCost": 1.50, "calories": 180, "carbs": 28, "protein": 4, "fat": 6},
+      {"id": "ao17_3", "name": "Extra BBQ Sauce", "extraCost": 0, "calories": 60, "carbs": 14, "protein": 0, "fat": 0}
+    ]
+  },
+  {
+    "id": "ag18",
+    "restaurantId": "r3",
+    "applicableItemIds": ["m14", "m15"],
+    "name": "Drink Add-Ons",
+    "required": false,
+    "maxSelections": 4,
+    "options": [
+      {"id": "ao18_1", "name": "Extra Espresso Shot", "extraCost": 0.75, "calories": 10, "carbs": 2, "protein": 0, "fat": 0},
+      {"id": "ao18_2", "name": "Whipped Cream", "extraCost": 0.50, "calories": 80, "carbs": 4, "protein": 1, "fat": 7},
+      {"id": "ao18_3", "name": "Extra Syrup", "extraCost": 0.50, "calories": 60, "carbs": 16, "protein": 0, "fat": 0},
+      {"id": "ao18_4", "name": "Oat Milk Upgrade", "extraCost": 0.75, "calories": 30, "carbs": 5, "protein": 1, "fat": 1}
+    ]
+  },
+  {
+    "id": "ag19",
+    "restaurantId": "r3",
+    "applicableItemIds": ["m17"],
+    "name": "Toast Add-Ons",
+    "required": false,
+    "maxSelections": 3,
+    "options": [
+      {"id": "ao19_1", "name": "Poached Egg", "extraCost": 0.75, "calories": 70, "carbs": 0, "protein": 6, "fat": 5},
+      {"id": "ao19_2", "name": "Smoked Salmon", "extraCost": 2.50, "calories": 120, "carbs": 0, "protein": 17, "fat": 6},
+      {"id": "ao19_3", "name": "Extra Avocado", "extraCost": 1.00, "calories": 80, "carbs": 4, "protein": 1, "fat": 7}
+    ]
+  },
+  {
+    "id": "ag20",
+    "restaurantId": "r3",
+    "applicableItemIds": ["m16", "m18"],
+    "name": "Bakery Add-Ons",
+    "required": false,
+    "maxSelections": 3,
+    "options": [
+      {"id": "ao20_1", "name": "Butter", "extraCost": 0, "calories": 100, "carbs": 0, "protein": 0, "fat": 11},
+      {"id": "ao20_2", "name": "Jam", "extraCost": 0, "calories": 50, "carbs": 13, "protein": 0, "fat": 0},
+      {"id": "ao20_3", "name": "Cream Cheese", "extraCost": 0.50, "calories": 90, "carbs": 2, "protein": 2, "fat": 8}
+    ]
+  },
+  {
+    "id": "ag21",
+    "restaurantId": "r4",
+    "applicableItemIds": ["m19"],
+    "name": "Burger Add-Ons",
+    "required": false,
+    "maxSelections": 5,
+    "options": [
+      {"id": "ao21_1", "name": "Extra Cheese", "extraCost": 0.75, "calories": 100, "carbs": 2, "protein": 5, "fat": 8},
+      {"id": "ao21_2", "name": "Bacon", "extraCost": 1.00, "calories": 80, "carbs": 0, "protein": 6, "fat": 6},
+      {"id": "ao21_3", "name": "Avocado", "extraCost": 1.00, "calories": 80, "carbs": 4, "protein": 1, "fat": 7},
+      {"id": "ao21_4", "name": "Fried Egg", "extraCost": 0.75, "calories": 70, "carbs": 0, "protein": 6, "fat": 5},
+      {"id": "ao21_5", "name": "Extra Patty", "extraCost": 2.50, "calories": 190, "carbs": 0, "protein": 16, "fat": 12}
+    ]
+  },
+  {
+    "id": "ag22",
+    "restaurantId": "r4",
+    "applicableItemIds": ["m20"],
+    "name": "Fries Add-Ons",
+    "required": false,
+    "maxSelections": 3,
+    "options": [
+      {"id": "ao22_1", "name": "Extra Cheese Sauce", "extraCost": 0, "calories": 100, "carbs": 8, "protein": 5, "fat": 7},
+      {"id": "ao22_2", "name": "Jalapeños", "extraCost": 0, "calories": 10, "carbs": 2, "protein": 0, "fat": 0},
+      {"id": "ao22_3", "name": "Extra Bacon", "extraCost": 0.50, "calories": 60, "carbs": 0, "protein": 5, "fat": 4}
+    ]
+  },
+  {
+    "id": "ag23",
+    "restaurantId": "r4",
+    "applicableItemIds": ["m21"],
+    "name": "Pizza Add-Ons",
+    "required": false,
+    "maxSelections": 4,
+    "options": [
+      {"id": "ao23_1", "name": "Extra Mozzarella", "extraCost": 1.00, "calories": 120, "carbs": 2, "protein": 7, "fat": 9},
+      {"id": "ao23_2", "name": "Pepperoni", "extraCost": 1.00, "calories": 130, "carbs": 0, "protein": 6, "fat": 11},
+      {"id": "ao23_3", "name": "Mushrooms", "extraCost": 0, "calories": 20, "carbs": 3, "protein": 2, "fat": 0},
+      {"id": "ao23_4", "name": "Red Pepper Flakes", "extraCost": 0, "calories": 5, "carbs": 1, "protein": 0, "fat": 0}
+    ]
+  },
+  {
+    "id": "ag24",
+    "restaurantId": "r4",
+    "applicableItemIds": ["m22"],
+    "name": "Sandwich Add-Ons",
+    "required": false,
+    "maxSelections": 3,
+    "options": [
+      {"id": "ao24_1", "name": "Extra Pulled Pork", "extraCost": 2.00, "calories": 150, "carbs": 0, "protein": 15, "fat": 9},
+      {"id": "ao24_2", "name": "Extra Coleslaw", "extraCost": 0, "calories": 80, "carbs": 10, "protein": 1, "fat": 5},
+      {"id": "ao24_3", "name": "Extra BBQ Sauce", "extraCost": 0, "calories": 80, "carbs": 20, "protein": 0, "fat": 0}
+    ]
+  },
+  {
+    "id": "ag25",
+    "restaurantId": "r5",
+    "applicableItemIds": ["m23"],
+    "name": "Smoothie Bowl Add-Ons",
+    "required": false,
+    "maxSelections": 4,
+    "options": [
+      {"id": "ao25_1", "name": "Protein Powder", "extraCost": 1.50, "calories": 100, "carbs": 2, "protein": 20, "fat": 2},
+      {"id": "ao25_2", "name": "Extra Granola", "extraCost": 0, "calories": 80, "carbs": 14, "protein": 2, "fat": 2},
+      {"id": "ao25_3", "name": "Peanut Butter", "extraCost": 1.00, "calories": 190, "carbs": 6, "protein": 8, "fat": 16},
+      {"id": "ao25_4", "name": "Extra Berries", "extraCost": 0, "calories": 40, "carbs": 10, "protein": 0, "fat": 0}
+    ]
+  },
+  {
+    "id": "ag26",
+    "restaurantId": "r5",
+    "applicableItemIds": ["m24"],
+    "name": "Bowl Add-Ons",
+    "required": false,
+    "maxSelections": 4,
+    "options": [
+      {"id": "ao26_1", "name": "Grilled Tofu", "extraCost": 1.50, "calories": 100, "carbs": 3, "protein": 10, "fat": 5},
+      {"id": "ao26_2", "name": "Extra Avocado", "extraCost": 1.00, "calories": 80, "carbs": 4, "protein": 1, "fat": 7},
+      {"id": "ao26_3", "name": "Hemp Seeds", "extraCost": 0, "calories": 60, "carbs": 2, "protein": 4, "fat": 5},
+      {"id": "ao26_4", "name": "Extra Miso Dressing", "extraCost": 0, "calories": 80, "carbs": 4, "protein": 2, "fat": 7}
+    ]
+  },
+  {
+    "id": "ag27",
+    "restaurantId": "r5",
+    "applicableItemIds": ["m25"],
+    "name": "Wrap Add-Ons",
+    "required": false,
+    "maxSelections": 3,
+    "options": [
+      {"id": "ao27_1", "name": "Grilled Chicken", "extraCost": 2.00, "calories": 180, "carbs": 0, "protein": 26, "fat": 4},
+      {"id": "ao27_2", "name": "Extra Avocado", "extraCost": 1.00, "calories": 80, "carbs": 4, "protein": 1, "fat": 7},
+      {"id": "ao27_3", "name": "Hummus", "extraCost": 0, "calories": 60, "carbs": 6, "protein": 3, "fat": 3}
+    ]
+  },
+  {
+    "id": "ag28",
+    "restaurantId": "r5",
+    "applicableItemIds": ["m26"],
+    "name": "Chia Pudding Add-Ons",
+    "required": false,
+    "maxSelections": 3,
+    "options": [
+      {"id": "ao28_1", "name": "Granola", "extraCost": 0.50, "calories": 80, "carbs": 14, "protein": 2, "fat": 2},
+      {"id": "ao28_2", "name": "Almond Butter", "extraCost": 1.00, "calories": 190, "carbs": 6, "protein": 8, "fat": 16},
+      {"id": "ao28_3", "name": "Extra Honey", "extraCost": 0, "calories": 50, "carbs": 14, "protein": 0, "fat": 0}
+    ]
+  },
+  {
+    "id": "ag29",
+    "restaurantId": "r6",
+    "applicableItemIds": ["m27"],
+    "name": "Protein Bar Add-Ons",
+    "required": false,
+    "maxSelections": 2,
+    "options": [
+      {"id": "ao29_1", "name": "Almond Butter Packet", "extraCost": 1.50, "calories": 190, "carbs": 6, "protein": 8, "fat": 16},
+      {"id": "ao29_2", "name": "Banana", "extraCost": 0.75, "calories": 90, "carbs": 23, "protein": 1, "fat": 0}
+    ]
+  },
+  {
+    "id": "ag30",
+    "restaurantId": "r6",
+    "applicableItemIds": ["m28"],
+    "name": "Water Add-Ons",
+    "required": false,
+    "maxSelections": 2,
+    "options": [
+      {"id": "ao30_1", "name": "Lemon Slice", "extraCost": 0, "calories": 5, "carbs": 1, "protein": 0, "fat": 0},
+      {"id": "ao30_2", "name": "Flavor Packet", "extraCost": 0.50, "calories": 10, "carbs": 2, "protein": 0, "fat": 0}
+    ]
+  },
+  {
+    "id": "ag31",
+    "restaurantId": "r6",
+    "applicableItemIds": ["m29"],
+    "name": "Trail Mix Add-Ons",
+    "required": false,
+    "maxSelections": 3,
+    "options": [
+      {"id": "ao31_1", "name": "Dark Chocolate Chips", "extraCost": 0, "calories": 80, "carbs": 10, "protein": 1, "fat": 4},
+      {"id": "ao31_2", "name": "Extra Almonds", "extraCost": 0, "calories": 100, "carbs": 4, "protein": 4, "fat": 9},
+      {"id": "ao31_3", "name": "Dried Mango", "extraCost": 0, "calories": 50, "carbs": 13, "protein": 0, "fat": 0}
+    ]
+  },
+  {
+    "id": "ag32",
+    "restaurantId": "r7",
+    "applicableItemIds": ["m37", "m38", "m39", "m43"],
+    "name": "Burger Add-Ons",
+    "required": false,
+    "maxSelections": 4,
+    "options": [
+      {"id": "ao32_1", "name": "Extra Cheese", "extraCost": 1.00, "calories": 110, "carbs": 0, "protein": 7, "fat": 9},
+      {"id": "ao32_2", "name": "Bacon", "extraCost": 1.00, "calories": 80, "carbs": 0, "protein": 6, "fat": 6},
+      {"id": "ao32_3", "name": "Avocado", "extraCost": 1.00, "calories": 100, "carbs": 4, "protein": 1, "fat": 9},
+      {"id": "ao32_4", "name": "Fried Egg", "extraCost": 0.75, "calories": 90, "carbs": 0, "protein": 7, "fat": 6}
+    ]
+  },
+  {
+    "id": "ag33",
+    "restaurantId": "r7",
+    "applicableItemIds": ["m40", "m41", "m42", "m46"],
+    "name": "Sandwich & Wrap Add-Ons",
+    "required": false,
+    "maxSelections": 3,
+    "options": [
+      {"id": "ao33_1", "name": "Extra Cheese", "extraCost": 1.00, "calories": 110, "carbs": 0, "protein": 7, "fat": 9},
+      {"id": "ao33_2", "name": "Avocado", "extraCost": 1.00, "calories": 100, "carbs": 4, "protein": 1, "fat": 9},
+      {"id": "ao33_3", "name": "Jalapeños", "extraCost": 0, "calories": 10, "carbs": 2, "protein": 0, "fat": 0}
+    ]
+  },
+  {
+    "id": "ag34",
+    "restaurantId": "r7",
+    "applicableItemIds": ["m44"],
+    "name": "Sauce Choice",
+    "required": false,
+    "maxSelections": 2,
+    "options": [
+      {"id": "ao34_1", "name": "BBQ Sauce", "extraCost": 0, "calories": 80, "carbs": 20, "protein": 0, "fat": 0},
+      {"id": "ao34_2", "name": "Ranch", "extraCost": 0, "calories": 90, "carbs": 2, "protein": 0, "fat": 8},
+      {"id": "ao34_3", "name": "Honey Mustard", "extraCost": 0, "calories": 100, "carbs": 12, "protein": 0, "fat": 6},
+      {"id": "ao34_4", "name": "IVC Sauce", "extraCost": 0, "calories": 80, "carbs": 8, "protein": 0, "fat": 6}
+    ]
+  },
+  {
+    "id": "ag35",
+    "restaurantId": "r7",
+    "applicableItemIds": ["m47", "m48"],
+    "name": "Sides Add-Ons",
+    "required": false,
+    "maxSelections": 3,
+    "options": [
+      {"id": "ao35_1", "name": "Cheese Sauce", "extraCost": 1.00, "calories": 100, "carbs": 8, "protein": 5, "fat": 7},
+      {"id": "ao35_2", "name": "Bacon Bits", "extraCost": 1.00, "calories": 60, "carbs": 0, "protein": 5, "fat": 4},
+      {"id": "ao35_3", "name": "Jalapeños", "extraCost": 0, "calories": 10, "carbs": 2, "protein": 0, "fat": 0}
+    ]
+  },
+  {
+    "id": "ag36",
+    "restaurantId": "r7",
+    "applicableItemIds": ["m63", "m64", "m65"],
+    "name": "Chips Add-Ons",
+    "required": false,
+    "maxSelections": 4,
+    "options": [
+      {"id": "ao36_1", "name": "Guacamole", "extraCost": 1.00, "calories": 90, "carbs": 6, "protein": 1, "fat": 8},
+      {"id": "ao36_2", "name": "Sour Cream", "extraCost": 0.50, "calories": 60, "carbs": 2, "protein": 1, "fat": 5},
+      {"id": "ao36_3", "name": "Extra Salsa", "extraCost": 0, "calories": 10, "carbs": 2, "protein": 0, "fat": 0},
+      {"id": "ao36_4", "name": "Jalapeños", "extraCost": 0, "calories": 10, "carbs": 2, "protein": 0, "fat": 0}
+    ]
+  }
+]

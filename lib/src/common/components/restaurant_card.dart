@@ -8,11 +8,13 @@ class RestaurantCard extends StatelessWidget {
   const RestaurantCard({
     required this.restaurant,
     required this.onTap,
+    this.showMeta = true,
     super.key,
   });
 
   final Restaurant restaurant;
   final VoidCallback onTap;
+  final bool showMeta;
 
   Color _statusColor(String status) {
     switch (status.toLowerCase()) {
@@ -78,26 +80,28 @@ class RestaurantCard extends StatelessWidget {
                           overflow: TextOverflow.ellipsis,
                         ),
                       ),
-                      const SizedBox(width: 8),
-                      Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 10,
-                          vertical: 4,
-                        ),
-                        decoration: BoxDecoration(
-                          color: _statusColor(restaurant.status),
-                          borderRadius: BorderRadius.circular(12),
-                        ),
-                        child: Text(
-                          restaurant.status[0].toUpperCase() +
-                              restaurant.status.substring(1),
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 11,
-                            fontWeight: FontWeight.w600,
+                      if (showMeta) ...[
+                        const SizedBox(width: 8),
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 10,
+                            vertical: 4,
+                          ),
+                          decoration: BoxDecoration(
+                            color: _statusColor(restaurant.status),
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: Text(
+                            restaurant.status[0].toUpperCase() +
+                                restaurant.status.substring(1),
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 11,
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ),
-                      ),
+                      ],
                     ],
                   ),
                   const SizedBox(height: 4),
@@ -109,17 +113,19 @@ class RestaurantCard extends StatelessWidget {
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
-                  const SizedBox(height: 6),
-                  Text(
-                    '📍 ${restaurant.distanceMiles.toStringAsFixed(1)} mi · '
-                    '⭐ ${restaurant.rating.toStringAsFixed(1)} · '
-                    '🕐 ${restaurant.hours}',
-                    style: AppTextStyles.label.copyWith(
-                      color: AppColors.textSecondary,
+                  if (showMeta) ...[
+                    const SizedBox(height: 6),
+                    Text(
+                      '📍 ${restaurant.distanceMiles.toStringAsFixed(1)} mi · '
+                      '⭐ ${restaurant.rating.toStringAsFixed(1)} · '
+                      '🕐 ${restaurant.hours}',
+                      style: AppTextStyles.label.copyWith(
+                        color: AppColors.textSecondary,
+                      ),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                     ),
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                  ),
+                  ],
                 ],
               ),
             ),

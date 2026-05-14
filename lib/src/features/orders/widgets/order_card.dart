@@ -75,7 +75,7 @@ class OrderCard extends StatelessWidget {
             Row(
               children: [
                 Text(
-                  '${order.items.length} items',
+                  '${order.items.fold(0, (sum, i) => sum + i.quantity)} items',
                   style: AppTextStyles.label.copyWith(
                     color: AppColors.textSecondary,
                   ),

@@ -65,11 +65,21 @@ class CartItemTile extends StatelessWidget {
                   style:
                       AppTextStyles.body.copyWith(fontWeight: FontWeight.w700),
                 ),
+                if (cartItem.selectedAddOns.isNotEmpty) ...[
+                  SizedBox(height: 2.h),
+                  Text(
+                    cartItem.selectedAddOns.map((a) => a.name).join(', '),
+                    style: AppTextStyles.label
+                        .copyWith(color: AppColors.textSecondary),
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ],
                 SizedBox(height: 4.h),
                 Text(
                   restaurantName,
                   style: AppTextStyles.label.copyWith(
-                    color: AppColors.textSecondary,
+                    color: AppColors.textHint,
                   ),
                 ),
               ],
@@ -98,7 +108,7 @@ class CartItemTile extends StatelessWidget {
               ),
               SizedBox(height: 6.h),
               Text(
-                '\$${(item.price * cartItem.quantity).toStringAsFixed(2)}',
+                '\$${cartItem.lineTotal.toStringAsFixed(2)}',
                 style: AppTextStyles.label
                     .copyWith(color: AppColors.textSecondary),
               ),

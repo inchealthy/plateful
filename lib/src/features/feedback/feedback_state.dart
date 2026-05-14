@@ -1,14 +1,14 @@
 import '../../common/domain/entities/order.dart';
 
-enum FeedbackDimension { overall, foodQuality, portionSize, serviceSpeed }
+enum FeedbackDimension { overall, food, service, recommend }
 
 class FeedbackState {
   const FeedbackState({
     this.order,
     this.overallRating = 0,
-    this.foodQualityRating = 0,
-    this.portionSizeRating = 0,
-    this.serviceSpeedRating = 0,
+    this.foodRating = 0,
+    this.serviceRating = 0,
+    this.recommendRating = 0,
     this.comment = '',
     this.isSubmitting = false,
     this.submitted = false,
@@ -16,27 +16,26 @@ class FeedbackState {
 
   final Order? order;
   final int overallRating;
-  final int foodQualityRating;
-  final int portionSizeRating;
-  final int serviceSpeedRating;
+  final int foodRating;
+  final int serviceRating;
+  final int recommendRating;
   final String comment;
   final bool isSubmitting;
   final bool submitted;
 
-  bool get canSubmit {
-    return overallRating > 0 &&
-        foodQualityRating > 0 &&
-        portionSizeRating > 0 &&
-        serviceSpeedRating > 0;
-  }
+  bool get canSubmit =>
+      overallRating > 0 &&
+      foodRating > 0 &&
+      serviceRating > 0 &&
+      recommendRating > 0;
 
   FeedbackState copyWith({
     Order? order,
     bool clearOrder = false,
     int? overallRating,
-    int? foodQualityRating,
-    int? portionSizeRating,
-    int? serviceSpeedRating,
+    int? foodRating,
+    int? serviceRating,
+    int? recommendRating,
     String? comment,
     bool? isSubmitting,
     bool? submitted,
@@ -44,9 +43,9 @@ class FeedbackState {
     return FeedbackState(
       order: clearOrder ? null : (order ?? this.order),
       overallRating: overallRating ?? this.overallRating,
-      foodQualityRating: foodQualityRating ?? this.foodQualityRating,
-      portionSizeRating: portionSizeRating ?? this.portionSizeRating,
-      serviceSpeedRating: serviceSpeedRating ?? this.serviceSpeedRating,
+      foodRating: foodRating ?? this.foodRating,
+      serviceRating: serviceRating ?? this.serviceRating,
+      recommendRating: recommendRating ?? this.recommendRating,
       comment: comment ?? this.comment,
       isSubmitting: isSubmitting ?? this.isSubmitting,
       submitted: submitted ?? this.submitted,

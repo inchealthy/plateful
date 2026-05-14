@@ -13,7 +13,6 @@ import 'widgets/filter_chips_bar.dart';
 import 'widgets/home_header.dart';
 import 'widgets/location_selector_screen.dart';
 import 'widgets/restaurant_list_view.dart';
-import 'widgets/restaurant_map_view.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key});
@@ -56,7 +55,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     final state = ref.watch(homeProvider);
     final cartState = ref.watch(cartProvider);
     final hasCartItems = cartState.items.isNotEmpty;
-    final isListTab = state.selectedTabIndex == 0;
     final selectedLocation = state.selectedLocation;
     final currentLocationName = selectedLocation?.name ?? 'Select location';
 
@@ -75,8 +73,6 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                     distanceKmById: state.locationDistanceKmById,
                     showDistance: state.hasLocationPermission,
                   ),
-                  selectedTabIndex: state.selectedTabIndex,
-                  onTabChanged: ref.read(homeProvider.notifier).onTabChanged,
                 ),
                 Padding(
                   padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
@@ -91,74 +87,28 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                       ref.read(homeProvider.notifier).onFilterSelected,
                 ),
                 Expanded(
-                  child: isListTab
-                      ? RestaurantListView(
-                          restaurants: state.filteredList,
-                          isLoading: state.isLoading,
-                          bottomPadding: hasCartItems ? 108 : 20,
-                          onTapRestaurant: (restaurant) =>
-                              _goToRestaurant(restaurant.id),
-                        )
-                      : RestaurantMapView(
-                          restaurants: state.filteredList,
-                          centerLat: selectedLocation?.lat ?? 0,
-                          centerLng: selectedLocation?.lng ?? 0,
-                          onViewMenu: (restaurant) =>
-                              _goToRestaurant(restaurant.id),
-                          userLat: state.userCoordinate?.latitude,
-                          userLng: state.userCoordinate?.longitude,
-                        ),
+                  child: RestaurantListView(
+                    restaurants: state.filteredList,
+                    isLoading: state.isLoading,
+                    bottomPadding: hasCartItems ? 108 : 20,
+                    onTapRestaurant: (restaurant) =>
+                        _goToRestaurant(restaurant.id),
+                  ),
                 ),
               ],
             ),
-            if (hasCartItems && isListTab) const CartFAB(),
-            if (hasCartItems && !isListTab)
-              Positioned(
-                key: const Key('home-map-cart-fab'),
-                right: 16,
-                bottom: 84,
-                child: Stack(
-                  clipBehavior: Clip.none,
-                  children: [
-                    FloatingActionButton(
-                      heroTag: 'home-map-cart-fab-btn',
-                      mini: true,
-                      backgroundColor: AppColors.primary,
-                      onPressed: () => context.push('/cart'),
-                      child: const Icon(
-                        Icons.shopping_cart,
-                        color: Colors.white,
-                      ),
-                    ),
-                    Positioned(
-                      top: -6,
-                      right: -6,
-                      child: Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 6,
-                          vertical: 2,
-                        ),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(10),
-                          border: Border.all(
-                            color: AppColors.primary,
-                            width: 1.5,
-                          ),
-                        ),
-                        child: Text(
-                          '${cartState.totalItems}',
-                          style: const TextStyle(
-                            color: AppColors.primary,
-                            fontSize: 11,
-                            fontWeight: FontWeight.w700,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+            if (hasCartItems) const CartFAB(),
+            Positioned(
+              right: 16,
+              bottom: hasCartItems ? 88 : 16,
+              child: FloatingActionButton(
+                key: const Key('home-feedback-fab'),
+                heroTag: 'home-feedback-fab',
+                backgroundColor: AppColors.primary,
+                onPressed: () => context.go('/shell/feedback'),
+                child: const Icon(Icons.rate_review, color: Colors.white),
               ),
+            ),
           ],
         ),
       ),

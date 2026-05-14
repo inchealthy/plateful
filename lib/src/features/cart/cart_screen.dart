@@ -32,12 +32,12 @@ class CartScreen extends ConsumerWidget {
                         onQtyChanged: (quantity) {
                           ref
                               .read(cartProvider.notifier)
-                              .updateQuantity(cartItem.item.id, quantity);
+                              .updateQuantity(cartItem.cartKey, quantity);
                         },
                         onRemove: () {
                           ref
                               .read(cartProvider.notifier)
-                              .removeItem(cartItem.item.id);
+                              .removeItem(cartItem.cartKey);
                         },
                       );
                     },

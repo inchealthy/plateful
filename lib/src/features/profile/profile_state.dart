@@ -1,19 +1,19 @@
 class ProfileState {
   const ProfileState({
     this.selectedDietaryPrefs = const {},
-    this.allergiesText = '',
+    this.selectedAllergens = const {},
   });
 
   final Set<String> selectedDietaryPrefs;
-  final String allergiesText;
+  final Set<String> selectedAllergens;
 
   ProfileState copyWith({
     Set<String>? selectedDietaryPrefs,
-    String? allergiesText,
+    Set<String>? selectedAllergens,
   }) {
     return ProfileState(
       selectedDietaryPrefs: selectedDietaryPrefs ?? this.selectedDietaryPrefs,
-      allergiesText: allergiesText ?? this.allergiesText,
+      selectedAllergens: selectedAllergens ?? this.selectedAllergens,
     );
   }
 }

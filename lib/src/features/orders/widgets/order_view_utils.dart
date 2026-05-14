@@ -24,6 +24,7 @@ const _restaurantEmojiById = {
   'r4': '🍔',
   'r5': '🌿',
   'r6': '🏪',
+  'r7': '☀️',
 };
 
 String orderDateLabel(DateTime dateTime) {

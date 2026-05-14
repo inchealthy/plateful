@@ -14,6 +14,7 @@ class MenuItemCard extends StatelessWidget {
     required this.onTap,
     required this.onIncrementTap,
     required this.onDecrementTap,
+    this.hasAllergenWarning = false,
     super.key,
   });
 
@@ -23,6 +24,7 @@ class MenuItemCard extends StatelessWidget {
   final VoidCallback onTap;
   final VoidCallback onIncrementTap;
   final VoidCallback onDecrementTap;
+  final bool hasAllergenWarning;
 
   Color _categoryColor(String category) {
     switch (category) {
@@ -80,15 +82,42 @@ class MenuItemCard extends StatelessWidget {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              width: 90.w,
-              height: 90.w,
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                color: _categoryColor(item.category),
-                borderRadius: BorderRadius.circular(12.r),
-              ),
-              child: Text(item.emoji, style: TextStyle(fontSize: 36.sp)),
+            Stack(
+              children: [
+                Container(
+                  width: 90.w,
+                  height: 90.w,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: _categoryColor(item.category),
+                    borderRadius: BorderRadius.circular(12.r),
+                  ),
+                  child: Text(item.emoji, style: TextStyle(fontSize: 36.sp)),
+                ),
+                if (hasAllergenWarning)
+                  Positioned(
+                    top: 5.h,
+                    right: 5.w,
+                    child: Container(
+                      width: 20.w,
+                      height: 20.w,
+                      alignment: Alignment.center,
+                      decoration: const BoxDecoration(
+                        color: Color(0xFFFF6B00),
+                        shape: BoxShape.circle,
+                      ),
+                      child: Text(
+                        '!',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 12.sp,
+                          fontWeight: FontWeight.w800,
+                          height: 1,
+                        ),
+                      ),
+                    ),
+                  ),
+              ],
             ),
             SizedBox(width: 12.w),
             Expanded(
@@ -144,19 +173,19 @@ class MenuItemCard extends StatelessWidget {
                         ),
                       ),
                       SizedBox(width: 8.w),
-                      quantity <= 0
-                          ? _AddButton(
-                              menuItemId: item.id,
-                              enabled: isOrderingEnabled,
-                              onTap: onIncrementTap,
-                            )
-                          : _InlineStepper(
-                              menuItemId: item.id,
-                              quantity: quantity,
-                              enabled: isOrderingEnabled,
-                              onIncrementTap: onIncrementTap,
-                              onDecrementTap: onDecrementTap,
-                            ),
+                      // quantity <= 0
+                      //     ? _AddButton(
+                      //         menuItemId: item.id,
+                      //         enabled: isOrderingEnabled,
+                      //         onTap: onIncrementTap,
+                      //       )
+                      //     : _InlineStepper(
+                      //         menuItemId: item.id,
+                      //         quantity: quantity,
+                      //         enabled: isOrderingEnabled,
+                      //         onIncrementTap: onIncrementTap,
+                      //         onDecrementTap: onDecrementTap,
+                      //       ),
                     ],
                   ),
                 ],

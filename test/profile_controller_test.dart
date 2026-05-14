@@ -13,12 +13,12 @@ void main() {
   setUpAll(HiveTestHelper.init);
   setUp(HiveTestHelper.clearAll);
 
-  test('dietary prefs and allergies persist after reload', () async {
+  test('dietary prefs and allergens persist after reload', () async {
     final containerA = ProviderContainer();
     final notifier = containerA.read(profileProvider.notifier);
 
     notifier.togglePref('Vegan 🌱');
-    notifier.updateAllergies('peanuts');
+    notifier.toggleAllergen('Peanuts');
 
     containerA.dispose();
 
@@ -27,7 +27,7 @@ void main() {
 
     final state = containerB.read(profileProvider);
     expect(state.selectedDietaryPrefs.contains('Vegan 🌱'), isTrue);
-    expect(state.allergiesText, 'peanuts');
+    expect(state.selectedAllergens.contains('Peanuts'), isTrue);
   });
 
   test('signOut clears all local boxes', () async {
@@ -38,7 +38,7 @@ void main() {
       'profile_data',
       jsonEncode({
         'prefs': ['Vegan 🌱'],
-        'allergies': 'peanuts'
+        'allergens': ['Peanuts']
       }),
     );
     await Hive.box<String>('profile').put(

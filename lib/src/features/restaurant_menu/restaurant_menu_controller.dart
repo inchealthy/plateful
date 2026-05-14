@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../common/domain/entities/add_on.dart';
 import '../../common/domain/entities/menu_item.dart';
 import '../../common/domain/entities/restaurant.dart';
 import 'restaurant_menu_state.dart';
@@ -23,12 +24,17 @@ class RestaurantMenuController
           await rootBundle.loadString('assets/jsons/restaurants.json');
       final menuItemsRaw =
           await rootBundle.loadString('assets/jsons/menu_items.json');
+      final addonsRaw =
+          await rootBundle.loadString('assets/jsons/addons.json');
 
       final restaurants = (jsonDecode(restaurantsRaw) as List<dynamic>)
           .map((e) => Restaurant.fromJson(e as Map<String, dynamic>))
           .toList();
       final items = (jsonDecode(menuItemsRaw) as List<dynamic>)
           .map((e) => MenuItem.fromJson(e as Map<String, dynamic>))
+          .toList();
+      final allAddOnGroups = (jsonDecode(addonsRaw) as List<dynamic>)
+          .map((e) => AddOnGroup.fromJson(e as Map<String, dynamic>))
           .toList();
 
       Restaurant? restaurant;
@@ -41,6 +47,9 @@ class RestaurantMenuController
 
       final restaurantItems =
           items.where((item) => item.restaurantId == restaurantId).toList();
+      final restaurantAddOnGroups = allAddOnGroups
+          .where((g) => g.restaurantId == restaurantId)
+          .toList();
       final selectedCategory =
           _hasCategory(state.selectedCategory, restaurantItems)
               ? state.selectedCategory
@@ -51,6 +60,7 @@ class RestaurantMenuController
         allItems: restaurantItems,
         filteredItems: _filterByCategory(restaurantItems, selectedCategory),
         selectedCategory: selectedCategory,
+        addOnGroups: restaurantAddOnGroups,
         isLoading: false,
       );
     } catch (_) {

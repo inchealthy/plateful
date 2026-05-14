@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 class AppColors {
   const AppColors._();
 
-  static const primary = Color(0xFF667EEA);
-  static const primaryDark = Color(0xFF5568D3);
-  static const gradientStart = Color(0xFF667EEA);
-  static const gradientEnd = Color(0xFF764BA2);
-  static const background = Color(0xFFF5F5F5);
+  static const primary = Color(0xFF7DC52C);
+  static const primaryDark = Color(0xFF006D2E);
+  static const gradientStart = Color(0xFF006D2E);
+  static const gradientEnd = Color(0xFF7DC52C);
+  static const background = Color(0xFFFFFBE8);
   static const surface = Color(0xFFFFFFFF);
   static const textPrimary = Color(0xFF222222);
   static const textSecondary = Color(0xFF666666);

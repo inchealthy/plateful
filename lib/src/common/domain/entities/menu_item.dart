@@ -1,3 +1,37 @@
+class Ingredient {
+  const Ingredient({
+    required this.name,
+    required this.calories,
+    required this.carbs,
+    required this.protein,
+    required this.fat,
+  });
+
+  final String name;
+  final double calories;
+  final double carbs;
+  final double protein;
+  final double fat;
+
+  factory Ingredient.fromJson(Map<String, dynamic> json) {
+    return Ingredient(
+      name: json['name'] as String,
+      calories: (json['calories'] as num).toDouble(),
+      carbs: (json['carbs'] as num).toDouble(),
+      protein: (json['protein'] as num).toDouble(),
+      fat: (json['fat'] as num).toDouble(),
+    );
+  }
+
+  Map<String, dynamic> toJson() => {
+        'name': name,
+        'calories': calories,
+        'carbs': carbs,
+        'protein': protein,
+        'fat': fat,
+      };
+}
+
 class MenuItem {
   const MenuItem({
     required this.id,
@@ -13,6 +47,7 @@ class MenuItem {
     required this.fat,
     required this.allergens,
     required this.dietaryTags,
+    this.ingredients = const [],
   });
 
   final String id;
@@ -28,6 +63,7 @@ class MenuItem {
   final double fat;
   final List<String> allergens;
   final List<String> dietaryTags;
+  final List<Ingredient> ingredients;
 
   factory MenuItem.fromJson(Map<String, dynamic> json) {
     return MenuItem(
@@ -44,6 +80,9 @@ class MenuItem {
       fat: (json['fat'] as num).toDouble(),
       allergens: List<String>.from(json['allergens'] as List),
       dietaryTags: List<String>.from(json['dietaryTags'] as List),
+      ingredients: (json['ingredients'] as List? ?? [])
+          .map((e) => Ingredient.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
   }
 
@@ -62,6 +101,7 @@ class MenuItem {
       'fat': fat,
       'allergens': allergens,
       'dietaryTags': dietaryTags,
+      'ingredients': ingredients.map((i) => i.toJson()).toList(),
     };
   }
 }

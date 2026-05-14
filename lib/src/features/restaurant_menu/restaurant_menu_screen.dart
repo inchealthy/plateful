@@ -8,6 +8,7 @@ import '../../common/components/cart_fab.dart';
 import '../../common/domain/entities/cart_item.dart';
 import '../../common/domain/entities/menu_item.dart';
 import '../cart/cart_controller.dart';
+import '../profile/profile_controller.dart';
 import 'restaurant_menu_controller.dart';
 import 'widgets/item_detail_sheet.dart';
 import 'widgets/menu_category_tabs.dart';
@@ -58,6 +59,8 @@ class _RestaurantMenuScreenState extends ConsumerState<RestaurantMenuScreen> {
     MenuItem item,
     String restaurantName,
     bool isRestaurantClosed,
+    List addOnGroups,
+    Set<String> selectedAllergens,
   ) async {
     await showModalBottomSheet<void>(
       context: context,
@@ -68,6 +71,8 @@ class _RestaurantMenuScreenState extends ConsumerState<RestaurantMenuScreen> {
           item: item,
           restaurantName: restaurantName,
           isRestaurantClosed: isRestaurantClosed,
+          addOnGroups: addOnGroups.cast(),
+          selectedAllergens: selectedAllergens,
         );
       },
     );
@@ -105,16 +110,9 @@ class _RestaurantMenuScreenState extends ConsumerState<RestaurantMenuScreen> {
     );
   }
 
-  void _handleDecrementItem(
-    MenuItem item,
-    int currentQuantity,
-  ) {
-    if (currentQuantity <= 0) {
-      return;
-    }
-    ref
-        .read(cartProvider.notifier)
-        .updateQuantity(item.id, currentQuantity - 1);
+  void _handleDecrementItem(MenuItem item, int currentQuantity) {
+    if (currentQuantity <= 0) return;
+    ref.read(cartProvider.notifier).decrementFirstByItemId(item.id);
   }
 
   Future<void> _showConflictDialog(
@@ -183,10 +181,13 @@ class _RestaurantMenuScreenState extends ConsumerState<RestaurantMenuScreen> {
     }
 
     final cartState = ref.watch(cartProvider);
-    final cartQuantityByItem = {
-      for (final cartItem in cartState.items)
-        cartItem.item.id: cartItem.quantity,
-    };
+    final selectedAllergens =
+        ref.watch(profileProvider.select((s) => s.selectedAllergens));
+    final cartQuantityByItem = <String, int>{};
+    for (final cartItem in cartState.items) {
+      cartQuantityByItem[cartItem.item.id] =
+          (cartQuantityByItem[cartItem.item.id] ?? 0) + cartItem.quantity;
+    }
     final isRestaurantClosed = _isRestaurantClosed(restaurant.status);
 
     return AnnotatedRegion<SystemUiOverlayStyle>(
@@ -210,11 +211,14 @@ class _RestaurantMenuScreenState extends ConsumerState<RestaurantMenuScreen> {
                   itemQuantityOf: (menuItemId) =>
                       cartQuantityByItem[menuItemId] ?? 0,
                   isOrderingEnabled: !isRestaurantClosed,
+                  selectedAllergens: selectedAllergens,
                   onTapItem: (item) => _openItemDetailSheet(
                     context,
                     item,
                     restaurant.name,
                     isRestaurantClosed,
+                    menuState.addOnGroupsForItem(item.id),
+                    selectedAllergens,
                   ),
                   onIncrementItem: (item) => _handleIncrementItem(
                     context,

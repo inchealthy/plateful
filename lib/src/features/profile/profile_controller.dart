@@ -26,7 +26,8 @@ class ProfileController extends Notifier<ProfileState> {
       return ProfileState(
         selectedDietaryPrefs:
             Set<String>.from(json['prefs'] as List? ?? const []),
-        allergiesText: json['allergies'] as String? ?? '',
+        selectedAllergens:
+            Set<String>.from(json['allergens'] as List? ?? const []),
       );
     } catch (_) {
       return const ProfileState();
@@ -49,8 +50,14 @@ class ProfileController extends Notifier<ProfileState> {
     _persist();
   }
 
-  void updateAllergies(String text) {
-    state = state.copyWith(allergiesText: text);
+  void toggleAllergen(String allergen) {
+    final updated = Set<String>.from(state.selectedAllergens);
+    if (updated.contains(allergen)) {
+      updated.remove(allergen);
+    } else {
+      updated.add(allergen);
+    }
+    state = state.copyWith(selectedAllergens: updated);
     _persist();
   }
 
@@ -69,7 +76,7 @@ class ProfileController extends Notifier<ProfileState> {
       _profileKey,
       jsonEncode({
         'prefs': state.selectedDietaryPrefs.toList(),
-        'allergies': state.allergiesText,
+        'allergens': state.selectedAllergens.toList(),
       }),
     );
   }

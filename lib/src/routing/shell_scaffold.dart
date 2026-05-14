@@ -16,8 +16,8 @@ class ShellScaffold extends StatefulWidget {
 class _ShellScaffoldState extends State<ShellScaffold> {
   static const _tabPaths = [
     AppRoute.home,
-    AppRoute.orders,
     AppRoute.feedback,
+    AppRoute.plato,
     AppRoute.profile,
   ];
 

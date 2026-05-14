@@ -1,3 +1,4 @@
+import '../../common/domain/entities/add_on.dart';
 import '../../common/domain/entities/menu_item.dart';
 import '../../common/domain/entities/restaurant.dart';
 
@@ -7,6 +8,7 @@ class RestaurantMenuState {
     this.allItems = const [],
     this.filteredItems = const [],
     this.selectedCategory = 'All',
+    this.addOnGroups = const [],
     this.isLoading = true,
   });
 
@@ -14,6 +16,7 @@ class RestaurantMenuState {
   final List<MenuItem> allItems;
   final List<MenuItem> filteredItems;
   final String selectedCategory;
+  final List<AddOnGroup> addOnGroups;
   final bool isLoading;
 
   static const _baseOrder = [
@@ -31,11 +34,18 @@ class RestaurantMenuState {
     return ['All', ...ordered, ...extras];
   }
 
+  List<AddOnGroup> addOnGroupsForItem(String itemId) {
+    return addOnGroups
+        .where((g) => g.applicableItemIds.contains(itemId))
+        .toList();
+  }
+
   RestaurantMenuState copyWith({
     Restaurant? restaurant,
     List<MenuItem>? allItems,
     List<MenuItem>? filteredItems,
     String? selectedCategory,
+    List<AddOnGroup>? addOnGroups,
     bool? isLoading,
     bool clearRestaurant = false,
   }) {
@@ -44,6 +54,7 @@ class RestaurantMenuState {
       allItems: allItems ?? this.allItems,
       filteredItems: filteredItems ?? this.filteredItems,
       selectedCategory: selectedCategory ?? this.selectedCategory,
+      addOnGroups: addOnGroups ?? this.addOnGroups,
       isLoading: isLoading ?? this.isLoading,
     );
   }

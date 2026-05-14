@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(flutter analyze:*)",
+      "Bash(node -e ' *)",
+      "Bash(flutter pub *)",
+      "Bash(python -c \"import json; data=json.load\\(open\\('d:/plateful/assets/jsons/menu_items.json'\\)\\); print\\('Total items:', len\\(data\\)\\); print\\('Last few IDs:', [d['id'] for d in data[-5:]]\\); print\\('r1 items:', len\\([d for d in data if d['restaurantId']=='r1']\\)\\)\")",
+      "Bash(python -c \"import json; data=json.load\\(open\\('d:/plateful/assets/jsons/menu_items.json', encoding='utf-8'\\)\\); print\\('Total items:', len\\(data\\)\\); print\\('Last few IDs:', [d['id'] for d in data[-5:]]\\); print\\('r1 items:', len\\([d for d in data if d['restaurantId']=='r1']\\)\\)\")"
+    ]
+  }
+}

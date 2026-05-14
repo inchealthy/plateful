@@ -100,18 +100,42 @@ class _CheckoutScreenState extends ConsumerState<CheckoutScreen> {
                             (cartItem) => Padding(
                               padding: EdgeInsets.symmetric(vertical: 6.h),
                               child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(
-                                    cartItem.item.emoji,
-                                    style: TextStyle(fontSize: 20.sp),
+                                  Padding(
+                                    padding: EdgeInsets.only(top: 2.h),
+                                    child: Text(
+                                      cartItem.item.emoji,
+                                      style: TextStyle(fontSize: 20.sp),
+                                    ),
                                   ),
                                   SizedBox(width: 8.w),
                                   Expanded(
-                                    child: Text(
-                                      cartItem.item.name,
-                                      style: AppTextStyles.body,
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          cartItem.item.name,
+                                          style: AppTextStyles.body,
+                                        ),
+                                        if (cartItem.selectedAddOns
+                                            .isNotEmpty) ...[
+                                          SizedBox(height: 2.h),
+                                          Text(
+                                            cartItem.selectedAddOns
+                                                .map((a) => a.name)
+                                                .join(', '),
+                                            style: AppTextStyles.label
+                                                .copyWith(
+                                              color: AppColors.textSecondary,
+                                            ),
+                                          ),
+                                        ],
+                                      ],
                                     ),
                                   ),
+                                  SizedBox(width: 8.w),
                                   Text(
                                     '×${cartItem.quantity}',
                                     style: AppTextStyles.label.copyWith(
@@ -120,7 +144,7 @@ class _CheckoutScreenState extends ConsumerState<CheckoutScreen> {
                                   ),
                                   SizedBox(width: 8.w),
                                   Text(
-                                    '\$${(cartItem.item.price * cartItem.quantity).toStringAsFixed(2)}',
+                                    '\$${cartItem.lineTotal.toStringAsFixed(2)}',
                                     style: AppTextStyles.body.copyWith(
                                       fontWeight: FontWeight.w600,
                                     ),
