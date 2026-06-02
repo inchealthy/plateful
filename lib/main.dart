@@ -35,7 +35,7 @@ class PlatefulApp extends StatelessWidget {
     return ScreenUtilInit(
       designSize: const Size(390, 844),
       builder: (_, __) => MaterialApp.router(
-        title: 'Plateful',
+        title: 'NutriHero',
         theme: AppTheme.light(),
         routerConfig: router,
       ),

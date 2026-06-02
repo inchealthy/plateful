@@ -43,17 +43,21 @@ class _SplashScreenState extends State<SplashScreen> {
             gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
-              colors: [Color(0xFF667EEA), Color(0xFF764BA2)],
+              colors: [Color(0xFF006D2E), Color(0xFF7DC52C)],
             ),
           ),
-          child: const Center(
+          child: Center(
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text('🍽️', style: TextStyle(fontSize: 60)),
-                SizedBox(height: 12),
-                Text(
-                  'Plateful',
+                Image.asset(
+                  'assets/images/NutriHero_icon-transparent.png',
+                  width: 100,
+                  height: 100,
+                ),
+                const SizedBox(height: 16),
+                const Text(
+                  'NutriHero',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 32,

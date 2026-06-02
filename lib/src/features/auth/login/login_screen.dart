@@ -36,13 +36,11 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
           child: Column(
             children: [
               SizedBox(height: 40.h),
-              Text('🍽️', style: TextStyle(fontSize: 72.sp)),
-              SizedBox(height: 8.h),
-              Text(
-                'Plateful',
-                style:
-                    AppTextStyles.heading1.copyWith(color: AppColors.primary),
+              Image.asset(
+                'assets/images/NutriHero_NutriHero - HorizontalLogo.png',
+                height: 72.h,
               ),
+              SizedBox(height: 8.h),
               Text(
                 'Campus Dining Made Easy',
                 style:

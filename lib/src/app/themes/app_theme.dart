@@ -37,6 +37,16 @@ class AppTheme {
           ),
         ),
       ),
+      chipTheme: ChipThemeData(
+        selectedColor: AppColors.primary,
+        checkmarkColor: Colors.white,
+        labelStyle: AppTextStyles.label.copyWith(color: AppColors.textPrimary),
+        secondaryLabelStyle: AppTextStyles.label.copyWith(color: Colors.white),
+        secondarySelectedColor: AppColors.primary,
+        backgroundColor: AppColors.background,
+        side: const BorderSide(color: AppColors.border),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
         fillColor: AppColors.background,

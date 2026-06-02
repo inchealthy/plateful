@@ -121,16 +121,35 @@ class _ItemDetailSheetState extends ConsumerState<ItemDetailSheet> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            // drag handle
+            // header row: back button + drag handle
             Padding(
-              padding: EdgeInsets.only(top: 10.h, bottom: 6.h),
-              child: Container(
-                width: 40.w,
-                height: 4.h,
-                decoration: BoxDecoration(
-                  color: AppColors.border,
-                  borderRadius: BorderRadius.circular(2.r),
-                ),
+              padding: EdgeInsets.only(top: 8.h, bottom: 4.h, left: 4.w),
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  Container(
+                    width: 40.w,
+                    height: 4.h,
+                    decoration: BoxDecoration(
+                      color: AppColors.border,
+                      borderRadius: BorderRadius.circular(2.r),
+                    ),
+                  ),
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: IconButton(
+                      icon: const Icon(Icons.keyboard_arrow_down_rounded),
+                      iconSize: 28,
+                      color: AppColors.textSecondary,
+                      padding: EdgeInsets.zero,
+                      constraints: BoxConstraints(
+                        minWidth: 36.w,
+                        minHeight: 36.h,
+                      ),
+                      onPressed: () => Navigator.of(context).pop(),
+                    ),
+                  ),
+                ],
               ),
             ),
 

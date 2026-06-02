@@ -87,7 +87,7 @@ class _RestaurantMapViewState extends State<RestaurantMapView> {
           children: [
             TileLayer(
               urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-              userAgentPackageName: 'com.plateful',
+              userAgentPackageName: 'com.issi.plateful',
             ),
             MarkerLayer(
               markers: [

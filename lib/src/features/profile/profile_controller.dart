@@ -36,7 +36,7 @@ class ProfileController extends Notifier<ProfileState> {
 
   String get userEmail {
     final email = AuthSessionStore.read().email;
-    return email == null || email.isEmpty ? 'user@plateful.app' : email;
+    return email == null || email.isEmpty ? 'user@nutrihero.app' : email;
   }
 
   void togglePref(String pref) {
