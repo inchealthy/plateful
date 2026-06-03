@@ -1,9 +1,12 @@
 import 'dart:convert';
 
+import 'dart:developer' as dev;
+
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:http/http.dart' as http;
 
+import '../../env.dart';
 import '../../common/domain/entities/menu_item.dart';
 import '../../common/domain/entities/restaurant.dart';
 import '../home/home_controller.dart';
@@ -11,9 +14,8 @@ import '../profile/profile_controller.dart';
 import 'plato_state.dart';
 
 class PlatoController extends Notifier<PlatoState> {
-  static const _geminiKey = 'AIzaSyD1yglTqyHsHdUv0ZUiRujz10oBOfZVY7A';
-  static const _geminiEndpoint =
-      'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=$_geminiKey';
+  static final _geminiEndpoint =
+      'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${Env.geminiApiKey}';
 
   @override
   PlatoState build() {
@@ -90,12 +92,17 @@ class PlatoController extends Notifier<PlatoState> {
         return true;
       }).toList();
 
+      dev.log('[Plato] selectedLocationId: "$selectedLocationId"');
+      dev.log('[Plato] matching restaurants: ${locationRestaurantIds.length}');
+      dev.log('[Plato] items after filtering: ${filtered.length}');
+
       if (filtered.isEmpty) {
         state = state.copyWith(status: PlatoStatus.empty, recommendations: []);
         return;
       }
 
       final query = state.freeText.trim();
+      dev.log('[Plato] query: "$query"');
       List<PlatoRecommendation> picks;
 
       if (query.isEmpty) {
@@ -180,7 +187,13 @@ Rules:
       }),
     );
 
+    dev.log('[Plato] HTTP status: ${response.statusCode}');
     if (response.statusCode != 200) {
+      dev.log('--- Gemini API error ---');
+      dev.log('Status : ${response.statusCode}');
+      dev.log('Headers: ${response.headers}');
+      dev.log('Body   : ${response.body}');
+      dev.log('------------------------');
       throw Exception('Gemini API error ${response.statusCode}: ${response.body}');
     }
 
@@ -189,7 +202,10 @@ Rules:
         as List)
         .first['text'] as String;
 
-    return _parseResponse(text, items, restaurantMap);
+    dev.log('[Plato] Gemini raw response: $text');
+    final results = _parseResponse(text, items, restaurantMap);
+    dev.log('[Plato] parsed recommendations: ${results.length}');
+    return results;
   }
 
   List<PlatoRecommendation> _parseResponse(

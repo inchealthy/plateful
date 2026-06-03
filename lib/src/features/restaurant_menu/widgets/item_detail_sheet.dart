@@ -116,7 +116,7 @@ class _ItemDetailSheetState extends ConsumerState<ItemDetailSheet> {
         constraints: BoxConstraints(maxHeight: screenHeight * 0.92),
         decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.vertical(top: Radius.circular(20.r)),
+          borderRadius: BorderRadius.vertical(top: Radius.circular(10.r)),
         ),
         child: Column(
           mainAxisSize: MainAxisSize.min,

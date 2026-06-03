@@ -34,10 +34,13 @@ class PlatefulApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: const Size(390, 844),
-      builder: (_, __) => MaterialApp.router(
-        title: 'NutriHero',
-        theme: AppTheme.light(),
-        routerConfig: router,
+      builder: (_, __) => GestureDetector(
+        onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
+        child: MaterialApp.router(
+          title: 'NutriHero',
+          theme: AppTheme.light(),
+          routerConfig: router,
+        ),
       ),
     );
   }

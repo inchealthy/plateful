@@ -62,7 +62,7 @@ class _LocationSelectorScreenState extends State<LocationSelectorScreen> {
                       final distance =
                           widget.distanceKmByLocationId[location.id];
                       final subtitle = widget.showDistance && distance != null
-                          ? '${distance.toStringAsFixed(1)} km away'
+                          ? '${(distance * 0.621371).toStringAsFixed(1)} mi away'
                           : null;
                       final selected = location.id == widget.selectedLocationId;
 

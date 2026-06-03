@@ -46,4 +46,7 @@ app.*.map.json
 
 # FVM Version Cache
 .fvm/
+
+# Secrets — copy env.dart.example → env.dart and fill in your keys
+lib/src/env.dart
 # Local planning workspace
