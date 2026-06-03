@@ -182,7 +182,7 @@ Rules:
         ],
         'generationConfig': {
           'temperature': 0.3,
-          'maxOutputTokens': 1024,
+          'maxOutputTokens': 4096,
         },
       }),
     );
@@ -208,26 +208,55 @@ Rules:
     return results;
   }
 
+  // Finds the closing ] of the outermost JSON array starting at [start],
+  // correctly skipping ] characters inside strings.
+  int _findArrayEnd(String text, int start) {
+    int depth = 0;
+    bool inString = false;
+    bool escaped = false;
+    for (int i = start; i < text.length; i++) {
+      final c = text[i];
+      if (escaped) { escaped = false; continue; }
+      if (c == '\\' && inString) { escaped = true; continue; }
+      if (c == '"') { inString = !inString; continue; }
+      if (inString) continue;
+      if (c == '[') depth++;
+      if (c == ']') { depth--; if (depth == 0) return i; }
+    }
+    return -1;
+  }
+
   List<PlatoRecommendation> _parseResponse(
     String text,
     List<MenuItem> items,
     Map<String, Restaurant> restaurantMap,
   ) {
     final start = text.indexOf('[');
-    final end = text.lastIndexOf(']');
-    if (start == -1 || end == -1) { return []; }
+    if (start == -1) { dev.log('[Plato] no [ found'); return []; }
+    final end = _findArrayEnd(text, start);
+    if (end == -1) { dev.log('[Plato] no matching ] found'); return []; }
 
-    final parsed = jsonDecode(text.substring(start, end + 1)) as List;
+    dev.log('[Plato] parsing substring [$start..$end] len=${end - start + 1}');
+
+    List<dynamic> parsed;
+    try {
+      parsed = jsonDecode(text.substring(start, end + 1)) as List;
+    } catch (e) {
+      dev.log('[Plato] jsonDecode error: $e');
+      return [];
+    }
     final itemMap = {for (final i in items) i.id: i};
     final picks = <PlatoRecommendation>[];
 
     for (final pick in parsed) {
       final id = pick['id'] as String?;
       final reason = pick['reason'] as String?;
+      dev.log('[Plato] pick id="$id" inMap=${itemMap.containsKey(id)}');
       if (id == null) { continue; }
       final item = itemMap[id];
       if (item == null) { continue; }
       final restaurant = restaurantMap[item.restaurantId];
+      dev.log('[Plato] restaurant=${restaurant?.id} for item=${item.id}');
       if (restaurant == null) { continue; }
       picks.add(PlatoRecommendation(
         item: item,

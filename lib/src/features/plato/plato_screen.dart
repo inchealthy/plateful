@@ -103,7 +103,7 @@ class _PlatoScreenState extends ConsumerState<PlatoScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   if (state.status == PlatoStatus.loading)
-                    const _LoadingView()
+                    const Center(child: _LoadingView())
                   else ...[
                     SizedBox(height: 20.h),
                     _PrefsSection(
