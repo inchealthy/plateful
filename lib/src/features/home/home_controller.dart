@@ -164,33 +164,32 @@ class HomeController extends Notifier<HomeState> {
             .where((r) => r.locationId == state.selectedLocationId)
             .toList();
 
-    if (state.searchQuery.isNotEmpty) {
-      final q = state.searchQuery.toLowerCase();
-      result = result
-          .where(
-            (r) =>
-                r.name.toLowerCase().contains(q) ||
-                r.cuisine.toLowerCase().contains(q) ||
-                r.tags.any((t) => t.toLowerCase().contains(q)) ||
-                (_menuItemsByRestaurant[r.id] ?? const []).any(
-                  (item) =>
-                      item.name.toLowerCase().contains(q) ||
-                      item.description.toLowerCase().contains(q) ||
-                      item.category.toLowerCase().contains(q) ||
-                      item.dietaryTags.any(
-                        (tag) => tag.toLowerCase().contains(q),
-                      ),
-                ),
-          )
-          .toList();
-    }
-
     if (state.selectedFilter != 'All') {
       result =
           result.where((r) => r.tags.contains(state.selectedFilter)).toList();
     }
 
-    state = state.copyWith(filteredList: result);
+    List<MenuItemResult> itemResults = const [];
+    if (state.searchQuery.isNotEmpty) {
+      final q = state.searchQuery.toLowerCase();
+      final restaurantMap = {for (final r in result) r.id: r};
+      final matches = <MenuItemResult>[];
+      for (final entry in _menuItemsByRestaurant.entries) {
+        final restaurant = restaurantMap[entry.key];
+        if (restaurant == null) continue;
+        for (final item in entry.value) {
+          if (item.name.toLowerCase().contains(q) ||
+              item.description.toLowerCase().contains(q) ||
+              item.category.toLowerCase().contains(q) ||
+              item.dietaryTags.any((t) => t.toLowerCase().contains(q))) {
+            matches.add(MenuItemResult(item: item, restaurant: restaurant));
+          }
+        }
+      }
+      itemResults = matches;
+    }
+
+    state = state.copyWith(filteredList: result, searchItemResults: itemResults);
   }
 
   bool _isPermissionGranted(LocationPermission permission) {

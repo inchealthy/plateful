@@ -1,11 +1,19 @@
 import '../../common/domain/entities/building_location.dart';
+import '../../common/domain/entities/menu_item.dart';
 import '../../common/domain/entities/restaurant.dart';
 import 'home_controller.dart';
+
+class MenuItemResult {
+  const MenuItemResult({required this.item, required this.restaurant});
+  final MenuItem item;
+  final Restaurant restaurant;
+}
 
 class HomeState {
   const HomeState({
     this.allRestaurants = const [],
     this.filteredList = const [],
+    this.searchItemResults = const [],
     this.searchQuery = '',
     this.selectedFilter = 'All',
     this.selectedTabIndex = 0,
@@ -20,6 +28,7 @@ class HomeState {
 
   final List<Restaurant> allRestaurants;
   final List<Restaurant> filteredList;
+  final List<MenuItemResult> searchItemResults;
   final String searchQuery;
   final String selectedFilter;
   final int selectedTabIndex;
@@ -46,6 +55,7 @@ class HomeState {
   HomeState copyWith({
     List<Restaurant>? allRestaurants,
     List<Restaurant>? filteredList,
+    List<MenuItemResult>? searchItemResults,
     String? searchQuery,
     String? selectedFilter,
     int? selectedTabIndex,
@@ -60,6 +70,7 @@ class HomeState {
     return HomeState(
       allRestaurants: allRestaurants ?? this.allRestaurants,
       filteredList: filteredList ?? this.filteredList,
+      searchItemResults: searchItemResults ?? this.searchItemResults,
       searchQuery: searchQuery ?? this.searchQuery,
       selectedFilter: selectedFilter ?? this.selectedFilter,
       selectedTabIndex: selectedTabIndex ?? this.selectedTabIndex,

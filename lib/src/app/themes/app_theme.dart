@@ -43,13 +43,13 @@ class AppTheme {
         labelStyle: AppTextStyles.label.copyWith(color: AppColors.textPrimary),
         secondaryLabelStyle: AppTextStyles.label.copyWith(color: Colors.white),
         secondarySelectedColor: AppColors.primary,
-        backgroundColor: AppColors.background,
+        backgroundColor: AppColors.inputFill,
         side: const BorderSide(color: AppColors.border),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
-        fillColor: AppColors.background,
+        fillColor: AppColors.inputFill,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
           borderSide: BorderSide.none,

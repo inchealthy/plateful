@@ -92,7 +92,7 @@ class _PlatoScreenState extends ConsumerState<PlatoScreen> {
     final locationName = homeState.selectedLocation?.name ?? 'All locations';
 
     return Scaffold(
-      backgroundColor: AppColors.background,
+      backgroundColor: AppColors.surface,
       body: CustomScrollView(
         slivers: [
           _buildHeader(locationName),
@@ -624,7 +624,7 @@ class _RecommendationCard extends StatelessWidget {
                   width: 60.w,
                   height: 60.w,
                   decoration: BoxDecoration(
-                    color: AppColors.background,
+                    color: AppColors.inputFill,
                     borderRadius: BorderRadius.circular(12.r),
                   ),
                   alignment: Alignment.center,
